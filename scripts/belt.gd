@@ -31,12 +31,13 @@ func _on_body_entered(body: Node2D) -> void:
 	var item: Item = body as Item
 	if is_instance_valid(item):
 		_items.append(item)
-		
+		item.increment_belt_count()
 
 func _on_body_exited(body: Node2D) -> void:
 	var item: Item = body as Item
 	if is_instance_valid(item):
 		_items.erase(item)
+		item.decrement_belt_count()
 
 func _ready() -> void:
 	if Engine.is_editor_hint():
