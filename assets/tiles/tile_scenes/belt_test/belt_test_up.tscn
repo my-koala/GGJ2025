@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dmd6guegx31yg"]
+
+[ext_resource type="PackedScene" uid="uid://dqtkx060mqlbo" path="res://assets/tiles/tile_scenes/belt_test/belt_test.tscn" id="1_os0ot"]
+
+[node name="belt_test_up_000" instance=ExtResource("1_os0ot")]
+direction = Vector2(0, -1)
+
+[node name="sprite_2d" parent="." index="1"]
+region_rect = Rect2(0, 32, 256, 32)

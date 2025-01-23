@@ -1,0 +1,12 @@
+GGJ2025 notes:
+
+tilemap animated tile speeds cannot be changed at runtime (without big scripting i dont want to do).
+one option is creating multiple tiles of the same textures with varying speeds, but this takes forever since each tile has to be manually configured (takes like 2 minutes to configure one tile for all its properties, there is no copy/pasting).
+even if scene collections were used instead, it would require some code checking/reading custom data layers and applying to belt scene. too much, i would rather be ape simple.
+so for now, no tilemaps for conveyor belts (but that's okay! you can just enable grid snapping and you get the same tilemap editing strengths with additional flexibility!)
+
+conveyor belt velocity is weird.
+for one, if an item is colliding with two belts going the same direction, the velocity shouldn't be additive. this is especially problematic as an item is moving down two sequential conveyor belt segments going the same direction (in the "seam" between, velocity is doubled).
+for the expected effect, max/min belt velocities (on each axis) need to be accumulated prior to physics integration, and is then added together to find the real velocity.
+right now the item is applying the belts' velocity via transform translation to simulate 'constant velocity' while preserving forces.
+i think the belts should be technically applying some sort of friction force that drags the item along or something, but im too lazy to think and this seems to work???

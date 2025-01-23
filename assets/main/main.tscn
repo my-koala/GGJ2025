@@ -1,0 +1,150 @@
+[gd_scene load_steps=7 format=4 uid="uid://dwaef6dipcc72"]
+
+[ext_resource type="PackedScene" uid="uid://cadnddkadj1bt" path="res://assets/tiles/tile_scenes/belt_test/belt_test_right.tscn" id="1_j84mu"]
+[ext_resource type="TileSet" uid="uid://ejf7mh4w5e0g" path="res://assets/tiles/tile_sets/belts.tres" id="1_xch4i"]
+[ext_resource type="PackedScene" uid="uid://dmd6guegx31yg" path="res://assets/tiles/tile_scenes/belt_test/belt_test_up.tscn" id="2_yti63"]
+[ext_resource type="PackedScene" uid="uid://6wa1a78ux7c1" path="res://assets/tiles/tile_scenes/belt_test/belt_test_left.tscn" id="3_dg683"]
+[ext_resource type="PackedScene" uid="uid://dmanjl013mh5d" path="res://assets/tiles/tile_scenes/belt_test/belt_test_down.tscn" id="4_3yvm8"]
+[ext_resource type="PackedScene" uid="uid://bunge2le1ir2y" path="res://assets/items/item_husky.tscn" id="6_xajwi"]
+
+[node name="main" type="Node"]
+
+[node name="map" type="Node2D" parent="."]
+
+[node name="camera_2d" type="Camera2D" parent="map"]
+zoom = Vector2(4, 4)
+process_callback = 0
+
+[node name="level_0" type="Node2D" parent="map"]
+
+[node name="belts" type="Node2D" parent="map/level_0"]
+y_sort_enabled = true
+
+[node name="belt_test_right_000" parent="map/level_0/belts" instance=ExtResource("1_j84mu")]
+position = Vector2(-48, 0)
+
+[node name="belt_test_right_001" parent="map/level_0/belts" instance=ExtResource("1_j84mu")]
+position = Vector2(-32, 0)
+speed = 64.0
+
+[node name="belt_test_right_002" parent="map/level_0/belts" instance=ExtResource("1_j84mu")]
+position = Vector2(-16, 0)
+speed = 64.0
+
+[node name="belt_test_right_003" parent="map/level_0/belts" instance=ExtResource("1_j84mu")]
+speed = 64.0
+
+[node name="belt_test_right_004" parent="map/level_0/belts" instance=ExtResource("1_j84mu")]
+position = Vector2(16, 0)
+speed = 64.0
+
+[node name="belt_test_right_005" parent="map/level_0/belts" instance=ExtResource("1_j84mu")]
+position = Vector2(32, 0)
+speed = 64.0
+
+[node name="belt_test_right_006" parent="map/level_0/belts" instance=ExtResource("1_j84mu")]
+position = Vector2(48, 0)
+speed = 64.0
+
+[node name="belt_test_right_007" parent="map/level_0/belts" instance=ExtResource("1_j84mu")]
+position = Vector2(-80, -64)
+speed = 32.0
+
+[node name="belt_test_up_000" parent="map/level_0/belts" instance=ExtResource("2_yti63")]
+position = Vector2(64, 0)
+speed = 32.0
+
+[node name="belt_test_up_001" parent="map/level_0/belts" instance=ExtResource("2_yti63")]
+position = Vector2(64, -16)
+speed = 32.0
+
+[node name="belt_test_up_002" parent="map/level_0/belts" instance=ExtResource("2_yti63")]
+position = Vector2(64, -32)
+speed = 32.0
+
+[node name="belt_test_up_003" parent="map/level_0/belts" instance=ExtResource("2_yti63")]
+position = Vector2(64, -48)
+speed = 8.0
+
+[node name="belt_test_left_000" parent="map/level_0/belts" instance=ExtResource("3_dg683")]
+position = Vector2(64, -64)
+speed = 32.0
+
+[node name="belt_test_left_001" parent="map/level_0/belts" instance=ExtResource("3_dg683")]
+position = Vector2(48, -64)
+speed = 32.0
+
+[node name="belt_test_left_002" parent="map/level_0/belts" instance=ExtResource("3_dg683")]
+position = Vector2(32, -64)
+speed = 32.0
+
+[node name="belt_test_left_003" parent="map/level_0/belts" instance=ExtResource("3_dg683")]
+position = Vector2(16, -64)
+speed = 32.0
+
+[node name="belt_test_left_004" parent="map/level_0/belts" instance=ExtResource("3_dg683")]
+position = Vector2(0, -64)
+speed = 32.0
+
+[node name="belt_test_left_005" parent="map/level_0/belts" instance=ExtResource("3_dg683")]
+position = Vector2(-16, -32)
+speed = 32.0
+
+[node name="belt_test_left_006" parent="map/level_0/belts" instance=ExtResource("3_dg683")]
+position = Vector2(-32, -32)
+speed = 32.0
+
+[node name="belt_test_left_007" parent="map/level_0/belts" instance=ExtResource("3_dg683")]
+position = Vector2(-80, -80)
+speed = 32.0
+
+[node name="belt_test_left_008" parent="map/level_0/belts" instance=ExtResource("3_dg683")]
+position = Vector2(48, -48)
+speed = 32.0
+
+[node name="belt_test_left_009" parent="map/level_0/belts" instance=ExtResource("3_dg683")]
+position = Vector2(32, -48)
+speed = 32.0
+
+[node name="belt_test_left_010" parent="map/level_0/belts" instance=ExtResource("3_dg683")]
+position = Vector2(16, -48)
+speed = 32.0
+
+[node name="belt_test_left_011" parent="map/level_0/belts" instance=ExtResource("3_dg683")]
+position = Vector2(0, -48)
+speed = 32.0
+
+[node name="belt_test_down_000" parent="map/level_0/belts" instance=ExtResource("4_3yvm8")]
+position = Vector2(-16, -64)
+speed = 32.0
+
+[node name="belt_test_down_001" parent="map/level_0/belts" instance=ExtResource("4_3yvm8")]
+position = Vector2(-16, -48)
+speed = 32.0
+
+[node name="belt_test_down_002" parent="map/level_0/belts" instance=ExtResource("4_3yvm8")]
+position = Vector2(-48, -32)
+speed = 32.0
+
+[node name="belt_test_down_003" parent="map/level_0/belts" instance=ExtResource("4_3yvm8")]
+position = Vector2(-48, -16)
+speed = 32.0
+
+[node name="tile_map_layer" type="TileMapLayer" parent="map/level_0"]
+process_mode = 4
+visible = false
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAD8/wAAAQAAAAAAAAACAP3/AAAAAAAAAgACAP7/AAAAAAAAAQACAP//AAAAAAAAAQACAAAAAAAAAAAAAQACAAEAAAAAAAAAAQACAAIAAAAAAAAAAQD8/wMAAAAAAAAAAAD9/wMAAAAAAAAAAAD+/wMAAAAAAAAAAAD///3/AQAAAAIAAAD//wMAAAAAAAAAAAAAAP3/AAAAAAAAAgAAAAMAAAAAAAAAAAABAP3/AAAAAAAAAgABAAMAAAAAAAAAAAACAAMAAAAAAAAAAAADAP3/AAAAAAAAAgD9/wAAAQAAAAAAAAD+/wAAAQAAAAAAAAD//wAAAQAAAAIAAAD/////AQAAAAIAAAD///7/AQAAAAIAAAD///z/AQAAAAQAAAD+//z/AQAAAAQAAAD9//z/AQAAAAQAAAD8//z/AQAAAAQAAAD7//z/AQAAAAQAAAD6//z/AQAAAAYAAAD6//3/AQAAAAYAAAD6//7/AQAAAAYAAAD6////AQAAAAYAAAD6/wAAAQAAAAAAAAD7/wAAAQAAAAAAAAA=")
+tile_set = ExtResource("1_xch4i")
+
+[node name="item_husky" parent="map/level_0" instance=ExtResource("6_xajwi")]
+position = Vector2(64, 0)
+
+[node name="item_husky2" parent="map/level_0" instance=ExtResource("6_xajwi")]
+position = Vector2(-80, -71)
+
+[node name="gui" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0

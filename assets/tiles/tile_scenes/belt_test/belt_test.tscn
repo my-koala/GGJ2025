@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://dqtkx060mqlbo"]
+
+[ext_resource type="Script" uid="uid://b8d71iwpoj8gr" path="res://scripts/belt.gd" id="1_bqilm"]
+[ext_resource type="Texture2D" uid="uid://ctjykgis1jakl" path="res://assets/tiles/tile_scenes/belt_test/belt_test.png" id="2_8tiuh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3rf22"]
+size = Vector2(16, 16)
+
+[node name="belt_test" type="Area2D"]
+collision_layer = 0
+input_pickable = false
+monitorable = false
+script = ExtResource("1_bqilm")
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="."]
+z_index = 1
+shape = SubResource("RectangleShape2D_3rf22")
+
+[node name="sprite_2d" type="Sprite2D" parent="."]
+texture = ExtResource("2_8tiuh")
+offset = Vector2(0, 8)
+hframes = 16
+frame = 4
+region_enabled = true
+region_rect = Rect2(0, 0, 256, 32)

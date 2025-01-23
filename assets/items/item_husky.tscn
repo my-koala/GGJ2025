@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://bunge2le1ir2y"]
+
+[ext_resource type="Script" uid="uid://d2og1gl874xp2" path="res://scripts/item.gd" id="1_3c3eu"]
+[ext_resource type="Texture2D" uid="uid://3l2kl4h30a3i" path="res://assets/items/husky/husky.png" id="2_x61kw"]
+[ext_resource type="Texture2D" uid="uid://dxtok5dows46k" path="res://assets/items/bubble.png" id="3_x61kw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_k5mrd"]
+radius = 6.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dg683"]
+size = Vector2(32, 32)
+
+[node name="item_husky" type="RigidBody2D"]
+can_sleep = false
+lock_rotation = true
+linear_damp = 16.0
+script = ExtResource("1_3c3eu")
+identifier = &"husky"
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_k5mrd")
+
+[node name="pickable" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 0
+monitoring = false
+monitorable = false
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="pickable"]
+position = Vector2(0, -12)
+shape = SubResource("RectangleShape2D_dg683")
+
+[node name="sprite_2d" type="Sprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_x61kw")
+offset = Vector2(0, -48)
+
+[node name="bubble" type="Sprite2D" parent="."]
+position = Vector2(0, -12)
+scale = Vector2(0.625, 0.625)
+texture = ExtResource("3_x61kw")

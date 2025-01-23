@@ -1,0 +1,88 @@
+[gd_resource type="TileSet" load_steps=8 format=3 uid="uid://ejf7mh4w5e0g"]
+
+[ext_resource type="PackedScene" uid="uid://cadnddkadj1bt" path="res://assets/tiles/tile_scenes/belt_test/belt_test_right.tscn" id="1_bi1y2"]
+[ext_resource type="PackedScene" uid="uid://dmd6guegx31yg" path="res://assets/tiles/tile_scenes/belt_test/belt_test_up.tscn" id="2_cxexh"]
+[ext_resource type="PackedScene" uid="uid://6wa1a78ux7c1" path="res://assets/tiles/tile_scenes/belt_test/belt_test_left.tscn" id="3_y477h"]
+[ext_resource type="PackedScene" uid="uid://dmanjl013mh5d" path="res://assets/tiles/tile_scenes/belt_test/belt_test_down.tscn" id="4_5c7on"]
+[ext_resource type="Texture2D" uid="uid://ctjykgis1jakl" path="res://assets/tiles/tile_scenes/belt_test/belt_test.png" id="5_cxexh"]
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_o6q4k"]
+resource_name = "belt_test"
+scenes/0/scene = ExtResource("1_bi1y2")
+scenes/1/scene = ExtResource("2_cxexh")
+scenes/2/scene = ExtResource("3_y477h")
+scenes/3/scene = ExtResource("4_5c7on")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y477h"]
+resource_name = "belt_test"
+texture = ExtResource("5_cxexh")
+separation = Vector2i(16, 0)
+use_texture_padding = false
+0:0/size_in_atlas = Vector2i(1, 2)
+0:0/animation_speed = 16.0
+0:0/animation_frame_0/duration = 1.0
+0:0/animation_frame_1/duration = 1.0
+0:0/animation_frame_2/duration = 1.0
+0:0/animation_frame_3/duration = 1.0
+0:0/animation_frame_4/duration = 1.0
+0:0/animation_frame_5/duration = 1.0
+0:0/animation_frame_6/duration = 1.0
+0:0/animation_frame_7/duration = 1.0
+0:0/0 = 0
+0:0/0/texture_origin = Vector2i(0, -8)
+0:0/0/y_sort_origin = -8
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:0/0/custom_data_0 = Vector2(16, 0)
+0:2/size_in_atlas = Vector2i(1, 2)
+0:2/animation_speed = 16.0
+0:2/animation_frame_0/duration = 1.0
+0:2/animation_frame_1/duration = 1.0
+0:2/animation_frame_2/duration = 1.0
+0:2/animation_frame_3/duration = 1.0
+0:2/animation_frame_4/duration = 1.0
+0:2/animation_frame_5/duration = 1.0
+0:2/animation_frame_6/duration = 1.0
+0:2/animation_frame_7/duration = 1.0
+0:2/0 = 0
+0:2/0/texture_origin = Vector2i(0, -8)
+0:2/0/y_sort_origin = -8
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:2/0/custom_data_0 = Vector2(0, -16)
+0:4/size_in_atlas = Vector2i(1, 2)
+0:4/animation_speed = 16.0
+0:4/animation_frame_0/duration = 1.0
+0:4/animation_frame_1/duration = 1.0
+0:4/animation_frame_2/duration = 1.0
+0:4/animation_frame_3/duration = 1.0
+0:4/animation_frame_4/duration = 1.0
+0:4/animation_frame_5/duration = 1.0
+0:4/animation_frame_6/duration = 1.0
+0:4/animation_frame_7/duration = 1.0
+0:4/0 = 0
+0:4/0/texture_origin = Vector2i(0, -8)
+0:4/0/y_sort_origin = -8
+0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:4/0/custom_data_0 = Vector2(-16, 0)
+0:6/size_in_atlas = Vector2i(1, 2)
+0:6/animation_speed = 16.0
+0:6/animation_frame_0/duration = 1.0
+0:6/animation_frame_1/duration = 1.0
+0:6/animation_frame_2/duration = 1.0
+0:6/animation_frame_3/duration = 1.0
+0:6/animation_frame_4/duration = 1.0
+0:6/animation_frame_5/duration = 1.0
+0:6/animation_frame_6/duration = 1.0
+0:6/animation_frame_7/duration = 1.0
+0:6/0 = 0
+0:6/0/texture_origin = Vector2i(0, -8)
+0:6/0/y_sort_origin = -8
+0:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:6/0/custom_data_0 = Vector2(0, 16)
+
+[resource]
+physics_layer_0/collision_layer = 2
+physics_layer_0/collision_mask = 0
+custom_data_layer_0/name = "velocity"
+custom_data_layer_0/type = 5
+sources/0 = SubResource("TileSetScenesCollectionSource_o6q4k")
+sources/1 = SubResource("TileSetAtlasSource_y477h")
