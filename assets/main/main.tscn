@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=4 uid="uid://dwaef6dipcc72"]
+[gd_scene load_steps=11 format=4 uid="uid://dwaef6dipcc72"]
 
 [ext_resource type="PackedScene" uid="uid://cadnddkadj1bt" path="res://assets/tiles/tile_scenes/belt_test/belt_test_right.tscn" id="1_j84mu"]
 [ext_resource type="TileSet" uid="uid://ejf7mh4w5e0g" path="res://assets/tiles/tile_sets/belts.tres" id="1_xch4i"]
@@ -6,6 +6,11 @@
 [ext_resource type="PackedScene" uid="uid://6wa1a78ux7c1" path="res://assets/tiles/tile_scenes/belt_test/belt_test_left.tscn" id="3_dg683"]
 [ext_resource type="PackedScene" uid="uid://dmanjl013mh5d" path="res://assets/tiles/tile_scenes/belt_test/belt_test_down.tscn" id="4_3yvm8"]
 [ext_resource type="PackedScene" uid="uid://bunge2le1ir2y" path="res://assets/items/item_husky.tscn" id="6_xajwi"]
+[ext_resource type="Script" uid="uid://bm1otnmdoj0h3" path="res://scripts/item_input.gd" id="7_dg683"]
+[ext_resource type="Script" uid="uid://crmh7bm1sm38a" path="res://scripts/item_output.gd" id="8_3yvm8"]
+[ext_resource type="Texture2D" uid="uid://cb4ig45wj083l" path="res://assets/tiles/tile_scenes/input_output/input_output_test.png" id="9_6sv45"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6sv45"]
 
 [node name="main" type="Node"]
 
@@ -22,6 +27,7 @@ y_sort_enabled = true
 
 [node name="belt_test_right_000" parent="map/level_0/belts" instance=ExtResource("1_j84mu")]
 position = Vector2(-48, 0)
+speed = 128.0
 
 [node name="belt_test_right_001" parent="map/level_0/belts" instance=ExtResource("1_j84mu")]
 position = Vector2(-32, 0)
@@ -114,6 +120,42 @@ speed = 32.0
 position = Vector2(0, -48)
 speed = 32.0
 
+[node name="belt_test_left_012" parent="map/level_0/belts" instance=ExtResource("3_dg683")]
+position = Vector2(64, 32)
+speed = 32.0
+
+[node name="belt_test_left_013" parent="map/level_0/belts" instance=ExtResource("3_dg683")]
+position = Vector2(48, 32)
+speed = 32.0
+
+[node name="belt_test_left_014" parent="map/level_0/belts" instance=ExtResource("3_dg683")]
+position = Vector2(32, 32)
+speed = 32.0
+
+[node name="belt_test_left_015" parent="map/level_0/belts" instance=ExtResource("3_dg683")]
+position = Vector2(16, 32)
+speed = 32.0
+
+[node name="belt_test_left_016" parent="map/level_0/belts" instance=ExtResource("3_dg683")]
+position = Vector2(0, 32)
+speed = 32.0
+
+[node name="belt_test_left_017" parent="map/level_0/belts" instance=ExtResource("3_dg683")]
+position = Vector2(-16, 32)
+speed = 32.0
+
+[node name="belt_test_left_018" parent="map/level_0/belts" instance=ExtResource("3_dg683")]
+position = Vector2(-32, 32)
+speed = 32.0
+
+[node name="belt_test_left_019" parent="map/level_0/belts" instance=ExtResource("3_dg683")]
+position = Vector2(-48, 32)
+speed = 32.0
+
+[node name="belt_test_left_020" parent="map/level_0/belts" instance=ExtResource("3_dg683")]
+position = Vector2(-64, 32)
+speed = 32.0
+
 [node name="belt_test_down_000" parent="map/level_0/belts" instance=ExtResource("4_3yvm8")]
 position = Vector2(-16, -64)
 speed = 32.0
@@ -142,6 +184,31 @@ position = Vector2(64, 0)
 
 [node name="item_husky2" parent="map/level_0" instance=ExtResource("6_xajwi")]
 position = Vector2(-80, -71)
+
+[node name="item_input" type="Node2D" parent="map/level_0"]
+position = Vector2(67, 27)
+script = ExtResource("7_dg683")
+items = Array[PackedScene]([ExtResource("6_xajwi"), ExtResource("6_xajwi")])
+metadata/_custom_type_script = ExtResource("7_dg683")
+
+[node name="sprite_2d" type="Sprite2D" parent="map/level_0/item_input"]
+texture = ExtResource("9_6sv45")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+
+[node name="item_output" type="Area2D" parent="map/level_0"]
+position = Vector2(-64, 32)
+script = ExtResource("8_3yvm8")
+items_expected = Array[StringName]([&"husky"])
+metadata/_custom_type_script = ExtResource("8_3yvm8")
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="map/level_0/item_output"]
+shape = SubResource("RectangleShape2D_6sv45")
+
+[node name="sprite_2d" type="Sprite2D" parent="map/level_0/item_output"]
+texture = ExtResource("9_6sv45")
+region_enabled = true
+region_rect = Rect2(16, 0, 16, 16)
 
 [node name="gui" type="Control" parent="."]
 layout_mode = 3

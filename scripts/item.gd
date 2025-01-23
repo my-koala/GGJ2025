@@ -31,6 +31,9 @@ func decrement_belt_count() -> void:
 func get_belt_count() -> int:
 	return _belt_count
 
+func is_bubble() -> bool:
+	return _state_curr == State.BUBBLE_SETUP || _state_curr == State.BUBBLE_LAUNCH
+
 enum State {
 	IDLE,
 	FALL,
