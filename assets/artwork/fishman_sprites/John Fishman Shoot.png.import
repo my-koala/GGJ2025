@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fo8qd67dpd4r"
-path="res://.godot/imported/John Fishman.png-7a3d8bdab5caf9d3534b0ea9ef0b8da7.ctex"
+uid="uid://5t0cru0c4cx4"
+path="res://.godot/imported/John Fishman Shoot.png-49cddeb395f5a4813aa2af8419741dad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/artwork/fishman_sprites/John Fishman.png"
-dest_files=["res://.godot/imported/John Fishman.png-7a3d8bdab5caf9d3534b0ea9ef0b8da7.ctex"]
+source_file="res://assets/artwork/fishman_sprites/John Fishman Shoot.png"
+dest_files=["res://.godot/imported/John Fishman Shoot.png-49cddeb395f5a4813aa2af8419741dad.ctex"]
 
 [params]
 
