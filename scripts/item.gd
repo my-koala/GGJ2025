@@ -15,38 +15,29 @@ var _pickable: Area2D = $pickable as Area2D
 @onready
 var _bubble: Sprite2D = $bubble as Sprite2D
 
-var _belt_velocity_max: Vector2 = Vector2.ZERO
-var _belt_velocity_min: Vector2 = Vector2.ZERO
+@onready
+var _belt_scan: Area2D = $belt_scan as Area2D
 
-## Applies belt velocity to this item. Accumulated belt velocities are capped to velocties' maximum.
-func apply_belt_velocity(belt_velocity: Vector2) -> void:
-	_belt_velocity_max = _belt_velocity_max.max(belt_velocity)
-	_belt_velocity_min = _belt_velocity_min.min(belt_velocity)
+## Array of colliding Belts.
+var _belts: Array[Belt] = []
 
-var _belt_count: int = 0
-
-func increment_belt_count() -> void:
-	_belt_count += 1
-
-func decrement_belt_count() -> void:
-	_belt_count -= 1
-
-func get_belt_count() -> int:
-	return _belt_count
+## Cached belt velocities. Updated during physics frame when _belt_infos is dirty.
+var _belts_velocity_max: Vector2 = Vector2.ZERO
+var _belts_velocity_min: Vector2 = Vector2.ZERO
 
 func is_bubble() -> bool:
 	return _state_curr == State.BUBBLE_SETUP || _state_curr == State.BUBBLE_LAUNCH
 
 enum State {
-	IDLE,
+	BELT,
 	FALL,
 	BUBBLE_SETUP,
 	BUBBLE_LAUNCH,
 }
 
-var _state_prev: State = State.IDLE
-var _state_curr: State = State.IDLE
-var _state_next: State = State.IDLE
+var _state_prev: State = State.BELT
+var _state_curr: State = State.BELT
+var _state_next: State = State.BELT
 
 func _ready() -> void:
 	if Engine.is_editor_hint():
@@ -56,6 +47,19 @@ func _ready() -> void:
 	
 	_pickable.mouse_entered.connect(func() -> void: _input_mouse_hovering = true)
 	_pickable.mouse_exited.connect(func() -> void: _input_mouse_hovering = false)
+	
+	_belt_scan.area_entered.connect(_on_belt_scan_area_entered)
+	_belt_scan.area_exited.connect(_on_belt_scan_area_exited)
+
+func _on_belt_scan_area_entered(area: Area2D) -> void:
+	var belt: Belt = area as Belt
+	if is_instance_valid(belt):
+		_belts.append(belt)
+
+func _on_belt_scan_area_exited(area: Area2D) -> void:
+	var belt: Belt = area as Belt
+	if is_instance_valid(belt):
+		_belts.erase(belt)
 
 var _input_mouse_clicked: bool = false# Mouse was clicked over pickable this physics frame.
 var _input_mouse_clicking: bool = false# Mouse is currently clicked over pickable since last input event.
@@ -70,28 +74,37 @@ func _input(event: InputEvent) -> void:
 			_input_mouse_clicked = _input_mouse_clicked || _input_mouse_clicking
 	if _input_mouse_clicking:
 		_input_mouse_vector = get_global_mouse_position().direction_to(global_position)
+		get_viewport().set_input_as_handled()
 
 func _physics_process(delta: float) -> void:
 	if Engine.is_editor_hint():
 		return
 	
+	# Update belt velocity min and max.
+	_belts_velocity_max = Vector2.ZERO
+	_belts_velocity_min = Vector2.ZERO
+	for belt: Belt in _belts:
+		var belt_velocity: Vector2 = belt.get_velocity()
+		_belts_velocity_max = _belts_velocity_max.max(belt_velocity)
+		_belts_velocity_min = _belts_velocity_min.min(belt_velocity)
+
 	match _state_curr:
-		State.IDLE:
-			if _state_prev != State.IDLE:
-				linear_damp = 16.0
+		State.BELT:
+			if _state_prev != State.BELT:
+				linear_damp = 0.0
 				_bubble.visible = false
 			
-			if get_belt_count() == 0:
+			if _belts.is_empty():
 				_state_next = State.FALL
 			elif _input_mouse_clicked:
 				_state_next = State.BUBBLE_SETUP
 		State.FALL:
 			if _state_prev != State.FALL:
-				linear_damp = 16.0
+				linear_damp = 0.0
 				_bubble.visible = false
 			
-			if get_belt_count() > 0:
-				_state_next = State.IDLE
+			if !_belts.is_empty():
+				_state_next = State.BELT
 			else:
 				modulate = Color.BLACK
 				item_dropped.emit(self)
@@ -111,6 +124,8 @@ func _physics_process(delta: float) -> void:
 			
 			if _input_mouse_clicked:
 				_state_next = State.FALL
+				# Issue:
+				linear_velocity = Vector2.ZERO
 				# Play some bubble pop animation.
 	
 	# Reset mouse clicked event.
@@ -120,15 +135,22 @@ func _physics_process(delta: float) -> void:
 	_state_curr = _state_next
 
 func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
-	if _state_curr == State.IDLE:
-		# Seems a bit hacky to set transform position directly.
-		# Changing velocity seems to be a no-go (mathematically).
-		var belt_velocity: Vector2 = Vector2.ZERO
-		belt_velocity = _belt_velocity_max + _belt_velocity_min
-		state.transform = state.transform.translated(belt_velocity * state.step)
-	
-	_belt_velocity_max = Vector2.ZERO
-	_belt_velocity_min = Vector2.ZERO
+	match _state_curr:
+		State.BELT:
+			# Seems a bit hacky to set transform position directly.
+			# Changing velocity seems to be a no-go (mathematically).
+			# For now, belt velocities replace velocity.
+			# There's an issue with item collisions when setting position directly.
+			# Items positioned inside another item causes catastrophic results.
+			#var belt_velocity: Vector2 = _belt_info_velocity_min + _belt_info_velocity_max
+			#state.transform = state.transform.translated(belt_velocity * state.step)
+			state.linear_velocity = _belts_velocity_max + _belts_velocity_min
+		State.FALL:
+			state.linear_velocity = Vector2.ZERO
+		State.BUBBLE_SETUP:
+			state.linear_velocity = Vector2.ZERO
+		State.BUBBLE_LAUNCH:
+			pass
 
 func _process(delta: float) -> void:
 	if Engine.is_editor_hint():

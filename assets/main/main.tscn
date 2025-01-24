@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://6wa1a78ux7c1" path="res://assets/tiles/tile_scenes/belt_test/belt_test_left.tscn" id="3_dg683"]
 [ext_resource type="PackedScene" uid="uid://dmanjl013mh5d" path="res://assets/tiles/tile_scenes/belt_test/belt_test_down.tscn" id="4_3yvm8"]
 [ext_resource type="PackedScene" uid="uid://bunge2le1ir2y" path="res://assets/items/item_husky.tscn" id="6_xajwi"]
-[ext_resource type="Script" path="res://scripts/item_input.gd" id="7_dg683"]
+[ext_resource type="Script" uid="uid://bm1otnmdoj0h3" path="res://scripts/item_input.gd" id="7_dg683"]
 [ext_resource type="Script" uid="uid://crmh7bm1sm38a" path="res://scripts/item_output.gd" id="8_3yvm8"]
 [ext_resource type="Texture2D" uid="uid://cb4ig45wj083l" path="res://assets/tiles/tile_scenes/input_output/input_output_test.png" id="9_6sv45"]
 [ext_resource type="Script" uid="uid://dncb1k2j1xn0n" path="res://scripts/game_manager.gd" id="10_by4fb"]
@@ -181,17 +181,15 @@ tile_map_data = PackedByteArray("AAD8/wAAAQAAAAAAAAACAP3/AAAAAAAAAgACAP7/AAAAAAA
 tile_set = ExtResource("1_xch4i")
 
 [node name="item_husky" parent="map/level_0" instance=ExtResource("6_xajwi")]
-visible = false
 position = Vector2(64, 0)
 
 [node name="item_husky2" parent="map/level_0" instance=ExtResource("6_xajwi")]
-visible = false
 position = Vector2(-80, -71)
 
 [node name="item_input" type="Node2D" parent="map/level_0"]
 position = Vector2(64, 32)
 script = ExtResource("7_dg683")
-items = Array[PackedScene]([ExtResource("6_xajwi"), ExtResource("6_xajwi")])
+items = Array[PackedScene]([ExtResource("6_xajwi")])
 metadata/_custom_type_script = ExtResource("7_dg683")
 
 [node name="sprite_2d" type="Sprite2D" parent="map/level_0/item_input"]

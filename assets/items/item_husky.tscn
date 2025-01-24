@@ -1,10 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://bunge2le1ir2y"]
+[gd_scene load_steps=7 format=3 uid="uid://bunge2le1ir2y"]
 
 [ext_resource type="Script" uid="uid://d2og1gl874xp2" path="res://scripts/item.gd" id="1_3c3eu"]
 [ext_resource type="Texture2D" uid="uid://3l2kl4h30a3i" path="res://assets/items/husky/husky.png" id="2_x61kw"]
 [ext_resource type="Texture2D" uid="uid://dxtok5dows46k" path="res://assets/items/bubble.png" id="3_x61kw"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_k5mrd"]
+radius = 8.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_x61kw"]
 radius = 6.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dg683"]
@@ -14,22 +17,14 @@ size = Vector2(32, 32)
 mass = 2.0
 can_sleep = false
 lock_rotation = true
+custom_integrator = true
+continuous_cd = 1
 linear_damp = 16.0
 script = ExtResource("1_3c3eu")
 identifier = &"husky"
 
 [node name="collision_shape_2d" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_k5mrd")
-
-[node name="pickable" type="Area2D" parent="."]
-collision_layer = 16
-collision_mask = 0
-monitoring = false
-monitorable = false
-
-[node name="collision_shape_2d" type="CollisionShape2D" parent="pickable"]
-position = Vector2(0, -12)
-shape = SubResource("RectangleShape2D_dg683")
 
 [node name="sprite_2d" type="Sprite2D" parent="."]
 scale = Vector2(0.25, 0.25)
@@ -40,3 +35,23 @@ offset = Vector2(0, -48)
 position = Vector2(0, -12)
 scale = Vector2(0.625, 0.625)
 texture = ExtResource("3_x61kw")
+
+[node name="belt_scan" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+input_pickable = false
+monitorable = false
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="belt_scan"]
+shape = SubResource("CircleShape2D_x61kw")
+
+[node name="pickable" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 0
+monitoring = false
+monitorable = false
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="pickable"]
+visible = false
+position = Vector2(0, -12)
+shape = SubResource("RectangleShape2D_dg683")
