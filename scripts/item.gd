@@ -2,6 +2,9 @@
 extends RigidBody2D
 class_name Item
 
+## Emitted when this item is "dropped" (bubble is popped without being over a conveyor) 
+signal item_dropped(item: Item)
+
 ## Identifier used by exits for filtering items.
 @export
 var identifier: StringName = &""
@@ -91,6 +94,8 @@ func _physics_process(delta: float) -> void:
 				_state_next = State.IDLE
 			else:
 				modulate = Color.BLACK
+				item_dropped.emit(self)
+			
 		State.BUBBLE_SETUP:
 			if _state_prev != State.BUBBLE_SETUP:
 				linear_damp = 0.0
