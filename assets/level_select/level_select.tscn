@@ -1,0 +1,80 @@
+[gd_scene load_steps=4 format=3 uid="uid://dyin3btnxrag2"]
+
+[ext_resource type="Script" uid="uid://bnl01t7jnxf0k" path="res://scripts/level_select.gd" id="1_lwdiq"]
+[ext_resource type="PackedScene" uid="uid://dwaef6dipcc72" path="res://assets/main/main.tscn" id="2_l1pr3"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_848ev"]
+font_size = 32
+
+[node name="level_select" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="level_select" type="Node" parent="." node_paths=PackedStringArray("level_list")]
+script = ExtResource("1_lwdiq")
+level_list = NodePath("../background/list")
+level_nodes = Array[PackedScene]([ExtResource("2_l1pr3")])
+metadata/_custom_type_script = ExtResource("1_lwdiq")
+
+[node name="background" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -216.0
+offset_right = 320.0
+offset_bottom = 256.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="header" type="Label" parent="background"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_top = 24.0
+offset_right = 20.0
+offset_bottom = 47.0
+grow_horizontal = 2
+text = "Select Level"
+label_settings = SubResource("LabelSettings_848ev")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="list" type="ItemList" parent="background"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = 88.0
+offset_right = -16.0
+offset_bottom = -64.0
+grow_horizontal = 2
+grow_vertical = 2
+allow_search = false
+item_count = 2
+same_column_width = true
+fixed_column_width = 152
+
+[node name="button" type="Button" parent="background"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = -48.0
+offset_right = -16.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Cancel"
