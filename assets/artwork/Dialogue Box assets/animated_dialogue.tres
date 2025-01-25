@@ -1,0 +1,11 @@
+[gd_resource type="AnimatedTexture" load_steps=3 format=3 uid="uid://cmthb8j5rqrok"]
+
+[ext_resource type="Texture2D" uid="uid://1bg5xwymvado" path="res://assets/artwork/Dialogue Box assets/Dialogue Done Open.png" id="1_xo48h"]
+[ext_resource type="Texture2D" uid="uid://ctk1e237hvau1" path="res://assets/artwork/Dialogue Box assets/Dialogue Done Closed.png" id="2_xiq2a"]
+
+[resource]
+frames = 2
+frame_0/texture = ExtResource("1_xo48h")
+frame_0/duration = 0.3
+frame_1/texture = ExtResource("2_xiq2a")
+frame_1/duration = 0.3

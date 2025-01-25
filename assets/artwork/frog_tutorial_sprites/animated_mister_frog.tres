@@ -1,0 +1,11 @@
+[gd_resource type="AnimatedTexture" load_steps=3 format=3 uid="uid://bm84mk1jtsmyp"]
+
+[ext_resource type="Texture2D" uid="uid://b6i4b7gawrq12" path="res://assets/artwork/frog_tutorial_sprites/Mr. Frog angrier Closed.png" id="1_cdsgq"]
+[ext_resource type="Texture2D" uid="uid://b2gw0aaqw2n3h" path="res://assets/artwork/frog_tutorial_sprites/Mr. Frog angrier open.png" id="2_7vyc8"]
+
+[resource]
+frames = 2
+frame_0/texture = ExtResource("1_cdsgq")
+frame_0/duration = 0.25
+frame_1/texture = ExtResource("2_7vyc8")
+frame_1/duration = 0.25

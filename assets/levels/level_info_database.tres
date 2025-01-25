@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="LevelInfoDatabase" load_steps=6 format=3 uid="uid://bew4r0dw4ruwq"]
 
-[ext_resource type="Script" uid="uid://c3vpxugd4v0wq" path="res://scripts/level_info.gd" id="1_swb3w"]
-[ext_resource type="Script" uid="uid://co31ccjj3y43n" path="res://scripts/level_info_database.gd" id="2_u1fod"]
+[ext_resource type="Script" path="res://scripts/level_info.gd" id="1_swb3w"]
+[ext_resource type="Script" path="res://scripts/level_info_database.gd" id="2_u1fod"]
 [ext_resource type="PackedScene" uid="uid://srio544gi0pg" path="res://assets/levels/scenes/level_0.tscn" id="2_uxqwt"]
 
 [sub_resource type="Resource" id="Resource_l65i7"]

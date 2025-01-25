@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://dwaef6dipcc72"]
+[gd_scene load_steps=17 format=4 uid="uid://dwaef6dipcc72"]
 
 [ext_resource type="PackedScene" uid="uid://cadnddkadj1bt" path="res://assets/tiles/tile_scenes/belt_test/belt_test_right.tscn" id="1_j84mu"]
 [ext_resource type="TileSet" uid="uid://ejf7mh4w5e0g" path="res://assets/tiles/tile_sets/belts.tres" id="1_xch4i"]
@@ -6,12 +6,29 @@
 [ext_resource type="PackedScene" uid="uid://6wa1a78ux7c1" path="res://assets/tiles/tile_scenes/belt_test/belt_test_left.tscn" id="3_dg683"]
 [ext_resource type="PackedScene" uid="uid://dmanjl013mh5d" path="res://assets/tiles/tile_scenes/belt_test/belt_test_down.tscn" id="4_3yvm8"]
 [ext_resource type="PackedScene" uid="uid://bunge2le1ir2y" path="res://assets/items/item_husky.tscn" id="6_xajwi"]
-[ext_resource type="Script" uid="uid://bm1otnmdoj0h3" path="res://scripts/item_input.gd" id="7_dg683"]
+[ext_resource type="Script" path="res://scripts/item_input.gd" id="7_dg683"]
 [ext_resource type="Script" uid="uid://crmh7bm1sm38a" path="res://scripts/item_output.gd" id="8_3yvm8"]
 [ext_resource type="Texture2D" uid="uid://cb4ig45wj083l" path="res://assets/tiles/tile_scenes/input_output/input_output_test.png" id="9_6sv45"]
 [ext_resource type="Script" uid="uid://dncb1k2j1xn0n" path="res://scripts/game_manager.gd" id="10_by4fb"]
+[ext_resource type="PackedScene" uid="uid://b5rbam8pcmykb" path="res://assets/dialogue_system/dialogue_system.tscn" id="11_in5wb"]
+[ext_resource type="Script" uid="uid://dfktug68yfw7d" path="res://scripts/dialogue_entry.gd" id="12_74c7k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6sv45"]
+
+[sub_resource type="Resource" id="Resource_b3jqf"]
+script = ExtResource("12_74c7k")
+dialogue = "[i][b]BLIMEY![/b][/i] Who designed such a system?"
+metadata/_custom_type_script = ExtResource("12_74c7k")
+
+[sub_resource type="Resource" id="Resource_u3ouf"]
+script = ExtResource("12_74c7k")
+dialogue = "What a nasty piece of work, innit?"
+metadata/_custom_type_script = ExtResource("12_74c7k")
+
+[sub_resource type="Resource" id="Resource_m2px1"]
+script = ExtResource("12_74c7k")
+dialogue = "I need to fire the person who designed this."
+metadata/_custom_type_script = ExtResource("12_74c7k")
 
 [node name="main" type="Node"]
 
@@ -222,3 +239,15 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="canvas_layer" type="CanvasLayer" parent="."]
+
+[node name="dialogue_system" parent="canvas_layer" instance=ExtResource("11_in5wb")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+dialogue_entries = Array[ExtResource("12_74c7k")]([SubResource("Resource_b3jqf"), SubResource("Resource_u3ouf"), SubResource("Resource_m2px1")])
