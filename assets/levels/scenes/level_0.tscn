@@ -1,0 +1,206 @@
+[gd_scene load_steps=12 format=3 uid="uid://srio544gi0pg"]
+
+[ext_resource type="PackedScene" uid="uid://cadnddkadj1bt" path="res://assets/tiles/tile_scenes/belt_test/belt_test_right.tscn" id="1_2w5tk"]
+[ext_resource type="Script" uid="uid://bd24x5hdgvi76" path="res://scripts/level.gd" id="1_fmkrf"]
+[ext_resource type="PackedScene" uid="uid://dmd6guegx31yg" path="res://assets/tiles/tile_scenes/belt_test/belt_test_up.tscn" id="2_fmkrf"]
+[ext_resource type="PackedScene" uid="uid://6wa1a78ux7c1" path="res://assets/tiles/tile_scenes/belt_test/belt_test_left.tscn" id="3_rpsmi"]
+[ext_resource type="PackedScene" uid="uid://dmanjl013mh5d" path="res://assets/tiles/tile_scenes/belt_test/belt_test_down.tscn" id="4_7v0kt"]
+[ext_resource type="PackedScene" uid="uid://bunge2le1ir2y" path="res://assets/items/item_husky.tscn" id="6_40i4i"]
+[ext_resource type="Script" uid="uid://bm1otnmdoj0h3" path="res://scripts/item_input.gd" id="7_tlaqs"]
+[ext_resource type="Texture2D" uid="uid://cb4ig45wj083l" path="res://assets/tiles/tile_scenes/input_output/input_output_test.png" id="8_kbb2g"]
+[ext_resource type="Script" uid="uid://crmh7bm1sm38a" path="res://scripts/item_output.gd" id="9_ihsyp"]
+[ext_resource type="Script" uid="uid://dncb1k2j1xn0n" path="res://scripts/game_manager.gd" id="10_g615w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6sv45"]
+
+[node name="level_0" type="Node2D" node_paths=PackedStringArray("_item_inputs", "_item_outputs")]
+script = ExtResource("1_fmkrf")
+_item_inputs = [NodePath("item_input")]
+_item_outputs = [NodePath("item_output")]
+
+[node name="belts" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="belt_test_right_000" parent="belts" instance=ExtResource("1_2w5tk")]
+position = Vector2(-48, 0)
+speed = 128.0
+
+[node name="belt_test_right_001" parent="belts" instance=ExtResource("1_2w5tk")]
+position = Vector2(-32, 0)
+speed = 64.0
+
+[node name="belt_test_right_002" parent="belts" instance=ExtResource("1_2w5tk")]
+position = Vector2(-16, 0)
+speed = 64.0
+
+[node name="belt_test_right_003" parent="belts" instance=ExtResource("1_2w5tk")]
+speed = 64.0
+
+[node name="belt_test_right_004" parent="belts" instance=ExtResource("1_2w5tk")]
+position = Vector2(16, 0)
+speed = 64.0
+
+[node name="belt_test_right_005" parent="belts" instance=ExtResource("1_2w5tk")]
+position = Vector2(32, 0)
+speed = 64.0
+
+[node name="belt_test_right_006" parent="belts" instance=ExtResource("1_2w5tk")]
+position = Vector2(48, 0)
+speed = 64.0
+
+[node name="belt_test_right_007" parent="belts" instance=ExtResource("1_2w5tk")]
+position = Vector2(-80, -64)
+speed = 32.0
+
+[node name="belt_test_up_000" parent="belts" instance=ExtResource("2_fmkrf")]
+position = Vector2(64, 0)
+speed = 32.0
+
+[node name="belt_test_up_001" parent="belts" instance=ExtResource("2_fmkrf")]
+position = Vector2(64, -16)
+speed = 32.0
+
+[node name="belt_test_up_002" parent="belts" instance=ExtResource("2_fmkrf")]
+position = Vector2(64, -32)
+speed = 32.0
+
+[node name="belt_test_up_003" parent="belts" instance=ExtResource("2_fmkrf")]
+position = Vector2(64, -48)
+speed = 8.0
+
+[node name="belt_test_left_000" parent="belts" instance=ExtResource("3_rpsmi")]
+position = Vector2(64, -64)
+speed = 32.0
+
+[node name="belt_test_left_001" parent="belts" instance=ExtResource("3_rpsmi")]
+position = Vector2(48, -64)
+speed = 32.0
+
+[node name="belt_test_left_002" parent="belts" instance=ExtResource("3_rpsmi")]
+position = Vector2(32, -64)
+speed = 32.0
+
+[node name="belt_test_left_003" parent="belts" instance=ExtResource("3_rpsmi")]
+position = Vector2(16, -64)
+speed = 32.0
+
+[node name="belt_test_left_004" parent="belts" instance=ExtResource("3_rpsmi")]
+position = Vector2(0, -64)
+speed = 32.0
+
+[node name="belt_test_left_005" parent="belts" instance=ExtResource("3_rpsmi")]
+position = Vector2(-16, -32)
+speed = 32.0
+
+[node name="belt_test_left_006" parent="belts" instance=ExtResource("3_rpsmi")]
+position = Vector2(-32, -32)
+speed = 32.0
+
+[node name="belt_test_left_007" parent="belts" instance=ExtResource("3_rpsmi")]
+position = Vector2(-80, -80)
+speed = 32.0
+
+[node name="belt_test_left_008" parent="belts" instance=ExtResource("3_rpsmi")]
+position = Vector2(48, -48)
+speed = 32.0
+
+[node name="belt_test_left_009" parent="belts" instance=ExtResource("3_rpsmi")]
+position = Vector2(32, -48)
+speed = 32.0
+
+[node name="belt_test_left_010" parent="belts" instance=ExtResource("3_rpsmi")]
+position = Vector2(16, -48)
+speed = 32.0
+
+[node name="belt_test_left_011" parent="belts" instance=ExtResource("3_rpsmi")]
+position = Vector2(0, -48)
+speed = 32.0
+
+[node name="belt_test_left_012" parent="belts" instance=ExtResource("3_rpsmi")]
+position = Vector2(64, 32)
+speed = 32.0
+
+[node name="belt_test_left_013" parent="belts" instance=ExtResource("3_rpsmi")]
+position = Vector2(48, 32)
+speed = 32.0
+
+[node name="belt_test_left_014" parent="belts" instance=ExtResource("3_rpsmi")]
+position = Vector2(32, 32)
+speed = 32.0
+
+[node name="belt_test_left_015" parent="belts" instance=ExtResource("3_rpsmi")]
+position = Vector2(16, 32)
+speed = 32.0
+
+[node name="belt_test_left_016" parent="belts" instance=ExtResource("3_rpsmi")]
+position = Vector2(0, 32)
+speed = 32.0
+
+[node name="belt_test_left_017" parent="belts" instance=ExtResource("3_rpsmi")]
+position = Vector2(-16, 32)
+speed = 32.0
+
+[node name="belt_test_left_018" parent="belts" instance=ExtResource("3_rpsmi")]
+position = Vector2(-32, 32)
+speed = 32.0
+
+[node name="belt_test_left_019" parent="belts" instance=ExtResource("3_rpsmi")]
+position = Vector2(-48, 32)
+speed = 32.0
+
+[node name="belt_test_left_020" parent="belts" instance=ExtResource("3_rpsmi")]
+position = Vector2(-64, 32)
+speed = 32.0
+
+[node name="belt_test_down_000" parent="belts" instance=ExtResource("4_7v0kt")]
+position = Vector2(-16, -64)
+speed = 32.0
+
+[node name="belt_test_down_001" parent="belts" instance=ExtResource("4_7v0kt")]
+position = Vector2(-16, -48)
+speed = 32.0
+
+[node name="belt_test_down_002" parent="belts" instance=ExtResource("4_7v0kt")]
+position = Vector2(-48, -32)
+speed = 32.0
+
+[node name="belt_test_down_003" parent="belts" instance=ExtResource("4_7v0kt")]
+position = Vector2(-48, -16)
+speed = 32.0
+
+[node name="item_husky" parent="." instance=ExtResource("6_40i4i")]
+position = Vector2(64, 0)
+
+[node name="item_husky2" parent="." instance=ExtResource("6_40i4i")]
+position = Vector2(-80, -71)
+
+[node name="item_input" type="Node2D" parent="."]
+position = Vector2(64, 32)
+script = ExtResource("7_tlaqs")
+items = Array[PackedScene]([ExtResource("6_40i4i")])
+metadata/_custom_type_script = ExtResource("7_tlaqs")
+
+[node name="sprite_2d" type="Sprite2D" parent="item_input"]
+texture = ExtResource("8_kbb2g")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+
+[node name="item_output" type="Area2D" parent="."]
+position = Vector2(-64, 32)
+script = ExtResource("9_ihsyp")
+items_expected = Array[StringName]([&"husky"])
+metadata/_custom_type_script = ExtResource("9_ihsyp")
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="item_output"]
+shape = SubResource("RectangleShape2D_6sv45")
+
+[node name="sprite_2d" type="Sprite2D" parent="item_output"]
+texture = ExtResource("8_kbb2g")
+region_enabled = true
+region_rect = Rect2(16, 0, 16, 16)
+
+[node name="game_manager" type="Node2D" parent="." node_paths=PackedStringArray("itemInputs", "itemOutputs")]
+script = ExtResource("10_g615w")
+itemInputs = [NodePath("../item_input")]
+itemOutputs = [NodePath("../item_output")]
+metadata/_custom_type_script = ExtResource("10_g615w")

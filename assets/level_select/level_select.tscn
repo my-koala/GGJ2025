@@ -1,55 +1,58 @@
-[gd_scene load_steps=4 format=3 uid="uid://dyin3btnxrag2"]
+[gd_scene load_steps=5 format=3 uid="uid://dyin3btnxrag2"]
 
 [ext_resource type="Script" uid="uid://bnl01t7jnxf0k" path="res://scripts/level_select.gd" id="1_lwdiq"]
-[ext_resource type="PackedScene" uid="uid://dwaef6dipcc72" path="res://assets/main/main.tscn" id="2_l1pr3"]
+[ext_resource type="Resource" uid="uid://bew4r0dw4ruwq" path="res://assets/levels/level_info_database.tres" id="2_l1pr3"]
+[ext_resource type="PackedScene" uid="uid://cjb8abm0mcqmb" path="res://assets/level_select/level_select_button.tscn" id="2_lwdiq"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_848ev"]
 font_size = 32
 
 [node name="level_select" type="Control"]
 layout_mode = 3
-anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="level_select" type="Node" parent="." node_paths=PackedStringArray("level_list")]
 script = ExtResource("1_lwdiq")
-level_list = NodePath("../background/list")
-level_nodes = Array[PackedScene]([ExtResource("2_l1pr3")])
-metadata/_custom_type_script = ExtResource("1_lwdiq")
+level_info_database = ExtResource("2_l1pr3")
+button_scene = ExtResource("2_lwdiq")
 
-[node name="background" type="Panel" parent="."]
+[node name="panel" type="Panel" parent="."]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -320.0
-offset_top = -216.0
-offset_right = 320.0
-offset_bottom = 256.0
+anchors_preset = -1
+anchor_left = 0.125
+anchor_top = 0.125
+anchor_right = 0.875
+anchor_bottom = 0.875
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="header" type="Label" parent="background"]
+[node name="header" type="Label" parent="panel"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -20.0
+offset_left = -90.5
 offset_top = 24.0
-offset_right = 20.0
-offset_bottom = 47.0
+offset_right = 90.5
+offset_bottom = 69.0
 grow_horizontal = 2
 text = "Select Level"
 label_settings = SubResource("LabelSettings_848ev")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="list" type="ItemList" parent="background"]
+[node name="level_name" type="Label" parent="panel"]
+layout_mode = 0
+offset_left = -160.0
+offset_top = -90.0
+offset_right = -51.0
+offset_bottom = -67.0
+text = "<Level Name>"
+horizontal_alignment = 1
+
+[node name="list" type="ItemList" parent="panel"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -65,7 +68,7 @@ item_count = 2
 same_column_width = true
 fixed_column_width = 152
 
-[node name="button" type="Button" parent="background"]
+[node name="button" type="Button" parent="panel"]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -78,3 +81,13 @@ offset_bottom = -16.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "Cancel"
+
+[node name="flow_container" type="FlowContainer" parent="panel"]
+layout_mode = 0
+offset_left = 224.0
+offset_top = 166.0
+offset_right = 736.0
+offset_bottom = 422.0
+theme_override_constants/h_separation = 32
+theme_override_constants/v_separation = 32
+alignment = 1

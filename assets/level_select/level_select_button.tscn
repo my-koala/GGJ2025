@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cjb8abm0mcqmb"]
+
+[node name="level_select_button" type="Button"]
+custom_minimum_size = Vector2(64, 64)
+theme_override_font_sizes/font_size = 32
+text = "1"
+clip_text = true

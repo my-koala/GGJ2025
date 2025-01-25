@@ -3,26 +3,32 @@ extends Node
 class_name LevelSelect
 
 # TODO:
-# - Store + retrieve a human readable name for each level
-#   - Do we make a root Level node that stores the name?
-#   - Do we store human names as another array in this script?
-# - Actually do something with our _on_item_clicked event
+# display level name when button is hovered over
+# 
 
-@export
-var level_list: ItemList
 
+signal level_selected(level_info: LevelInfo)
+
+## Database that tracks LevelInfos.
 @export
-var level_nodes: Array[PackedScene] = []
+var level_info_database: LevelInfoDatabase = null
+
+## Button to add to level select container.
+@export
+var button_scene: PackedScene = null
+
+@onready
+var _flow_container: FlowContainer = $panel/flow_container as FlowContainer
 
 func _ready() -> void:
 	if Engine.is_editor_hint():
 		return
 	
-	# Automatically populate our item list with levels
-	for level: PackedScene in level_nodes:
-		level_list.add_item(level.resource_name)
-	
-	level_list.item_clicked.connect(_on_item_clicked)
+	for level_info: LevelInfo in level_info_database.level_infos:
+		var level_button: Button = button_scene.instantiate() as Button
+		level_button.pressed.connect(_on_level_button_pressed.bind(level_info))
+		_flow_container.add_child(level_button)
 
-func _on_item_clicked(index: int) -> void:
-	return
+func _on_level_button_pressed(level_info: LevelInfo) -> void:
+	print("button pressed: " + str(level_info.name))
+	level_selected.emit(level_info)
