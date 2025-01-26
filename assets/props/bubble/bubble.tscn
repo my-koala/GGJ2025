@@ -38,7 +38,7 @@ jiggle_period = 8.0
 [node name="sprite_2d" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_pik2t")
 position = Vector2(0, -16)
-scale = Vector2(0.925864, 0.989184)
+scale = Vector2(0.985906, 0.932662)
 
 [node name="temp" type="Sprite2D" parent="sprite_2d"]
 z_index = 128

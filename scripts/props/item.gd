@@ -77,9 +77,6 @@ var _drop_fall_rotation_max: float = 0.0
 var _drop_fall_rotation: float = 0.0
 
 var _dropped: bool = false
-var _dropped_wait: float = 0.25
-var _dropped_wait_time: float = 0.0
-var _dropped_waited: bool = false
 
 func _physics_process(delta: float) -> void:
 	if Engine.is_editor_hint():
@@ -133,10 +130,6 @@ func _physics_process(delta: float) -> void:
 				_dropped = true
 				_sprite.modulate.a = 0.0
 				_explosion.explode()
-			if _dropped_wait_time < _dropped_wait:
-				_dropped_wait_time += delta
-			elif !_dropped_waited:
-				_dropped_waited = true
 				item_dropped.emit()
 
 func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:

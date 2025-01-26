@@ -7,6 +7,6 @@
 identifier = &"husky"
 drop_grace_time = 0.1
 
-[node name="sprite_2d" parent="." index="2"]
+[node name="sprite_2d" parent="." index="1"]
 texture = ExtResource("2_gawok")
 offset = Vector2(0, -32)

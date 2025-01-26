@@ -13,6 +13,9 @@
 [ext_resource type="PackedScene" uid="uid://c0do5ac4gsllo" path="res://assets/props/item/scenes/item_anvil.tscn" id="11_ve11y"]
 
 [node name="level_debug" instance=ExtResource("1_36gu4")]
+camera_shake_strength = null
+camera_shake_decay = null
+item_dropped_wait = null
 
 [node name="wall_poster_1" parent="geometry" index="0"]
 position = Vector2(229, -304)
