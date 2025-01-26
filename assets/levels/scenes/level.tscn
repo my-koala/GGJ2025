@@ -6,5 +6,10 @@
 script = ExtResource("1_uuog7")
 
 [node name="camera_2d" type="Camera2D" parent="."]
-zoom = Vector2(4, 4)
 process_callback = 0
+
+[node name="geometry" type="Node2D" parent="."]
+
+[node name="floor" type="TileMapLayer" parent="geometry"]
+
+[node name="walls" type="TileMapLayer" parent="geometry"]

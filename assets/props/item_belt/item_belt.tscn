@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://10j3gm2iies0"]
+
+[ext_resource type="Script" uid="uid://b8d71iwpoj8gr" path="res://scripts/item/item_belt.gd" id="1_efu5p"]
+[ext_resource type="Texture2D" uid="uid://ckephoxxolsbb" path="res://assets/artwork/conveyer/conveyer_belt.png" id="2_clhca"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_efu5p"]
+
+[node name="item_belt" type="Area2D"]
+collision_layer = 2
+collision_mask = 0
+input_pickable = false
+monitoring = false
+script = ExtResource("1_efu5p")
+metadata/_custom_type_script = ExtResource("1_efu5p")
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_efu5p")
+
+[node name="belt" type="Sprite2D" parent="."]
+texture = ExtResource("2_clhca")
+
+[node name="overlay" type="Sprite2D" parent="."]
+texture = ExtResource("2_clhca")
+
+[node name="support" type="Sprite2D" parent="."]
+texture = ExtResource("2_clhca")
