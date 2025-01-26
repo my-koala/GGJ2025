@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bxdeacaolfcbj" path="res://assets/props/item/textures/item_urchin.tres" id="2_wv8td"]
 
 [node name="item_urchin" instance=ExtResource("1_wv8td")]
+collision_layer = 5
 mass = 0.5
 identifier = &"urchin"
 

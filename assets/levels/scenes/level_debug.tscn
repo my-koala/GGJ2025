@@ -75,6 +75,24 @@ position = Vector2(256, 64)
 
 [node name="item_anvil" parent="items" index="0" instance=ExtResource("11_ve11y")]
 position = Vector2(257, 9)
+collision_layer = 9
+collision_mask = 9
 custom_integrator = true
+
+[node name="item_anvil" parent="asset_zoo/items" index="0"]
+collision_layer = 9
+collision_mask = 9
+
+[node name="item_husky" parent="asset_zoo/items" index="1"]
+collision_layer = 9
+collision_mask = 9
+
+[node name="item_plastic" parent="asset_zoo/items" index="2"]
+collision_layer = 9
+collision_mask = 9
+
+[node name="item_urchin" parent="asset_zoo/items" index="3"]
+collision_layer = 9
+collision_mask = 9
 
 [editable path="asset_zoo"]

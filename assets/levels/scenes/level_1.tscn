@@ -105,6 +105,22 @@ position = Vector2(-96, 0)
 [node name="item_belt_right_007" parent="belts" index="17" instance=ExtResource("6_f6q5q")]
 position = Vector2(-32, 0)
 
+[node name="item_anvil" parent="asset_zoo/items" index="0"]
+collision_layer = 9
+collision_mask = 9
+
+[node name="item_husky" parent="asset_zoo/items" index="1"]
+collision_layer = 9
+collision_mask = 9
+
+[node name="item_plastic" parent="asset_zoo/items" index="2"]
+collision_layer = 9
+collision_mask = 9
+
+[node name="item_urchin" parent="asset_zoo/items" index="3"]
+collision_layer = 9
+collision_mask = 9
+
 [node name="dialogue_system" parent="canvas_layer" index="0"]
 dialogue_entries = Array[ExtResource("10_blbmo")]([SubResource("Resource_3gdde"), SubResource("Resource_ymvoe"), SubResource("Resource_fpsi2"), SubResource("Resource_mhti0"), SubResource("Resource_omd5s")])
 

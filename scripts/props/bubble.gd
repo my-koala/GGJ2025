@@ -128,6 +128,11 @@ func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 	if _bubble_created:
 		# Workaround for contact impulse bug.
 		_jiggle_acceleration += state.linear_velocity.distance_to(_velocity_prev)
+		for contact: int in state.get_contact_count():
+			var contact_layer: int = PhysicsServer2D.body_get_collision_layer(state.get_contact_collider(contact))
+			if (contact_layer & (1 << 2)) > 0:
+				bubble_destroy.call_deferred()
+				break
 	_velocity_prev = state.linear_velocity
 	
 	# Get jiggle strength from current frame contact impulses.
