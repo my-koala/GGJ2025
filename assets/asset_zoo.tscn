@@ -14,10 +14,10 @@
 [ext_resource type="PackedScene" uid="uid://bevkk63dtnl4m" path="res://assets/props/chute/chute_exit_left.tscn" id="12_wqi4e"]
 [ext_resource type="PackedScene" uid="uid://b7eq87fdh4dmy" path="res://assets/props/chute/chute_exit_right.tscn" id="13_u6dnh"]
 [ext_resource type="PackedScene" uid="uid://cxituxp0nhofi" path="res://assets/props/chute/chute_exit_up.tscn" id="14_blg8r"]
-[ext_resource type="PackedScene" uid="uid://c0do5ac4gsllo" path="res://assets/props/item/husky/item_anvil.tscn" id="15_blg8r"]
-[ext_resource type="PackedScene" uid="uid://bunge2le1ir2y" path="res://assets/props/item/husky/item_husky.tscn" id="16_dskkk"]
-[ext_resource type="PackedScene" uid="uid://bujiosqxmdtgo" path="res://assets/props/item/husky/item_plastic.tscn" id="17_lxnim"]
-[ext_resource type="PackedScene" uid="uid://cuexjjvr7pki7" path="res://assets/props/item/husky/item_urchin.tscn" id="18_b3ncw"]
+[ext_resource type="PackedScene" uid="uid://c0do5ac4gsllo" path="res://assets/props/item/scenes/item_anvil.tscn" id="15_blg8r"]
+[ext_resource type="PackedScene" uid="uid://bunge2le1ir2y" path="res://assets/props/item/scenes/item_husky.tscn" id="16_dskkk"]
+[ext_resource type="PackedScene" uid="uid://bujiosqxmdtgo" path="res://assets/props/item/scenes/item_plastic.tscn" id="17_lxnim"]
+[ext_resource type="PackedScene" uid="uid://cuexjjvr7pki7" path="res://assets/props/item/scenes/item_urchin.tscn" id="18_b3ncw"]
 
 [node name="asset_zoo" type="Node2D"]
 
@@ -68,7 +68,6 @@ position = Vector2(256, 0)
 
 [node name="chute_exit_right_000" parent="chute_exits" instance=ExtResource("13_u6dnh")]
 position = Vector2(384, 0)
-item_center_check = false
 
 [node name="chute_exit_up_000" parent="chute_exits" instance=ExtResource("14_blg8r")]
 position = Vector2(512, 0)
@@ -79,15 +78,11 @@ metadata/_edit_lock_ = true
 
 [node name="item_anvil" parent="items" instance=ExtResource("15_blg8r")]
 position = Vector2(256, 0)
-drop_fall_time = null
 
 [node name="item_husky" parent="items" instance=ExtResource("16_dskkk")]
-drop_fall_time = null
 
 [node name="item_plastic" parent="items" instance=ExtResource("17_lxnim")]
 position = Vector2(128, 0)
-drop_fall_time = null
 
 [node name="item_urchin" parent="items" instance=ExtResource("18_b3ncw")]
 position = Vector2(384, 0)
-drop_fall_time = null

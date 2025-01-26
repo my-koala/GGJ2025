@@ -1,0 +1,115 @@
+[gd_scene load_steps=14 format=3 uid="uid://o6w6r60aaoog"]
+
+[ext_resource type="PackedScene" uid="uid://c8vl5y0q7ua3b" path="res://assets/levels/scenes/level.tscn" id="1_gppl4"]
+[ext_resource type="PackedScene" uid="uid://bbehyped0t73w" path="res://assets/props/chute/chute_entry_right.tscn" id="2_b5acj"]
+[ext_resource type="Script" uid="uid://dip6wdi7oacqt" path="res://scripts/props/item_info.gd" id="3_6iupr"]
+[ext_resource type="Resource" uid="uid://buvtu0snttan0" path="res://assets/props/item/item_infos/item_info_husky.tres" id="4_8givo"]
+[ext_resource type="PackedScene" uid="uid://bevkk63dtnl4m" path="res://assets/props/chute/chute_exit_left.tscn" id="5_s8uh7"]
+[ext_resource type="PackedScene" uid="uid://c7jr2tlmcby2e" path="res://assets/props/belt/belt_right.tscn" id="6_f6q5q"]
+[ext_resource type="PackedScene" uid="uid://b5rbam8pcmykb" path="res://assets/dialogue_system/dialogue_system.tscn" id="9_st2on"]
+[ext_resource type="Script" uid="uid://dfktug68yfw7d" path="res://scripts/dialogue_entry.gd" id="10_blbmo"]
+
+[sub_resource type="Resource" id="Resource_3gdde"]
+script = ExtResource("10_blbmo")
+dialogue = "Good work. Just don't get too comfortable, Fish Man."
+metadata/_custom_type_script = ExtResource("10_blbmo")
+
+[sub_resource type="Resource" id="Resource_ymvoe"]
+script = ExtResource("10_blbmo")
+dialogue = "This time, you've got a split in the conveyor belt. Two exits instead of one."
+metadata/_custom_type_script = ExtResource("10_blbmo")
+
+[sub_resource type="Resource" id="Resource_fpsi2"]
+script = ExtResource("10_blbmo")
+dialogue = "I shouldn't have to spell it out, but... [i]you better get it right[/i]."
+metadata/_custom_type_script = ExtResource("10_blbmo")
+
+[sub_resource type="Resource" id="Resource_mhti0"]
+script = ExtResource("10_blbmo")
+dialogue = "[b]Choosing the right exit[/b] is key here. You don't want to be the bloke who messes it up and sends something to the wrong chute."
+metadata/_custom_type_script = ExtResource("10_blbmo")
+
+[sub_resource type="Resource" id="Resource_omd5s"]
+script = ExtResource("10_blbmo")
+dialogue = "Remember, if anything falls on the floor, you're finished. I'm not interested in cleaning up your mistakes."
+metadata/_custom_type_script = ExtResource("10_blbmo")
+
+[node name="level_0" instance=ExtResource("1_gppl4")]
+
+[node name="wall_poster_1" parent="geometry" index="0"]
+position = Vector2(229, -304)
+
+[node name="chute_entry_right_000" parent="chutes" index="0" instance=ExtResource("2_b5acj")]
+y_sort_enabled = false
+position = Vector2(-416, 0)
+item_infos = Array[ExtResource("3_6iupr")]([ExtResource("4_8givo")])
+
+[node name="chute_exit_left_000" parent="chutes" index="1" instance=ExtResource("5_s8uh7")]
+position = Vector2(416, -160)
+item_infos = Array[ExtResource("3_6iupr")]([ExtResource("4_8givo")])
+
+[node name="chute_exit_left_001" parent="chutes" index="2" instance=ExtResource("5_s8uh7")]
+position = Vector2(416, 160)
+item_infos = Array[ExtResource("3_6iupr")]([ExtResource("4_8givo")])
+
+[node name="item_belt_right_009" parent="belts" index="0" instance=ExtResource("6_f6q5q")]
+position = Vector2(96, -160)
+
+[node name="item_belt_right_010" parent="belts" index="1" instance=ExtResource("6_f6q5q")]
+position = Vector2(160, -160)
+
+[node name="item_belt_right_011" parent="belts" index="2" instance=ExtResource("6_f6q5q")]
+position = Vector2(224, -160)
+
+[node name="item_belt_right_012" parent="belts" index="3" instance=ExtResource("6_f6q5q")]
+position = Vector2(288, -160)
+
+[node name="item_belt_right_013" parent="belts" index="4" instance=ExtResource("6_f6q5q")]
+position = Vector2(352, -160)
+
+[node name="item_belt_right_014" parent="belts" index="5" instance=ExtResource("6_f6q5q")]
+position = Vector2(352, 160)
+
+[node name="item_belt_right_015" parent="belts" index="6" instance=ExtResource("6_f6q5q")]
+position = Vector2(288, 160)
+
+[node name="item_belt_right_016" parent="belts" index="7" instance=ExtResource("6_f6q5q")]
+position = Vector2(224, 160)
+
+[node name="item_belt_right_017" parent="belts" index="8" instance=ExtResource("6_f6q5q")]
+position = Vector2(160, 160)
+
+[node name="item_belt_right_018" parent="belts" index="9" instance=ExtResource("6_f6q5q")]
+position = Vector2(96, 160)
+
+[node name="item_belt_right_019" parent="belts" index="10" instance=ExtResource("6_f6q5q")]
+position = Vector2(32, 160)
+
+[node name="item_belt_right_020" parent="belts" index="11" instance=ExtResource("6_f6q5q")]
+position = Vector2(32, -160)
+
+[node name="item_belt_right_002" parent="belts" index="12" instance=ExtResource("6_f6q5q")]
+position = Vector2(-352, 0)
+
+[node name="item_belt_right_003" parent="belts" index="13" instance=ExtResource("6_f6q5q")]
+position = Vector2(-288, 0)
+
+[node name="item_belt_right_004" parent="belts" index="14" instance=ExtResource("6_f6q5q")]
+position = Vector2(-224, 0)
+
+[node name="item_belt_right_005" parent="belts" index="15" instance=ExtResource("6_f6q5q")]
+position = Vector2(-160, 0)
+
+[node name="item_belt_right_006" parent="belts" index="16" instance=ExtResource("6_f6q5q")]
+position = Vector2(-96, 0)
+
+[node name="item_belt_right_007" parent="belts" index="17" instance=ExtResource("6_f6q5q")]
+position = Vector2(-32, 0)
+
+[node name="canvas_layer" type="CanvasLayer" parent="." index="6"]
+visible = false
+
+[node name="dialogue_system" parent="canvas_layer" index="0" instance=ExtResource("9_st2on")]
+dialogue_entries = Array[ExtResource("10_blbmo")]([SubResource("Resource_3gdde"), SubResource("Resource_ymvoe"), SubResource("Resource_fpsi2"), SubResource("Resource_mhti0"), SubResource("Resource_omd5s")])
+
+[editable path="asset_zoo"]

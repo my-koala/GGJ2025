@@ -1,0 +1,164 @@
+[gd_scene load_steps=20 format=3 uid="uid://cfquoavtiknus"]
+
+[ext_resource type="PackedScene" uid="uid://c8vl5y0q7ua3b" path="res://assets/levels/scenes/level.tscn" id="1_1et6b"]
+[ext_resource type="PackedScene" uid="uid://bbehyped0t73w" path="res://assets/props/chute/chute_entry_right.tscn" id="2_rxabv"]
+[ext_resource type="Script" uid="uid://dip6wdi7oacqt" path="res://scripts/props/item_info.gd" id="3_cg1gs"]
+[ext_resource type="Resource" uid="uid://buvtu0snttan0" path="res://assets/props/item/item_infos/item_info_husky.tres" id="4_vpue2"]
+[ext_resource type="PackedScene" uid="uid://bevkk63dtnl4m" path="res://assets/props/chute/chute_exit_left.tscn" id="5_1ur70"]
+[ext_resource type="PackedScene" uid="uid://c7jr2tlmcby2e" path="res://assets/props/belt/belt_right.tscn" id="6_0ki71"]
+[ext_resource type="PackedScene" uid="uid://b5rbam8pcmykb" path="res://assets/dialogue_system/dialogue_system.tscn" id="7_c5tth"]
+[ext_resource type="PackedScene" uid="uid://buqbn7w8cx67a" path="res://assets/props/belt/belt_left.tscn" id="7_vpue2"]
+[ext_resource type="PackedScene" uid="uid://dj0k635q02lwu" path="res://assets/props/belt/belt_up.tscn" id="8_1ur70"]
+[ext_resource type="Script" uid="uid://dfktug68yfw7d" path="res://scripts/dialogue_entry.gd" id="8_iest2"]
+[ext_resource type="PackedScene" uid="uid://d2hg70rrjbhwk" path="res://assets/props/belt/belt_down.tscn" id="9_0ki71"]
+
+[sub_resource type="Resource" id="Resource_3gdde"]
+script = ExtResource("8_iest2")
+dialogue = "Blimey, I'm impressed."
+metadata/_custom_type_script = ExtResource("8_iest2")
+
+[sub_resource type="Resource" id="Resource_ymvoe"]
+script = ExtResource("8_iest2")
+dialogue = "Now, let's address the elephant in the room. See that circular conveyor belt over there? The one twirling around like some sort of fancy sushi restaurant? Yeah, that's the [b]sushi belt[/b]."
+metadata/_custom_type_script = ExtResource("8_iest2")
+
+[sub_resource type="Resource" id="Resource_fpsi2"]
+script = ExtResource("8_iest2")
+dialogue = "To be fair, it's mostly for entertainment these days. Used to be, the old crew would hop on and ride it around like some sort of amusement park ride."
+metadata/_custom_type_script = ExtResource("8_iest2")
+
+[sub_resource type="Resource" id="Resource_mhti0"]
+script = ExtResource("8_iest2")
+dialogue = "Good fun for them, I suppose, but it didn't help with the actual work. In fact, half the time it just ended up with trash piled high on it. Ridiculous!"
+metadata/_custom_type_script = ExtResource("8_iest2")
+
+[sub_resource type="Resource" id="Resource_omd5s"]
+script = ExtResource("8_iest2")
+dialogue = "There was one bloke who thought it was a shortcut for getting around the warehouse. [i]Wouldn't stop riding the thing[/i], even when there was actual work to be done. Don't get me started on that!"
+metadata/_custom_type_script = ExtResource("8_iest2")
+
+[sub_resource type="Resource" id="Resource_c5tth"]
+script = ExtResource("8_iest2")
+dialogue = "Anyway, enough about that. Don't bother your little head about the sushi belt. It'll do what it does, and you do what you do."
+metadata/_custom_type_script = ExtResource("8_iest2")
+
+[sub_resource type="Resource" id="Resource_iest2"]
+script = ExtResource("8_iest2")
+dialogue = "Just keep your focus on the main job, and [i]don't let anything hit the floor[/i]."
+metadata/_custom_type_script = ExtResource("8_iest2")
+
+[sub_resource type="Resource" id="Resource_vpue2"]
+script = ExtResource("8_iest2")
+dialogue = "Now, get on with it. I've got a lunch to get to."
+metadata/_custom_type_script = ExtResource("8_iest2")
+
+[node name="level_0" instance=ExtResource("1_1et6b")]
+
+[node name="wall_poster_1" parent="geometry" index="0"]
+position = Vector2(229, -304)
+
+[node name="chute_entry_right_000" parent="chutes" index="0" instance=ExtResource("2_rxabv")]
+y_sort_enabled = false
+position = Vector2(-416, 160)
+item_infos = Array[ExtResource("3_cg1gs")]([ExtResource("4_vpue2")])
+
+[node name="chute_exit_left_001" parent="chutes" index="1" instance=ExtResource("5_1ur70")]
+position = Vector2(416, 160)
+item_infos = Array[ExtResource("3_cg1gs")]([ExtResource("4_vpue2")])
+
+[node name="item_belt_right_014" parent="belts" index="0" instance=ExtResource("6_0ki71")]
+position = Vector2(352, 160)
+
+[node name="item_belt_right_015" parent="belts" index="1" instance=ExtResource("6_0ki71")]
+position = Vector2(288, 160)
+
+[node name="item_belt_right_016" parent="belts" index="2" instance=ExtResource("6_0ki71")]
+position = Vector2(224, 160)
+
+[node name="item_belt_right_017" parent="belts" index="3" instance=ExtResource("6_0ki71")]
+position = Vector2(160, 160)
+
+[node name="item_belt_right_018" parent="belts" index="4" instance=ExtResource("6_0ki71")]
+position = Vector2(96, 160)
+
+[node name="item_belt_right_019" parent="belts" index="5" instance=ExtResource("6_0ki71")]
+position = Vector2(32, 160)
+
+[node name="item_belt_right_002" parent="belts" index="6" instance=ExtResource("6_0ki71")]
+position = Vector2(-352, 160)
+
+[node name="item_belt_right_003" parent="belts" index="7" instance=ExtResource("6_0ki71")]
+position = Vector2(-288, 160)
+
+[node name="item_belt_right_004" parent="belts" index="8" instance=ExtResource("6_0ki71")]
+position = Vector2(-224, 160)
+
+[node name="item_belt_right_005" parent="belts" index="9" instance=ExtResource("6_0ki71")]
+position = Vector2(-160, 160)
+
+[node name="item_belt_right_006" parent="belts" index="10" instance=ExtResource("6_0ki71")]
+position = Vector2(-96, 160)
+
+[node name="item_belt_right_007" parent="belts" index="11" instance=ExtResource("6_0ki71")]
+position = Vector2(-32, 160)
+
+[node name="belt_left_002" parent="asset_zoo/belts" index="4" instance=ExtResource("7_vpue2")]
+position = Vector2(-32, 1056)
+
+[node name="belt_left_003" parent="asset_zoo/belts" index="5" instance=ExtResource("7_vpue2")]
+position = Vector2(-96, 1056)
+
+[node name="belt_left_004" parent="asset_zoo/belts" index="6" instance=ExtResource("7_vpue2")]
+position = Vector2(-160, 1056)
+
+[node name="belt_left_005" parent="asset_zoo/belts" index="7" instance=ExtResource("7_vpue2")]
+position = Vector2(-224, 1056)
+
+[node name="belt_left_006" parent="asset_zoo/belts" index="8" instance=ExtResource("7_vpue2")]
+position = Vector2(-288, 1056)
+
+[node name="belt_right_001" parent="asset_zoo/belts" index="9" instance=ExtResource("6_0ki71")]
+position = Vector2(-352, 864)
+
+[node name="belt_up_003" parent="asset_zoo/belts" index="10" instance=ExtResource("8_1ur70")]
+position = Vector2(-352, 928)
+
+[node name="belt_up_001" parent="asset_zoo/belts" index="11" instance=ExtResource("8_1ur70")]
+position = Vector2(-352, 992)
+
+[node name="belt_up_002" parent="asset_zoo/belts" index="12" instance=ExtResource("8_1ur70")]
+position = Vector2(-352, 1056)
+
+[node name="belt_right_002" parent="asset_zoo/belts" index="13" instance=ExtResource("6_0ki71")]
+position = Vector2(-288, 864)
+
+[node name="belt_right_003" parent="asset_zoo/belts" index="14" instance=ExtResource("6_0ki71")]
+position = Vector2(-224, 864)
+
+[node name="belt_right_004" parent="asset_zoo/belts" index="15" instance=ExtResource("6_0ki71")]
+position = Vector2(-160, 864)
+
+[node name="belt_right_005" parent="asset_zoo/belts" index="16" instance=ExtResource("6_0ki71")]
+position = Vector2(-96, 864)
+
+[node name="belt_right_006" parent="asset_zoo/belts" index="17" instance=ExtResource("6_0ki71")]
+position = Vector2(-32, 864)
+
+[node name="belt_down_003" parent="asset_zoo/belts" index="18" instance=ExtResource("9_0ki71")]
+position = Vector2(32, 864)
+
+[node name="belt_down_001" parent="asset_zoo/belts" index="19" instance=ExtResource("9_0ki71")]
+position = Vector2(32, 928)
+
+[node name="belt_down_002" parent="asset_zoo/belts" index="20" instance=ExtResource("9_0ki71")]
+position = Vector2(32, 992)
+
+[node name="belt_left_001" parent="asset_zoo/belts" index="21" instance=ExtResource("7_vpue2")]
+position = Vector2(32, 1056)
+
+[node name="canvas_layer" type="CanvasLayer" parent="." index="6"]
+
+[node name="dialogue_system" parent="canvas_layer" index="0" instance=ExtResource("7_c5tth")]
+dialogue_entries = Array[ExtResource("8_iest2")]([SubResource("Resource_3gdde"), SubResource("Resource_ymvoe"), SubResource("Resource_fpsi2"), SubResource("Resource_mhti0"), SubResource("Resource_omd5s"), SubResource("Resource_c5tth"), SubResource("Resource_iest2"), SubResource("Resource_vpue2")])
+
+[editable path="asset_zoo"]
