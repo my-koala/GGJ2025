@@ -33,6 +33,11 @@ func _on_body_entered(node: Node2D) -> void:
 	if is_instance_valid(item):
 		_items_collided.append(item)
 
+func _on_body_exited(node: Node2D) -> void:
+	var item: Item = node as Item
+	if is_instance_valid(item):
+		_items_collided.erase(item)
+
 func _physics_process(delta: float) -> void:
 	if Engine.is_editor_hint():
 		return
