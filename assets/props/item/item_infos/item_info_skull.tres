@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemInfo" load_steps=4 format=3 uid="uid://catu7vsjra2ho"]
+
+[ext_resource type="Texture2D" uid="uid://cmgsjd5b474ls" path="res://assets/props/item/textures/item_skull.tres" id="1_sivgv"]
+[ext_resource type="Script" uid="uid://dip6wdi7oacqt" path="res://scripts/props/item_info.gd" id="2_7t2tu"]
+[ext_resource type="PackedScene" uid="uid://dxnu6sxnuqx54" path="res://assets/props/item/scenes/item_skull.tscn" id="3_7t2tu"]
+
+[resource]
+script = ExtResource("2_7t2tu")
+icon = ExtResource("1_sivgv")
+identifier = &"skull"
+packed_scene = ExtResource("3_7t2tu")
+metadata/_custom_type_script = ExtResource("2_7t2tu")

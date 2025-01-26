@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://v3i2dqx0eg2f"]
+
+[ext_resource type="PackedScene" uid="uid://pic8ndslx525" path="res://assets/props/item/item.tscn" id="1_s8aru"]
+[ext_resource type="Texture2D" uid="uid://5euw5it54l8g" path="res://assets/props/item/textures/item_conk.tres" id="2_s8aru"]
+
+[node name="item_conk" instance=ExtResource("1_s8aru")]
+identifier = &"husky"
+drop_grace_time = 0.1
+
+[node name="sprite_2d" parent="." index="1"]
+scale = Vector2(0.375, 0.375)
+texture = ExtResource("2_s8aru")
+offset = Vector2(0, -32)

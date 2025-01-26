@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemInfo" load_steps=4 format=3 uid="uid://fcjusydadrq4"]
+
+[ext_resource type="Texture2D" uid="uid://cesle5hvthyuy" path="res://assets/props/item/textures/item_flag.tres" id="1_os01b"]
+[ext_resource type="Script" uid="uid://dip6wdi7oacqt" path="res://scripts/props/item_info.gd" id="2_rtgmn"]
+[ext_resource type="PackedScene" uid="uid://b03v66orpsk1u" path="res://assets/props/item/scenes/item_flag.tscn" id="3_rtgmn"]
+
+[resource]
+script = ExtResource("2_rtgmn")
+icon = ExtResource("1_os01b")
+identifier = &"flag"
+packed_scene = ExtResource("3_rtgmn")
+metadata/_custom_type_script = ExtResource("2_rtgmn")
