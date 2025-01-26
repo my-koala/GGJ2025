@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bkx8x5sui5s0"
+path="res://.godot/imported/Bubble Sorter.mp3-4975e903db452a64b4bc7e0ec4717803.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/Bubble Sorter.mp3"
+dest_files=["res://.godot/imported/Bubble Sorter.mp3-4975e903db452a64b4bc7e0ec4717803.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
