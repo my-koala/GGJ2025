@@ -104,9 +104,9 @@ func _physics_process(delta: float) -> void:
 			if _bubble.is_bubble_created():
 				_state = State.BUBBLE
 			elif _belts.is_empty():
-				_drop_grace_time += delta
 				if _drop_grace_time > drop_grace_time:
 					_state = State.DROP
+				_drop_grace_time += delta
 			else:
 				_drop_grace_time = 0.0
 		State.BUBBLE:
