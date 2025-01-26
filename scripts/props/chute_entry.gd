@@ -1,6 +1,6 @@
 @tool
-extends Node2D
-class_name ItemInput
+extends StaticBody2D
+class_name ChuteEntry
 
 # TODO:
 # events for manager (e.g. item instantiated)

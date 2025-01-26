@@ -105,6 +105,11 @@ func _physics_process(delta: float) -> void:
 			elif !_bubble_launched && !_input_mouse_clicking:
 				bubble_launch(_input_mouse_vector * 128.0)
 		_input_mouse_clicked = false
+	
+	if !_bubble_created:
+		freeze = true
+	else:
+		freeze = false
 
 #var _contact_colliders: Array[RID] = []
 #var _contact_jiggle: float = 0.0
@@ -120,10 +125,7 @@ var _jiggle_acceleration: float = 0.0
 
 var _velocity_prev: Vector2 = Vector2.ZERO
 func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
-	if !_bubble_created:
-		state.linear_velocity = Vector2.ZERO
-		return
-	else:
+	if _bubble_created:
 		# Workaround for contact impulse bug.
 		_jiggle_acceleration += state.linear_velocity.distance_to(_velocity_prev)
 	_velocity_prev = state.linear_velocity

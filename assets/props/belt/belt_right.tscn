@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c7jr2tlmcby2e"]
+
+[ext_resource type="PackedScene" uid="uid://10j3gm2iies0" path="res://assets/props/belt/belt.tscn" id="1_c5yau"]
+
+[node name="item_belt_right_000" instance=ExtResource("1_c5yau")]
+direction = Vector2(1, 0)

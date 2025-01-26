@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://pic8ndslx525"]
 
-[ext_resource type="Script" uid="uid://d2og1gl874xp2" path="res://scripts/item/item.gd" id="1_pgqwr"]
+[ext_resource type="Script" uid="uid://d2og1gl874xp2" path="res://scripts/props/item.gd" id="1_pgqwr"]
 [ext_resource type="PackedScene" uid="uid://ej43syhrhoib" path="res://assets/props/bubble/bubble.tscn" id="2_m02vc"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_f3o2e"]
@@ -24,14 +24,13 @@ shape = SubResource("CircleShape2D_o0pvw")
 
 [node name="sprite_2d" type="Sprite2D" parent="."]
 
-[node name="item_belt_scan" type="Area2D" parent="."]
+[node name="belt_scan" type="Area2D" parent="."]
 collision_layer = 0
 collision_mask = 2
 input_pickable = false
 monitorable = false
 
-[node name="collision_shape_2d" type="CollisionShape2D" parent="item_belt_scan"]
+[node name="collision_shape_2d" type="CollisionShape2D" parent="belt_scan"]
 shape = SubResource("CircleShape2D_f3o2e")
 
 [node name="bubble" parent="." instance=ExtResource("2_m02vc")]
-position = Vector2(0, -16)

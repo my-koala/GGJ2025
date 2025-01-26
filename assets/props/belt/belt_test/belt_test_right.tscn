@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cadnddkadj1bt"]
 
-[ext_resource type="PackedScene" uid="uid://dqtkx060mqlbo" path="res://assets/props/item_belt/belt_test/belt_test.tscn" id="1_skdbd"]
+[ext_resource type="PackedScene" uid="uid://dqtkx060mqlbo" path="res://assets/props/belt/belt_test/belt_test.tscn" id="1_skdbd"]
 
 [node name="belt_test_right_000" instance=ExtResource("1_skdbd")]
 direction = Vector2(1, 0)

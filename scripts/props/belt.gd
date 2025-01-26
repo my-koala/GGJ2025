@@ -1,6 +1,6 @@
 @tool
 extends Area2D
-class_name ItemBelt
+class_name Belt
 
 ## Velocity direction of conveyor belt.
 @export
@@ -18,12 +18,12 @@ var speed: float = 16.0:
 	set(value):
 		speed = maxf(value, 0.0)
 
-@onready
-var _sprite: Sprite2D = $sprite_2d as Sprite2D
-#var _sprite_frame_delta: float = 0.0
-
 func get_velocity() -> Vector2:
 	return direction * speed
+
+#@onready
+#var _sprite: Sprite2D = $sprite_2d as Sprite2D
+#var _sprite_frame_delta: float = 0.0
 
 #func _process(delta: float) -> void:
 	# Sprite frame animation.

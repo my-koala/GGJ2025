@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cm3qipbrusjhe"
-path="res://.godot/imported/wall.png-f7e6aa960b33edcf5496f6f9fadc2ac8.ctex"
+uid="uid://ctjykgis1jakl"
+path="res://.godot/imported/belt_test.png-8b164eb5467fdfcd29b4a3a7c27e5ee8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tiles/wall.png"
-dest_files=["res://.godot/imported/wall.png-f7e6aa960b33edcf5496f6f9fadc2ac8.ctex"]
+source_file="res://assets/props/belt/belt_test/belt_test.png"
+dest_files=["res://.godot/imported/belt_test.png-8b164eb5467fdfcd29b4a3a7c27e5ee8.ctex"]
 
 [params]
 

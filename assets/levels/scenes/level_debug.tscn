@@ -1,24 +1,24 @@
 [gd_scene load_steps=24 format=3 uid="uid://srio544gi0pg"]
 
 [ext_resource type="Script" uid="uid://bd24x5hdgvi76" path="res://scripts/level/level.gd" id="1_jrxwf"]
-[ext_resource type="PackedScene" uid="uid://cadnddkadj1bt" path="res://assets/props/item_belt/belt_test/belt_test_right.tscn" id="2_gsb8x"]
-[ext_resource type="PackedScene" uid="uid://dmd6guegx31yg" path="res://assets/props/item_belt/belt_test/belt_test_up.tscn" id="3_wqd8v"]
-[ext_resource type="PackedScene" uid="uid://6wa1a78ux7c1" path="res://assets/props/item_belt/belt_test/belt_test_left.tscn" id="4_00324"]
-[ext_resource type="PackedScene" uid="uid://dmanjl013mh5d" path="res://assets/props/item_belt/belt_test/belt_test_down.tscn" id="5_enlnt"]
+[ext_resource type="PackedScene" uid="uid://cadnddkadj1bt" path="res://assets/props/belt/belt_test/belt_test_right.tscn" id="2_gsb8x"]
+[ext_resource type="PackedScene" uid="uid://dmd6guegx31yg" path="res://assets/props/belt/belt_test/belt_test_up.tscn" id="3_wqd8v"]
+[ext_resource type="PackedScene" uid="uid://6wa1a78ux7c1" path="res://assets/props/belt/belt_test/belt_test_left.tscn" id="4_00324"]
+[ext_resource type="PackedScene" uid="uid://dmanjl013mh5d" path="res://assets/props/belt/belt_test/belt_test_down.tscn" id="5_enlnt"]
 [ext_resource type="PackedScene" uid="uid://bunge2le1ir2y" path="res://assets/props/item/husky/item_husky.tscn" id="6_n45ye"]
-[ext_resource type="Script" uid="uid://bm1otnmdoj0h3" path="res://scripts/item/item_input.gd" id="7_s0oup"]
 [ext_resource type="Texture2D" uid="uid://cb4ig45wj083l" path="res://assets/tiles/tile_scenes/input_output/input_output_test.png" id="8_o2ikt"]
 [ext_resource type="Texture2D" uid="uid://bw7x563rutto1" path="res://assets/artwork/tile_background/floor_tile_up.png" id="9_jrxwf"]
-[ext_resource type="Script" uid="uid://crmh7bm1sm38a" path="res://scripts/item/item_output.gd" id="9_xyptv"]
+[ext_resource type="Script" uid="uid://crmh7bm1sm38a" path="res://scripts/props/chute_exit.gd" id="9_xyptv"]
 [ext_resource type="Texture2D" uid="uid://dsx4sjwtwwrr1" path="res://assets/artwork/tile_background/floor_tile_middle.png" id="10_jrxwf"]
+[ext_resource type="PackedScene" uid="uid://c7jr2tlmcby2e" path="res://assets/props/belt/belt_right.tscn" id="10_s0oup"]
 [ext_resource type="Texture2D" uid="uid://by7lyvrhit0ic" path="res://assets/artwork/tile_background/wall.png" id="11_negnl"]
 [ext_resource type="Texture2D" uid="uid://nsavnb7cm36c" path="res://assets/artwork/tile_background/wall_corner.png" id="12_4ab8w"]
 [ext_resource type="Texture2D" uid="uid://cm433c2tcw2k6" path="res://assets/artwork/tile_background/floor_crack1.png" id="15_00324"]
-[ext_resource type="PackedScene" uid="uid://pic8ndslx525" path="res://assets/props/item/item.tscn" id="15_gsb8x"]
 [ext_resource type="Texture2D" uid="uid://y640an10valm" path="res://assets/artwork/tile_background/wall_barnacle1.png" id="16_enlnt"]
 [ext_resource type="Texture2D" uid="uid://cmd743epcevm0" path="res://assets/artwork/tile_background/wall_clock.png" id="17_n45ye"]
 [ext_resource type="Texture2D" uid="uid://d2w5b6w4p11p8" path="res://assets/artwork/tile_background/wall_door.png" id="18_n45ye"]
 [ext_resource type="Texture2D" uid="uid://by3p7rwttdgiv" path="res://assets/artwork/tile_background/wall_door_bg.png" id="19_s0oup"]
+[ext_resource type="PackedScene" uid="uid://d2hg70rrjbhwk" path="res://assets/props/belt/belt_down.tscn" id="20_s0oup"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6sv45"]
 
@@ -31,10 +31,8 @@ size = Vector2(1059.5, 147.75)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wqd8v"]
 size = Vector2(146.75, 651.875)
 
-[node name="level_debug" type="Node2D" node_paths=PackedStringArray("_item_inputs", "_item_outputs")]
+[node name="level_debug" type="Node2D"]
 script = ExtResource("1_jrxwf")
-_item_inputs = [NodePath("item_input")]
-_item_outputs = [NodePath("item_output")]
 
 [node name="belts" type="Node2D" parent="."]
 y_sort_enabled = true
@@ -188,11 +186,9 @@ speed = 32.0
 position = Vector2(-48, -16)
 speed = 32.0
 
-[node name="item_input" type="Node2D" parent="."]
+[node name="item_input" type="StaticBody2D" parent="."]
 position = Vector2(208, 207)
 scale = Vector2(3, 3)
-script = ExtResource("7_s0oup")
-metadata/_custom_type_script = ExtResource("7_s0oup")
 
 [node name="sprite_2d" type="Sprite2D" parent="item_input"]
 texture = ExtResource("8_o2ikt")
@@ -215,77 +211,8 @@ region_enabled = true
 region_rect = Rect2(16, 0, 16, 16)
 
 [node name="camera_2d" type="Camera2D" parent="."]
+zoom = Vector2(1.25, 1.25)
 process_callback = 0
-
-[node name="floor" type="Sprite2D" parent="."]
-z_index = -4
-position = Vector2(-229, -112)
-texture = ExtResource("9_jrxwf")
-
-[node name="floor2" type="Sprite2D" parent="."]
-z_index = -4
-position = Vector2(-229, 16)
-texture = ExtResource("10_jrxwf")
-
-[node name="floor4" type="Sprite2D" parent="."]
-z_index = -4
-position = Vector2(-101, -112)
-texture = ExtResource("10_jrxwf")
-
-[node name="floor5" type="Sprite2D" parent="."]
-z_index = -4
-position = Vector2(-101, 16)
-texture = ExtResource("10_jrxwf")
-
-[node name="floor3" type="Sprite2D" parent="."]
-z_index = -4
-position = Vector2(-229, 144)
-texture = ExtResource("10_jrxwf")
-
-[node name="wall" type="Sprite2D" parent="."]
-position = Vector2(-229, -240)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("11_negnl")
-
-[node name="wall2" type="Sprite2D" parent="."]
-position = Vector2(-101, -240)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("11_negnl")
-
-[node name="wall3" type="Sprite2D" parent="."]
-position = Vector2(-357, -112)
-rotation = -1.5708
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("11_negnl")
-
-[node name="wall4" type="Sprite2D" parent="."]
-position = Vector2(-357, 16)
-rotation = -1.5708
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("11_negnl")
-
-[node name="wall5" type="Sprite2D" parent="."]
-position = Vector2(-357, 144)
-rotation = -1.5708
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("11_negnl")
-
-[node name="wall_corner" type="Sprite2D" parent="."]
-position = Vector2(-357, -240)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("12_4ab8w")
-
-[node name="wall_corner2" type="Sprite2D" parent="."]
-position = Vector2(-357, 272)
-rotation = -1.5708
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("12_4ab8w")
-
-[node name="item" parent="." instance=ExtResource("15_gsb8x")]
-position = Vector2(174, 103)
-
-[node name="item2" parent="." instance=ExtResource("6_n45ye")]
-position = Vector2(105, -74)
 
 [node name="static_body_2d" type="StaticBody2D" parent="."]
 visible = false
@@ -310,27 +237,105 @@ shape = SubResource("RectangleShape2D_wqd8v")
 position = Vector2(448.375, -0.9375)
 shape = SubResource("RectangleShape2D_wqd8v")
 
-[node name="floor_crack_1" type="Sprite2D" parent="."]
+[node name="item_belt_down_000" parent="." instance=ExtResource("20_s0oup")]
+position = Vector2(-162, -80)
+
+[node name="item_belt_down_001" parent="." instance=ExtResource("20_s0oup")]
+position = Vector2(-162, -16)
+
+[node name="item_belt_right_000" parent="." instance=ExtResource("10_s0oup")]
+position = Vector2(381, 24)
+
+[node name="temp" type="Node2D" parent="."]
+
+[node name="floor" type="Sprite2D" parent="temp"]
+z_index = -4
+position = Vector2(-229, -112)
+texture = ExtResource("9_jrxwf")
+
+[node name="floor2" type="Sprite2D" parent="temp"]
+z_index = -4
+position = Vector2(-229, 16)
+texture = ExtResource("10_jrxwf")
+
+[node name="floor4" type="Sprite2D" parent="temp"]
+z_index = -4
+position = Vector2(-101, -112)
+texture = ExtResource("10_jrxwf")
+
+[node name="floor5" type="Sprite2D" parent="temp"]
+z_index = -4
+position = Vector2(-101, 16)
+texture = ExtResource("10_jrxwf")
+
+[node name="floor3" type="Sprite2D" parent="temp"]
+z_index = -4
+position = Vector2(-229, 144)
+texture = ExtResource("10_jrxwf")
+
+[node name="wall" type="Sprite2D" parent="temp"]
+position = Vector2(-229, -240)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("11_negnl")
+
+[node name="wall2" type="Sprite2D" parent="temp"]
+position = Vector2(-101, -240)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("11_negnl")
+
+[node name="wall3" type="Sprite2D" parent="temp"]
+position = Vector2(-357, -112)
+rotation = -1.5708
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("11_negnl")
+
+[node name="wall4" type="Sprite2D" parent="temp"]
+position = Vector2(-357, 16)
+rotation = -1.5708
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("11_negnl")
+
+[node name="wall5" type="Sprite2D" parent="temp"]
+position = Vector2(-357, 144)
+rotation = -1.5708
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("11_negnl")
+
+[node name="wall_corner" type="Sprite2D" parent="temp"]
+position = Vector2(-357, -240)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("12_4ab8w")
+
+[node name="wall_corner2" type="Sprite2D" parent="temp"]
+position = Vector2(-357, 272)
+rotation = -1.5708
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("12_4ab8w")
+
+[node name="floor_crack_1" type="Sprite2D" parent="temp"]
 modulate = Color(1, 1, 1, 0.286275)
 position = Vector2(-240, 80)
 texture = ExtResource("15_00324")
 
-[node name="wall_barnacle_1" type="Sprite2D" parent="."]
+[node name="wall_barnacle_1" type="Sprite2D" parent="temp"]
 position = Vector2(-289, -239)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("16_enlnt")
 
-[node name="wall_clock" type="Sprite2D" parent="."]
+[node name="wall_clock" type="Sprite2D" parent="temp"]
 position = Vector2(-88, -235)
 scale = Vector2(0.375, 0.375)
 texture = ExtResource("17_n45ye")
 
-[node name="wall_door" type="Sprite2D" parent="."]
+[node name="wall_door" type="Sprite2D" parent="temp"]
 position = Vector2(-183, -240)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("18_n45ye")
 
-[node name="wall_door2" type="Sprite2D" parent="."]
+[node name="wall_door2" type="Sprite2D" parent="temp"]
 position = Vector2(-183, -240)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("19_s0oup")
+
+[node name="item_husky" parent="." instance=ExtResource("6_n45ye")]
+position = Vector2(-29, -45)

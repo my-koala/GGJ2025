@@ -1,6 +1,6 @@
 @tool
 extends Area2D
-class_name ItemOutput
+class_name ChuteExit
 
 signal item_destroyed(item: Item, correct: bool)
 

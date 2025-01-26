@@ -1,9 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://10j3gm2iies0"]
+[gd_scene load_steps=5 format=3 uid="uid://10j3gm2iies0"]
 
-[ext_resource type="Script" uid="uid://b8d71iwpoj8gr" path="res://scripts/item/item_belt.gd" id="1_efu5p"]
+[ext_resource type="Script" uid="uid://b8d71iwpoj8gr" path="res://scripts/props/belt.gd" id="1_efu5p"]
 [ext_resource type="Texture2D" uid="uid://ckephoxxolsbb" path="res://assets/artwork/conveyer/conveyer_belt.png" id="2_clhca"]
+[ext_resource type="Texture2D" uid="uid://bp0ts46tuafqm" path="res://assets/artwork/conveyer/conveyer_bottom.png" id="4_kjfa7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_efu5p"]
+size = Vector2(64, 64)
 
 [node name="item_belt" type="Area2D"]
 collision_layer = 2
@@ -11,16 +13,20 @@ collision_mask = 0
 input_pickable = false
 monitoring = false
 script = ExtResource("1_efu5p")
+speed = 64.0
 metadata/_custom_type_script = ExtResource("1_efu5p")
 
 [node name="collision_shape_2d" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_efu5p")
 
 [node name="belt" type="Sprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_clhca")
 
 [node name="overlay" type="Sprite2D" parent="."]
-texture = ExtResource("2_clhca")
+scale = Vector2(0.25, 0.25)
 
 [node name="support" type="Sprite2D" parent="."]
-texture = ExtResource("2_clhca")
+position = Vector2(0, 64)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("4_kjfa7")

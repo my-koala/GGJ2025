@@ -1,10 +1,10 @@
 [gd_resource type="TileSet" load_steps=8 format=3 uid="uid://ejf7mh4w5e0g"]
 
-[ext_resource type="PackedScene" uid="uid://cadnddkadj1bt" path="res://assets/props/item_belt/belt_test/belt_test_right.tscn" id="1_bi1y2"]
-[ext_resource type="PackedScene" uid="uid://dmd6guegx31yg" path="res://assets/props/item_belt/belt_test/belt_test_up.tscn" id="2_cxexh"]
-[ext_resource type="PackedScene" uid="uid://6wa1a78ux7c1" path="res://assets/props/item_belt/belt_test/belt_test_left.tscn" id="3_y477h"]
-[ext_resource type="PackedScene" uid="uid://dmanjl013mh5d" path="res://assets/props/item_belt/belt_test/belt_test_down.tscn" id="4_5c7on"]
-[ext_resource type="Texture2D" uid="uid://ctjykgis1jakl" path="res://assets/props/item_belt/belt_test/belt_test.png" id="5_cxexh"]
+[ext_resource type="PackedScene" uid="uid://cadnddkadj1bt" path="res://assets/props/belt/belt_test/belt_test_right.tscn" id="1_bi1y2"]
+[ext_resource type="PackedScene" uid="uid://dmd6guegx31yg" path="res://assets/props/belt/belt_test/belt_test_up.tscn" id="2_cxexh"]
+[ext_resource type="PackedScene" uid="uid://6wa1a78ux7c1" path="res://assets/props/belt/belt_test/belt_test_left.tscn" id="3_y477h"]
+[ext_resource type="PackedScene" uid="uid://dmanjl013mh5d" path="res://assets/props/belt/belt_test/belt_test_down.tscn" id="4_5c7on"]
+[ext_resource type="Texture2D" uid="uid://ctjykgis1jakl" path="res://assets/props/belt/belt_test/belt_test.png" id="5_cxexh"]
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_o6q4k"]
 resource_name = "belt_test"

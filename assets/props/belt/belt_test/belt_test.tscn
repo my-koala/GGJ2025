@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dqtkx060mqlbo"]
 
-[ext_resource type="Script" uid="uid://b8d71iwpoj8gr" path="res://scripts/item/item_belt.gd" id="1_bqilm"]
-[ext_resource type="Texture2D" uid="uid://ctjykgis1jakl" path="res://assets/props/item_belt/belt_test/belt_test.png" id="2_8tiuh"]
+[ext_resource type="Script" uid="uid://b8d71iwpoj8gr" path="res://scripts/props/belt.gd" id="1_bqilm"]
+[ext_resource type="Texture2D" uid="uid://ctjykgis1jakl" path="res://assets/props/belt/belt_test/belt_test.png" id="2_8tiuh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3rf22"]
 size = Vector2(16, 16)
