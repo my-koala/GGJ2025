@@ -1,10 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://10j3gm2iies0"]
+[gd_scene load_steps=6 format=3 uid="uid://10j3gm2iies0"]
 
 [ext_resource type="Script" uid="uid://b8d71iwpoj8gr" path="res://scripts/props/belt.gd" id="1_efu5p"]
 [ext_resource type="Texture2D" uid="uid://bbc7shs5ba88c" path="res://assets/props/belt/belt.png" id="2_q8fm2"]
+[ext_resource type="Shader" uid="uid://d0sxah2llq270" path="res://shaders/belt.tres" id="3_h8joh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_efu5p"]
 size = Vector2(64, 64)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_u3bbq"]
+shader = ExtResource("3_h8joh")
+shader_parameter/Speed = 64.0
+shader_parameter/Region_Params = Vector4(0, 0, 0.25, 0.25)
 
 [node name="belt_000" type="Area2D"]
 y_sort_enabled = true
@@ -29,6 +35,7 @@ region_enabled = true
 region_rect = Rect2(64, 0, 64, 64)
 
 [node name="belt" type="Sprite2D" parent="visual"]
+material = SubResource("ShaderMaterial_u3bbq")
 position = Vector2(0, 32)
 texture = ExtResource("2_q8fm2")
 region_enabled = true

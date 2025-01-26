@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://b5rbam8pcmykb"]
 
-[ext_resource type="Script" path="res://scripts/dialogue.gd" id="1_nnohn"]
-[ext_resource type="Texture2D" path="res://assets/artwork/Dialogue Box assets/animated_dialogue.tres" id="2_37c5w"]
-[ext_resource type="Texture2D" path="res://assets/artwork/frog_tutorial_sprites/animated_mister_frog.tres" id="3_l7mx8"]
+[ext_resource type="Script" uid="uid://b15roumchet6x" path="res://scripts/dialogue.gd" id="1_nnohn"]
+[ext_resource type="Texture2D" uid="uid://cmthb8j5rqrok" path="res://assets/artwork/Dialogue Box assets/animated_dialogue.tres" id="2_37c5w"]
+[ext_resource type="Texture2D" uid="uid://bm84mk1jtsmyp" path="res://assets/artwork/frog_tutorial_sprites/animated_mister_frog.tres" id="3_l7mx8"]
 [ext_resource type="Texture2D" uid="uid://c3pptswaffoyi" path="res://assets/artwork/Dialogue Box assets/Dialogue Box.png" id="4_37c5w"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_nnohn"]
