@@ -1,9 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://o6w6r60aaoog"]
+[gd_scene load_steps=15 format=3 uid="uid://o6w6r60aaoog"]
 
 [ext_resource type="PackedScene" uid="uid://c8vl5y0q7ua3b" path="res://assets/levels/scenes/level.tscn" id="1_gppl4"]
 [ext_resource type="PackedScene" uid="uid://bbehyped0t73w" path="res://assets/props/chute/chute_entry_right.tscn" id="2_b5acj"]
 [ext_resource type="Script" uid="uid://dip6wdi7oacqt" path="res://scripts/props/item_info.gd" id="3_6iupr"]
-[ext_resource type="Resource" uid="uid://buvtu0snttan0" path="res://assets/props/item/item_infos/item_info_husky.tres" id="4_8givo"]
+[ext_resource type="Resource" uid="uid://dguk7yimd6o5s" path="res://assets/props/item/item_infos/item_info_conk.tres" id="4_8tqqt"]
+[ext_resource type="Resource" uid="uid://cko3omy02a0fd" path="res://assets/props/item/item_infos/item_info_plastic.tres" id="5_gppl4"]
 [ext_resource type="PackedScene" uid="uid://bevkk63dtnl4m" path="res://assets/props/chute/chute_exit_left.tscn" id="5_s8uh7"]
 [ext_resource type="PackedScene" uid="uid://c7jr2tlmcby2e" path="res://assets/props/belt/belt_right.tscn" id="6_f6q5q"]
 [ext_resource type="Script" uid="uid://dfktug68yfw7d" path="res://scripts/dialogue_entry.gd" id="10_blbmo"]
@@ -41,15 +42,17 @@ position = Vector2(229, -304)
 [node name="chute_entry_right_000" parent="chutes" index="0" instance=ExtResource("2_b5acj")]
 y_sort_enabled = false
 position = Vector2(-416, 0)
-item_infos = Array[ExtResource("3_6iupr")]([ExtResource("4_8givo")])
+item_infos = Array[ExtResource("3_6iupr")]([ExtResource("4_8tqqt"), ExtResource("5_gppl4"), ExtResource("4_8tqqt"), ExtResource("5_gppl4"), ExtResource("5_gppl4"), ExtResource("4_8tqqt")])
+spawn_frequency = 3.0
+spawn_delay = 3.0
 
 [node name="chute_exit_left_000" parent="chutes" index="1" instance=ExtResource("5_s8uh7")]
 position = Vector2(416, -160)
-item_infos = Array[ExtResource("3_6iupr")]([ExtResource("4_8givo")])
+item_infos = Array[ExtResource("3_6iupr")]([ExtResource("4_8tqqt")])
 
 [node name="chute_exit_left_001" parent="chutes" index="2" instance=ExtResource("5_s8uh7")]
 position = Vector2(416, 160)
-item_infos = Array[ExtResource("3_6iupr")]([ExtResource("4_8givo")])
+item_infos = Array[ExtResource("3_6iupr")]([ExtResource("5_gppl4")])
 
 [node name="item_belt_right_009" parent="belts" index="0" instance=ExtResource("6_f6q5q")]
 position = Vector2(96, -160)

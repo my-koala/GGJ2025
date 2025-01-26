@@ -1,10 +1,13 @@
-[gd_scene load_steps=17 format=3 uid="uid://xkd2fq6c4aeo"]
+[gd_scene load_steps=21 format=3 uid="uid://xkd2fq6c4aeo"]
 
 [ext_resource type="PackedScene" uid="uid://c8vl5y0q7ua3b" path="res://assets/levels/scenes/level.tscn" id="1_3gdde"]
 [ext_resource type="PackedScene" uid="uid://bbehyped0t73w" path="res://assets/props/chute/chute_entry_right.tscn" id="2_ymvoe"]
 [ext_resource type="Script" uid="uid://dip6wdi7oacqt" path="res://scripts/props/item_info.gd" id="3_fpsi2"]
-[ext_resource type="Resource" uid="uid://buvtu0snttan0" path="res://assets/props/item/item_infos/item_info_husky.tres" id="4_mhti0"]
+[ext_resource type="Resource" uid="uid://dguk7yimd6o5s" path="res://assets/props/item/item_infos/item_info_conk.tres" id="4_fpsi2"]
+[ext_resource type="Resource" uid="uid://or3knto76bkw" path="res://assets/props/item/item_infos/item_info_banana.tres" id="5_mhti0"]
 [ext_resource type="PackedScene" uid="uid://bevkk63dtnl4m" path="res://assets/props/chute/chute_exit_left.tscn" id="5_mn73r"]
+[ext_resource type="Resource" uid="uid://cko3omy02a0fd" path="res://assets/props/item/item_infos/item_info_plastic.tres" id="6_omd5s"]
+[ext_resource type="Resource" uid="uid://p7ojn1574vfb" path="res://assets/props/item/item_infos/item_info_bottle.tres" id="7_64u3x"]
 [ext_resource type="PackedScene" uid="uid://c7jr2tlmcby2e" path="res://assets/props/belt/belt_right.tscn" id="7_72clv"]
 [ext_resource type="PackedScene" uid="uid://dj0k635q02lwu" path="res://assets/props/belt/belt_up.tscn" id="8_g381p"]
 [ext_resource type="PackedScene" uid="uid://buqbn7w8cx67a" path="res://assets/props/belt/belt_left.tscn" id="9_d432t"]
@@ -53,11 +56,13 @@ position = Vector2(229, -304)
 [node name="chute_entry_right_000" parent="chutes" index="0" instance=ExtResource("2_ymvoe")]
 y_sort_enabled = false
 position = Vector2(-224, 96)
-item_infos = Array[ExtResource("3_fpsi2")]([ExtResource("4_mhti0")])
+item_infos = Array[ExtResource("3_fpsi2")]([ExtResource("4_fpsi2"), ExtResource("5_mhti0"), ExtResource("6_omd5s"), ExtResource("7_64u3x")])
+spawn_frequency = 5.0
+spawn_delay = 5.0
 
 [node name="chute_exit_left_000" parent="chutes" index="1" instance=ExtResource("5_mn73r")]
 position = Vector2(224, -160)
-item_infos = Array[ExtResource("3_fpsi2")]([ExtResource("4_mhti0")])
+item_infos = Array[ExtResource("3_fpsi2")]([ExtResource("4_fpsi2"), ExtResource("6_omd5s"), ExtResource("7_64u3x"), ExtResource("5_mhti0")])
 
 [node name="item_belt_right_008" parent="belts" index="0" instance=ExtResource("7_72clv")]
 position = Vector2(-160, -160)

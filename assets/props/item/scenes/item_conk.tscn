@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://5euw5it54l8g" path="res://assets/props/item/textures/item_conk.tres" id="2_s8aru"]
 
 [node name="item_conk" instance=ExtResource("1_s8aru")]
-identifier = &"husky"
+identifier = &"conk"
 drop_grace_time = 0.1
 
 [node name="sprite_2d" parent="." index="1"]

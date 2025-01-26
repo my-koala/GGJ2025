@@ -1,15 +1,24 @@
-[gd_scene load_steps=19 format=3 uid="uid://cfquoavtiknus"]
+[gd_scene load_steps=25 format=3 uid="uid://cfquoavtiknus"]
 
 [ext_resource type="PackedScene" uid="uid://c8vl5y0q7ua3b" path="res://assets/levels/scenes/level.tscn" id="1_1et6b"]
 [ext_resource type="PackedScene" uid="uid://bbehyped0t73w" path="res://assets/props/chute/chute_entry_right.tscn" id="2_rxabv"]
 [ext_resource type="Script" uid="uid://dip6wdi7oacqt" path="res://scripts/props/item_info.gd" id="3_cg1gs"]
-[ext_resource type="Resource" uid="uid://buvtu0snttan0" path="res://assets/props/item/item_infos/item_info_husky.tres" id="4_vpue2"]
+[ext_resource type="Resource" uid="uid://or3knto76bkw" path="res://assets/props/item/item_infos/item_info_banana.tres" id="4_3p4ce"]
 [ext_resource type="PackedScene" uid="uid://bevkk63dtnl4m" path="res://assets/props/chute/chute_exit_left.tscn" id="5_1ur70"]
+[ext_resource type="Resource" uid="uid://p7ojn1574vfb" path="res://assets/props/item/item_infos/item_info_bottle.tres" id="5_axmfg"]
 [ext_resource type="PackedScene" uid="uid://c7jr2tlmcby2e" path="res://assets/props/belt/belt_right.tscn" id="6_0ki71"]
+<<<<<<< HEAD
+=======
+[ext_resource type="Resource" uid="uid://cd65uywkbvhb2" path="res://assets/props/item/item_infos/item_info_bicycle.tres" id="6_omllw"]
+[ext_resource type="PackedScene" uid="uid://b5rbam8pcmykb" path="res://assets/dialogue_system/dialogue_system.tscn" id="7_c5tth"]
+[ext_resource type="Resource" uid="uid://cko3omy02a0fd" path="res://assets/props/item/item_infos/item_info_plastic.tres" id="7_lebjv"]
+>>>>>>> 8a390e9 (assign items to every level)
 [ext_resource type="PackedScene" uid="uid://buqbn7w8cx67a" path="res://assets/props/belt/belt_left.tscn" id="7_vpue2"]
 [ext_resource type="PackedScene" uid="uid://dj0k635q02lwu" path="res://assets/props/belt/belt_up.tscn" id="8_1ur70"]
+[ext_resource type="Resource" uid="uid://fcjusydadrq4" path="res://assets/props/item/item_infos/item_info_flag.tres" id="8_07r3n"]
 [ext_resource type="Script" uid="uid://dfktug68yfw7d" path="res://scripts/dialogue_entry.gd" id="8_iest2"]
 [ext_resource type="PackedScene" uid="uid://d2hg70rrjbhwk" path="res://assets/props/belt/belt_down.tscn" id="9_0ki71"]
+[ext_resource type="Resource" uid="uid://dguk7yimd6o5s" path="res://assets/props/item/item_infos/item_info_conk.tres" id="9_dec52"]
 
 [sub_resource type="Resource" id="Resource_3gdde"]
 script = ExtResource("8_iest2")
@@ -59,11 +68,13 @@ position = Vector2(229, -304)
 [node name="chute_entry_right_000" parent="chutes" index="0" instance=ExtResource("2_rxabv")]
 y_sort_enabled = false
 position = Vector2(-416, 160)
-item_infos = Array[ExtResource("3_cg1gs")]([ExtResource("4_vpue2")])
+item_infos = Array[ExtResource("3_cg1gs")]([ExtResource("4_3p4ce"), ExtResource("5_axmfg"), ExtResource("6_omllw"), ExtResource("7_lebjv"), ExtResource("8_07r3n"), ExtResource("9_dec52")])
+spawn_frequency = 3.0
+spawn_delay = 3.0
 
 [node name="chute_exit_left_001" parent="chutes" index="1" instance=ExtResource("5_1ur70")]
 position = Vector2(416, 160)
-item_infos = Array[ExtResource("3_cg1gs")]([ExtResource("4_vpue2")])
+item_infos = Array[ExtResource("3_cg1gs")]([ExtResource("6_omllw"), ExtResource("8_07r3n"), ExtResource("7_lebjv"), ExtResource("9_dec52"), ExtResource("4_3p4ce"), ExtResource("5_axmfg")])
 
 [node name="item_belt_right_014" parent="belts" index="0" instance=ExtResource("6_0ki71")]
 position = Vector2(352, 160)

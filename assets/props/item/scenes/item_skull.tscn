@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cmgsjd5b474ls" path="res://assets/props/item/textures/item_skull.tres" id="2_tjggd"]
 
 [node name="item_skull" instance=ExtResource("1_tjggd")]
-identifier = &"husky"
+identifier = &"skull"
 drop_grace_time = 0.1
 
 [node name="sprite_2d" parent="." index="1"]

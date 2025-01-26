@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cesle5hvthyuy" path="res://assets/props/item/textures/item_flag.tres" id="2_5fj17"]
 
 [node name="item_flag" instance=ExtResource("1_5fj17")]
-identifier = &"husky"
+identifier = &"flag"
 drop_grace_time = 0.1
 
 [node name="sprite_2d" parent="." index="1"]
