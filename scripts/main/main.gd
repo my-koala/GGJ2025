@@ -92,6 +92,8 @@ func _load_level(level_info: LevelInfo) -> void:
 	
 	if is_instance_valid(_level_instance):
 		_level_instance.ended.connect(_on_level_ended)
+		_level_instance.played = _level_info.played
+		_level_info.played = true
 		_play.add_child(_level_instance)
 	
 	_set_state(State.PLAY)
@@ -113,6 +115,8 @@ func _load_next_level() -> void:
 	
 	if is_instance_valid(_level_instance):
 		_level_instance.ended.connect(_on_level_ended)
+		_level_instance.played = _level_info.played
+		_level_info.played = true
 		_play.add_child(_level_instance)
 	
 	_set_state(State.PLAY)
@@ -132,6 +136,8 @@ func _reload_level() -> void:
 	
 	if is_instance_valid(_level_instance):
 		_level_instance.ended.connect(_on_level_ended)
+		_level_instance.played = _level_info.played
+		_level_info.played = true
 		_play.add_child(_level_instance)
 	
 	_set_state(State.PLAY)

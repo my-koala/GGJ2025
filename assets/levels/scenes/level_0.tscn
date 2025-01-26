@@ -58,7 +58,6 @@ y_sort_enabled = false
 position = Vector2(-224, 96)
 item_infos = Array[ExtResource("3_fpsi2")]([ExtResource("4_fpsi2"), ExtResource("5_mhti0"), ExtResource("6_omd5s"), ExtResource("7_64u3x")])
 spawn_frequency = 5.0
-spawn_delay = 5.0
 
 [node name="chute_exit_left_000" parent="chutes" index="1" instance=ExtResource("5_mn73r")]
 position = Vector2(224, -160)

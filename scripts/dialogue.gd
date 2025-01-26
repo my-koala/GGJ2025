@@ -13,6 +13,8 @@ signal dialogue_started()
 ## Emitted when the current dialogue tree has finished.
 signal dialogue_ended()
 
+# set by Level
+
 ## Array of all dialogue entries
 @export
 var dialogue_entries: Array[DialogueEntry] = []
@@ -39,13 +41,8 @@ signal _user_interacted()
 func _ready() -> void:
 	if Engine.is_editor_hint():
 		return
-
-	# Do not start any dialogue events if no entries are present	
-	if dialogue_entries.size() == 0:
-		return
 	
-	dialogue_started.emit()
-	_play_dialogue()
+	self.visible = false
 
 # Emit our interaction signal if any keyboard or mouse press is detected
 func _input(event: InputEvent) -> void:
@@ -54,7 +51,9 @@ func _input(event: InputEvent) -> void:
 		_user_interacted.emit()
 
 # Iterates through all entries, awaits each one, and waits for player interaction before continuing
-func _play_dialogue() -> void:
+func play_dialogue() -> void:
+	self.visible = true
+	dialogue_started.emit()
 	for entry: DialogueEntry in dialogue_entries:
 		var animatedTexture: AnimatedTexture = agent as AnimatedTexture
 		

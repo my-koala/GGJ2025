@@ -13,4 +13,6 @@ var name: StringName = &""
 @export
 var difficulty: int = 0# idea: 1-5 star difficult rating
 
+var played: bool = false
+
 var completed: bool = false

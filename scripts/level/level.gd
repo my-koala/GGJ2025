@@ -13,6 +13,8 @@ var _dialogue: Dialogue = $canvas_layer/dialogue_system as Dialogue
 @onready
 var _camera: Camera2D = $camera_2d as Camera2D
 
+var played: bool = false# used for dialogue check
+
 var _chute_entries: Array[ChuteEntry] = []
 var _chute_exits: Array[ChuteExit] = []
 
@@ -52,11 +54,15 @@ func _ready() -> void:
 		if is_instance_valid(chute_exit):
 			chute_exit.item_destroyed.connect(_on_item_destroyed)
 			_chute_exits.append(chute_exit)
-		
+	
 	# If dialogue is present, start chutes once the dialogue is finished
 	# Instantly start chutes otherwise
 	if is_instance_valid(_dialogue):
-		_dialogue.dialogue_ended.connect(_on_dialog_finished)
+		if !played:
+			_dialogue.dialogue_ended.connect(_on_dialog_finished)
+			_dialogue.play_dialogue()
+		else:
+			_on_dialog_finished()
 	else:
 		print("no dialogue???")
 		_on_dialog_finished()
