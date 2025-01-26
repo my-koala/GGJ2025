@@ -1,0 +1,61 @@
+[gd_scene load_steps=15 format=3 uid="uid://cyvnkcfvx2w6w"]
+
+[ext_resource type="PackedScene" uid="uid://d2hg70rrjbhwk" path="res://assets/props/belt/belt_down.tscn" id="1_i1fy7"]
+[ext_resource type="PackedScene" uid="uid://buqbn7w8cx67a" path="res://assets/props/belt/belt_left.tscn" id="2_v4a0n"]
+[ext_resource type="PackedScene" uid="uid://c7jr2tlmcby2e" path="res://assets/props/belt/belt_right.tscn" id="3_srpe5"]
+[ext_resource type="PackedScene" uid="uid://dj0k635q02lwu" path="res://assets/props/belt/belt_up.tscn" id="4_xdm2m"]
+[ext_resource type="PackedScene" uid="uid://djuqtd12lmwm0" path="res://assets/props/chute/chute_entry.tscn" id="5_edws2"]
+[ext_resource type="PackedScene" uid="uid://bpcdodk1pslt8" path="res://assets/props/chute/chute_entry_down.tscn" id="6_khcsl"]
+[ext_resource type="PackedScene" uid="uid://syqfbt1ykpo8" path="res://assets/props/chute/chute_entry_left.tscn" id="7_kgolq"]
+[ext_resource type="PackedScene" uid="uid://bbehyped0t73w" path="res://assets/props/chute/chute_entry_right.tscn" id="8_oi0qg"]
+[ext_resource type="PackedScene" uid="uid://cc2ro2n2x7eyi" path="res://assets/props/chute/chute_entry_up.tscn" id="9_mj0cx"]
+[ext_resource type="PackedScene" uid="uid://ctlwqfj210i8e" path="res://assets/props/chute/chute_exit.tscn" id="10_tag8k"]
+[ext_resource type="PackedScene" uid="uid://ct8pfmrh7wncv" path="res://assets/props/chute/chute_exit_down.tscn" id="11_m5r3d"]
+[ext_resource type="PackedScene" uid="uid://bevkk63dtnl4m" path="res://assets/props/chute/chute_exit_left.tscn" id="12_wqi4e"]
+[ext_resource type="PackedScene" uid="uid://b7eq87fdh4dmy" path="res://assets/props/chute/chute_exit_right.tscn" id="13_u6dnh"]
+[ext_resource type="PackedScene" uid="uid://cxituxp0nhofi" path="res://assets/props/chute/chute_exit_up.tscn" id="14_blg8r"]
+
+[node name="asset_zoo" type="Node2D"]
+
+[node name="belt_down_000" parent="." instance=ExtResource("1_i1fy7")]
+position = Vector2(256, 0)
+
+[node name="belt_left_000" parent="." instance=ExtResource("2_v4a0n")]
+position = Vector2(384, 0)
+
+[node name="belt_right_000" parent="." instance=ExtResource("3_srpe5")]
+position = Vector2(512, 0)
+
+[node name="belt_up_000" parent="." instance=ExtResource("4_xdm2m")]
+position = Vector2(128, 0)
+
+[node name="chute_entry_000" parent="." instance=ExtResource("5_edws2")]
+position = Vector2(0, 128)
+
+[node name="chute_entry_down_000" parent="." instance=ExtResource("6_khcsl")]
+position = Vector2(128, 128)
+
+[node name="chute_entry_left_000" parent="." instance=ExtResource("7_kgolq")]
+position = Vector2(256, 128)
+
+[node name="chute_entry_right_000" parent="." instance=ExtResource("8_oi0qg")]
+position = Vector2(384, 128)
+
+[node name="chute_entry_up_000" parent="." instance=ExtResource("9_mj0cx")]
+position = Vector2(512, 128)
+
+[node name="chute_exit_000" parent="." instance=ExtResource("10_tag8k")]
+position = Vector2(0, 256)
+
+[node name="chute_exit_down_000" parent="." instance=ExtResource("11_m5r3d")]
+position = Vector2(128, 256)
+
+[node name="chute_exit_left_000" parent="." instance=ExtResource("12_wqi4e")]
+position = Vector2(256, 256)
+
+[node name="chute_exit_right_000" parent="." instance=ExtResource("13_u6dnh")]
+position = Vector2(384, 256)
+item_center_check = false
+
+[node name="chute_exit_up_000" parent="." instance=ExtResource("14_blg8r")]
+position = Vector2(512, 256)

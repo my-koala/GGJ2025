@@ -4,11 +4,11 @@ class_name Level
 
 signal ended(passed: bool)
 
-@export
-var _item_inputs: Array[ItemInput] = []
+@onready
+var _chutes: Node2D = $chutes as Node2D
 
-@export
-var _item_outputs: Array[ItemOutput] = []
+var _chute_entries: Array[ChuteEntry] = []
+var _chute_exits: Array[ChuteExit] = []
 
 var _total_items: int = 0
 var _items_destroyed: int = 0
@@ -25,12 +25,17 @@ func _ready() -> void:
 	if Engine.is_editor_hint():
 		return
 	
-	for input: ItemInput in _item_inputs:
-		input.item_instantiated.connect(_on_item_instantiated)
-		_total_items += input.items.size()
+	for node: Node in _chutes.get_children():
+		var chute_entry: ChuteEntry = node as ChuteEntry
+		if is_instance_valid(chute_entry):
+			chute_entry.item_instantiated.connect(_on_item_instantiated)
+			_total_items += chute_entry.items.size()
+			_chute_entries.append(chute_entry)
 		
-	for output: ItemOutput in _item_outputs:
-		output.item_destroyed.connect(_on_item_destroyed)
+		var chute_exit: ChuteExit = node as ChuteExit
+		if is_instance_valid(chute_exit):
+			chute_exit.item_destroyed.connect(_on_item_destroyed)
+			_chute_exits.append(chute_exit)
 
 # When an item is instantiated by an Item Input, we need the manager to listen
 # to when that item is dropped on the floor. This can be a fail state.

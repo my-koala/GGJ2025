@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://bpcdodk1pslt8"]
+
+[ext_resource type="PackedScene" uid="uid://djuqtd12lmwm0" path="res://assets/props/chute/chute_entry.tscn" id="1_7r5jv"]
+
+[node name="chute_entry_down_000" instance=ExtResource("1_7r5jv")]
+
+[node name="sprite_2d" parent="." index="0"]
+region_rect = Rect2(128, 0, 64, 144)
+
+[node name="spawn_point" parent="." index="1"]
+position = Vector2(0, 64)
+
+[node name="collision_shape_2d" parent="." index="2"]
+disabled = false
+
+[node name="belt" parent="." index="3"]
+monitorable = false

@@ -1,15 +1,34 @@
-[gd_scene load_steps=2 format=3 uid="uid://c8vl5y0q7ua3b"]
+[gd_scene load_steps=5 format=4 uid="uid://c8vl5y0q7ua3b"]
 
 [ext_resource type="Script" uid="uid://bd24x5hdgvi76" path="res://scripts/level/level.gd" id="1_uuog7"]
+[ext_resource type="TileSet" uid="uid://bnr6afut1lj70" path="res://assets/tiles/tile_sets/geometry.tres" id="2_8m5s3"]
+[ext_resource type="PackedScene" uid="uid://cyvnkcfvx2w6w" path="res://assets/asset_zoo.tscn" id="3_ecg5t"]
+[ext_resource type="Texture2D" uid="uid://b4ukhv7wppjf7" path="res://assets/artwork/tile_background/wall_poster1.png" id="4_kguka"]
 
 [node name="level" type="Node2D"]
+y_sort_enabled = true
 script = ExtResource("1_uuog7")
 
 [node name="camera_2d" type="Camera2D" parent="."]
 process_callback = 0
 
-[node name="geometry" type="Node2D" parent="."]
+[node name="geometry" type="TileMapLayer" parent="."]
+z_index = -128
+tile_map_data = PackedByteArray("AAD/////AAABAAEAAAD//wAAAAABAAEAAAAAAAAAAAABAAEAAAAAAP//AAABAAEAAAD+////AAABAAEAAAD+/wAAAAABAAEAAAABAAAAAAABAAEAAAABAP//AAABAAEAAAD9////AAABAAEAAAD9/wAAAAABAAEAAAACAP//AAABAAEAAAACAAAAAAABAAEAAAD9//7/AAABAAAAAAD+//7/AAABAAAAAAD///7/AAABAAAAAAAAAP7/AAABAAAAAAABAP7/AAABAAAAAAACAP7/AAABAAAAAAADAP7/AAACAAAAAAADAP//AAACAAEAAAD8//7/AAAAAAAAAAD8////AAAAAAEAAAD8/wEAAAAAAAIAAAADAAEAAAACAAIAAAADAAAAAAACAAEAAAD8/wAAAAAAAAEAAAD9/wEAAAABAAIAAAD+/wEAAAABAAIAAAD//wEAAAABAAIAAAAAAAEAAAABAAIAAAABAAEAAAABAAIAAAACAAEAAAABAAIAAAD7//3/AQAAAAAAAAD8//3/AQABAAAAAAD9//3/AQABAAAAAAD+//3/AQABAAAAAAD///3/AQABAAAAAAAAAP3/AQABAAAAAAABAP3/AQABAAAAAAACAP3/AQABAAAAAAADAP3/AQABAAAAAAAEAP7/AQACAAEAAAAEAP//AQACAAEAAAAEAAAAAQACAAEAAAAEAAEAAQACAAEAAAADAAIAAQABAAIAAAACAAIAAQABAAIAAAABAAIAAQABAAIAAAAAAAIAAQABAAIAAAD//wIAAQABAAIAAAD+/wIAAQABAAIAAAD9/wIAAQABAAIAAAD8/wIAAQABAAIAAAD7/wEAAQAAAAEAAAD7/wAAAQAAAAEAAAD7////AQAAAAEAAAD7//7/AQAAAAEAAAAEAP3/AQACAAAAAAAEAAIAAQACAAIAAAD7/wIAAQAAAAIAAAA=")
+tile_set = ExtResource("2_8m5s3")
 
-[node name="floor" type="TileMapLayer" parent="geometry"]
+[node name="wall_poster_1" type="Sprite2D" parent="geometry"]
+position = Vector2(218, -301)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_kguka")
 
-[node name="walls" type="TileMapLayer" parent="geometry"]
+[node name="chutes" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="belts" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="asset_zoo" parent="." instance=ExtResource("3_ecg5t")]
+position = Vector2(0, -1024)
+
+[editable path="asset_zoo"]

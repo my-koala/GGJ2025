@@ -1,341 +1,57 @@
-[gd_scene load_steps=24 format=3 uid="uid://srio544gi0pg"]
+[gd_scene load_steps=8 format=3 uid="uid://hje37ito51wp"]
 
-[ext_resource type="Script" uid="uid://bd24x5hdgvi76" path="res://scripts/level/level.gd" id="1_jrxwf"]
-[ext_resource type="PackedScene" uid="uid://cadnddkadj1bt" path="res://assets/props/belt/belt_test/belt_test_right.tscn" id="2_gsb8x"]
-[ext_resource type="PackedScene" uid="uid://dmd6guegx31yg" path="res://assets/props/belt/belt_test/belt_test_up.tscn" id="3_wqd8v"]
-[ext_resource type="PackedScene" uid="uid://6wa1a78ux7c1" path="res://assets/props/belt/belt_test/belt_test_left.tscn" id="4_00324"]
-[ext_resource type="PackedScene" uid="uid://dmanjl013mh5d" path="res://assets/props/belt/belt_test/belt_test_down.tscn" id="5_enlnt"]
+[ext_resource type="PackedScene" uid="uid://c8vl5y0q7ua3b" path="res://assets/levels/scenes/level.tscn" id="1_36gu4"]
+[ext_resource type="PackedScene" uid="uid://dj0k635q02lwu" path="res://assets/props/belt/belt_up.tscn" id="3_xfglt"]
+[ext_resource type="PackedScene" uid="uid://buqbn7w8cx67a" path="res://assets/props/belt/belt_left.tscn" id="4_0sq7a"]
+[ext_resource type="PackedScene" uid="uid://b7eq87fdh4dmy" path="res://assets/props/chute/chute_exit_right.tscn" id="5_uokaw"]
+[ext_resource type="PackedScene" uid="uid://bbehyped0t73w" path="res://assets/props/chute/chute_entry_right.tscn" id="6_3dbkb"]
 [ext_resource type="PackedScene" uid="uid://bunge2le1ir2y" path="res://assets/props/item/husky/item_husky.tscn" id="6_n45ye"]
-[ext_resource type="Texture2D" uid="uid://cb4ig45wj083l" path="res://assets/tiles/tile_scenes/input_output/input_output_test.png" id="8_o2ikt"]
-[ext_resource type="Texture2D" uid="uid://bw7x563rutto1" path="res://assets/artwork/tile_background/floor_tile_up.png" id="9_jrxwf"]
-[ext_resource type="Script" uid="uid://crmh7bm1sm38a" path="res://scripts/props/chute_exit.gd" id="9_xyptv"]
-[ext_resource type="Texture2D" uid="uid://dsx4sjwtwwrr1" path="res://assets/artwork/tile_background/floor_tile_middle.png" id="10_jrxwf"]
 [ext_resource type="PackedScene" uid="uid://c7jr2tlmcby2e" path="res://assets/props/belt/belt_right.tscn" id="10_s0oup"]
-[ext_resource type="Texture2D" uid="uid://by7lyvrhit0ic" path="res://assets/artwork/tile_background/wall.png" id="11_negnl"]
-[ext_resource type="Texture2D" uid="uid://nsavnb7cm36c" path="res://assets/artwork/tile_background/wall_corner.png" id="12_4ab8w"]
-[ext_resource type="Texture2D" uid="uid://cm433c2tcw2k6" path="res://assets/artwork/tile_background/floor_crack1.png" id="15_00324"]
-[ext_resource type="Texture2D" uid="uid://y640an10valm" path="res://assets/artwork/tile_background/wall_barnacle1.png" id="16_enlnt"]
-[ext_resource type="Texture2D" uid="uid://cmd743epcevm0" path="res://assets/artwork/tile_background/wall_clock.png" id="17_n45ye"]
-[ext_resource type="Texture2D" uid="uid://d2w5b6w4p11p8" path="res://assets/artwork/tile_background/wall_door.png" id="18_n45ye"]
-[ext_resource type="Texture2D" uid="uid://by3p7rwttdgiv" path="res://assets/artwork/tile_background/wall_door_bg.png" id="19_s0oup"]
-[ext_resource type="PackedScene" uid="uid://d2hg70rrjbhwk" path="res://assets/props/belt/belt_down.tscn" id="20_s0oup"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6sv45"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jrxwf"]
-size = Vector2(167, 629.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_gsb8x"]
-size = Vector2(1059.5, 147.75)
+[node name="level_debug" instance=ExtResource("1_36gu4")]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wqd8v"]
-size = Vector2(146.75, 651.875)
+[node name="chute_entry_right_000" parent="chutes" index="0" instance=ExtResource("6_3dbkb")]
+position = Vector2(-192, 128)
+items = Array[PackedScene]([ExtResource("6_n45ye")])
 
-[node name="level_debug" type="Node2D"]
-script = ExtResource("1_jrxwf")
-
-[node name="belts" type="Node2D" parent="."]
-y_sort_enabled = true
-position = Vector2(-9, 111)
-scale = Vector2(3, 3)
+[node name="chute_exit_right_000" parent="chutes" index="1" instance=ExtResource("5_uokaw")]
+position = Vector2(-128, -128)
+item_center_check = false
 
-[node name="belt_test_right_000" parent="belts" instance=ExtResource("2_gsb8x")]
-position = Vector2(-48, 0)
-speed = 128.0
+[node name="item_belt_right_000" parent="belts" index="0" instance=ExtResource("10_s0oup")]
+position = Vector2(-128, 128)
 
-[node name="belt_test_right_001" parent="belts" instance=ExtResource("2_gsb8x")]
-position = Vector2(-32, 0)
-speed = 64.0
+[node name="item_belt_right_001" parent="belts" index="1" instance=ExtResource("10_s0oup")]
+position = Vector2(-64, 128)
 
-[node name="belt_test_right_002" parent="belts" instance=ExtResource("2_gsb8x")]
-position = Vector2(-16, 0)
-speed = 64.0
+[node name="item_belt_right_002" parent="belts" index="2" instance=ExtResource("10_s0oup")]
+position = Vector2(0, 128)
 
-[node name="belt_test_right_003" parent="belts" instance=ExtResource("2_gsb8x")]
-speed = 64.0
-
-[node name="belt_test_right_004" parent="belts" instance=ExtResource("2_gsb8x")]
-position = Vector2(16, 0)
-speed = 64.0
-
-[node name="belt_test_right_005" parent="belts" instance=ExtResource("2_gsb8x")]
-position = Vector2(32, 0)
-speed = 64.0
-
-[node name="belt_test_right_006" parent="belts" instance=ExtResource("2_gsb8x")]
-position = Vector2(48, 0)
-speed = 64.0
-
-[node name="belt_test_right_007" parent="belts" instance=ExtResource("2_gsb8x")]
-position = Vector2(-80, -64)
-speed = 32.0
-
-[node name="belt_test_up_000" parent="belts" instance=ExtResource("3_wqd8v")]
-position = Vector2(64, 0)
-speed = 32.0
-
-[node name="belt_test_up_001" parent="belts" instance=ExtResource("3_wqd8v")]
-position = Vector2(64, -16)
-speed = 32.0
-
-[node name="belt_test_up_002" parent="belts" instance=ExtResource("3_wqd8v")]
-position = Vector2(64, -32)
-speed = 32.0
-
-[node name="belt_test_up_003" parent="belts" instance=ExtResource("3_wqd8v")]
-position = Vector2(64, -48)
-speed = 8.0
-
-[node name="belt_test_left_000" parent="belts" instance=ExtResource("4_00324")]
-position = Vector2(64, -64)
-speed = 32.0
-
-[node name="belt_test_left_001" parent="belts" instance=ExtResource("4_00324")]
-position = Vector2(48, -64)
-speed = 32.0
-
-[node name="belt_test_left_002" parent="belts" instance=ExtResource("4_00324")]
-position = Vector2(32, -64)
-speed = 32.0
-
-[node name="belt_test_left_003" parent="belts" instance=ExtResource("4_00324")]
-position = Vector2(16, -64)
-speed = 32.0
-
-[node name="belt_test_left_004" parent="belts" instance=ExtResource("4_00324")]
-position = Vector2(0, -64)
-speed = 32.0
-
-[node name="belt_test_left_005" parent="belts" instance=ExtResource("4_00324")]
-position = Vector2(-16, -32)
-speed = 32.0
-
-[node name="belt_test_left_006" parent="belts" instance=ExtResource("4_00324")]
-position = Vector2(-32, -32)
-speed = 32.0
-
-[node name="belt_test_left_007" parent="belts" instance=ExtResource("4_00324")]
-position = Vector2(-80, -80)
-speed = 32.0
-
-[node name="belt_test_left_008" parent="belts" instance=ExtResource("4_00324")]
-position = Vector2(48, -48)
-speed = 32.0
-
-[node name="belt_test_left_009" parent="belts" instance=ExtResource("4_00324")]
-position = Vector2(32, -48)
-speed = 32.0
-
-[node name="belt_test_left_010" parent="belts" instance=ExtResource("4_00324")]
-position = Vector2(16, -48)
-speed = 32.0
-
-[node name="belt_test_left_011" parent="belts" instance=ExtResource("4_00324")]
-position = Vector2(0, -48)
-speed = 32.0
-
-[node name="belt_test_left_012" parent="belts" instance=ExtResource("4_00324")]
-position = Vector2(64, 32)
-speed = 32.0
-
-[node name="belt_test_left_013" parent="belts" instance=ExtResource("4_00324")]
-position = Vector2(48, 32)
-speed = 32.0
-
-[node name="belt_test_left_014" parent="belts" instance=ExtResource("4_00324")]
-position = Vector2(32, 32)
-speed = 32.0
-
-[node name="belt_test_left_015" parent="belts" instance=ExtResource("4_00324")]
-position = Vector2(16, 32)
-speed = 32.0
+[node name="item_belt_right_003" parent="belts" index="3" instance=ExtResource("10_s0oup")]
+position = Vector2(64, 128)
 
-[node name="belt_test_left_016" parent="belts" instance=ExtResource("4_00324")]
-position = Vector2(0, 32)
-speed = 32.0
+[node name="item_belt_up_000" parent="belts" index="4" instance=ExtResource("3_xfglt")]
+position = Vector2(128, 128)
 
-[node name="belt_test_left_017" parent="belts" instance=ExtResource("4_00324")]
-position = Vector2(-16, 32)
-speed = 32.0
-
-[node name="belt_test_left_018" parent="belts" instance=ExtResource("4_00324")]
-position = Vector2(-32, 32)
-speed = 32.0
-
-[node name="belt_test_left_019" parent="belts" instance=ExtResource("4_00324")]
-position = Vector2(-48, 32)
-speed = 32.0
-
-[node name="belt_test_left_020" parent="belts" instance=ExtResource("4_00324")]
-position = Vector2(-64, 32)
-speed = 32.0
-
-[node name="belt_test_down_000" parent="belts" instance=ExtResource("5_enlnt")]
-position = Vector2(-16, -64)
-speed = 32.0
-
-[node name="belt_test_down_001" parent="belts" instance=ExtResource("5_enlnt")]
-position = Vector2(-16, -48)
-speed = 32.0
-
-[node name="belt_test_down_002" parent="belts" instance=ExtResource("5_enlnt")]
-position = Vector2(-48, -32)
-speed = 32.0
-
-[node name="belt_test_down_003" parent="belts" instance=ExtResource("5_enlnt")]
-position = Vector2(-48, -16)
-speed = 32.0
-
-[node name="item_input" type="StaticBody2D" parent="."]
-position = Vector2(208, 207)
-scale = Vector2(3, 3)
-
-[node name="sprite_2d" type="Sprite2D" parent="item_input"]
-texture = ExtResource("8_o2ikt")
-region_enabled = true
-region_rect = Rect2(0, 0, 16, 16)
-
-[node name="item_output" type="Area2D" parent="."]
-position = Vector2(-223, 205)
-scale = Vector2(3, 3)
-script = ExtResource("9_xyptv")
-items_expected = Array[StringName]([&"husky"])
-metadata/_custom_type_script = ExtResource("9_xyptv")
-
-[node name="collision_shape_2d" type="CollisionShape2D" parent="item_output"]
-shape = SubResource("RectangleShape2D_6sv45")
-
-[node name="sprite_2d" type="Sprite2D" parent="item_output"]
-texture = ExtResource("8_o2ikt")
-region_enabled = true
-region_rect = Rect2(16, 0, 16, 16)
-
-[node name="camera_2d" type="Camera2D" parent="."]
-zoom = Vector2(1.25, 1.25)
-process_callback = 0
-
-[node name="static_body_2d" type="StaticBody2D" parent="."]
-visible = false
-
-[node name="collision_shape_2d" type="CollisionShape2D" parent="static_body_2d"]
-position = Vector2(-459, 9.75)
-shape = SubResource("RectangleShape2D_jrxwf")
-
-[node name="collision_shape_2d2" type="CollisionShape2D" parent="static_body_2d"]
-position = Vector2(-6.75, -249.875)
-shape = SubResource("RectangleShape2D_gsb8x")
-
-[node name="collision_shape_2d5" type="CollisionShape2D" parent="static_body_2d"]
-position = Vector2(-7, 391)
-shape = SubResource("RectangleShape2D_gsb8x")
-
-[node name="collision_shape_2d3" type="CollisionShape2D" parent="static_body_2d"]
-position = Vector2(448.375, -0.9375)
-shape = SubResource("RectangleShape2D_wqd8v")
-
-[node name="collision_shape_2d4" type="CollisionShape2D" parent="static_body_2d"]
-position = Vector2(448.375, -0.9375)
-shape = SubResource("RectangleShape2D_wqd8v")
-
-[node name="item_belt_down_000" parent="." instance=ExtResource("20_s0oup")]
-position = Vector2(-162, -80)
-
-[node name="item_belt_down_001" parent="." instance=ExtResource("20_s0oup")]
-position = Vector2(-162, -16)
-
-[node name="item_belt_right_000" parent="." instance=ExtResource("10_s0oup")]
-position = Vector2(381, 24)
-
-[node name="temp" type="Node2D" parent="."]
-
-[node name="floor" type="Sprite2D" parent="temp"]
-z_index = -4
-position = Vector2(-229, -112)
-texture = ExtResource("9_jrxwf")
-
-[node name="floor2" type="Sprite2D" parent="temp"]
-z_index = -4
-position = Vector2(-229, 16)
-texture = ExtResource("10_jrxwf")
-
-[node name="floor4" type="Sprite2D" parent="temp"]
-z_index = -4
-position = Vector2(-101, -112)
-texture = ExtResource("10_jrxwf")
-
-[node name="floor5" type="Sprite2D" parent="temp"]
-z_index = -4
-position = Vector2(-101, 16)
-texture = ExtResource("10_jrxwf")
-
-[node name="floor3" type="Sprite2D" parent="temp"]
-z_index = -4
-position = Vector2(-229, 144)
-texture = ExtResource("10_jrxwf")
-
-[node name="wall" type="Sprite2D" parent="temp"]
-position = Vector2(-229, -240)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("11_negnl")
-
-[node name="wall2" type="Sprite2D" parent="temp"]
-position = Vector2(-101, -240)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("11_negnl")
-
-[node name="wall3" type="Sprite2D" parent="temp"]
-position = Vector2(-357, -112)
-rotation = -1.5708
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("11_negnl")
-
-[node name="wall4" type="Sprite2D" parent="temp"]
-position = Vector2(-357, 16)
-rotation = -1.5708
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("11_negnl")
-
-[node name="wall5" type="Sprite2D" parent="temp"]
-position = Vector2(-357, 144)
-rotation = -1.5708
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("11_negnl")
-
-[node name="wall_corner" type="Sprite2D" parent="temp"]
-position = Vector2(-357, -240)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("12_4ab8w")
-
-[node name="wall_corner2" type="Sprite2D" parent="temp"]
-position = Vector2(-357, 272)
-rotation = -1.5708
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("12_4ab8w")
-
-[node name="floor_crack_1" type="Sprite2D" parent="temp"]
-modulate = Color(1, 1, 1, 0.286275)
-position = Vector2(-240, 80)
-texture = ExtResource("15_00324")
-
-[node name="wall_barnacle_1" type="Sprite2D" parent="temp"]
-position = Vector2(-289, -239)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("16_enlnt")
-
-[node name="wall_clock" type="Sprite2D" parent="temp"]
-position = Vector2(-88, -235)
-scale = Vector2(0.375, 0.375)
-texture = ExtResource("17_n45ye")
-
-[node name="wall_door" type="Sprite2D" parent="temp"]
-position = Vector2(-183, -240)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("18_n45ye")
-
-[node name="wall_door2" type="Sprite2D" parent="temp"]
-position = Vector2(-183, -240)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("19_s0oup")
-
-[node name="item_husky" parent="." instance=ExtResource("6_n45ye")]
-position = Vector2(-29, -45)
+[node name="item_belt_up_001" parent="belts" index="5" instance=ExtResource("3_xfglt")]
+position = Vector2(128, 64)
+
+[node name="item_belt_up_002" parent="belts" index="6" instance=ExtResource("3_xfglt")]
+position = Vector2(128, 0)
+
+[node name="item_belt_up_003" parent="belts" index="7" instance=ExtResource("3_xfglt")]
+position = Vector2(128, -64)
+
+[node name="item_belt_left_003" parent="belts" index="8" instance=ExtResource("4_0sq7a")]
+position = Vector2(64, -128)
+
+[node name="item_belt_left_002" parent="belts" index="9" instance=ExtResource("4_0sq7a")]
+position = Vector2(0, -128)
+
+[node name="item_belt_left_001" parent="belts" index="10" instance=ExtResource("4_0sq7a")]
+position = Vector2(-64, -128)
+
+[node name="item_belt_left_000" parent="belts" index="11" instance=ExtResource("4_0sq7a")]
+position = Vector2(128, -128)
+
+[editable path="asset_zoo"]

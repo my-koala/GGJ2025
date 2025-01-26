@@ -55,6 +55,7 @@ theme/custom="uid://bv0qfh1mb8pui"
 2d_physics/layer_1="World"
 2d_physics/layer_2="Belt"
 2d_physics/layer_3="Popper"
+2d_physics/layer_4="Item"
 2d_physics/layer_5="Pickable"
 
 [physics]

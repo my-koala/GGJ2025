@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://10j3gm2iies0" path="res://assets/props/belt/belt.tscn" id="1_p7t2n"]
 [ext_resource type="Texture2D" uid="uid://dc2c4xdivoffm" path="res://assets/artwork/conveyer/conveyer_bottom_end2.png" id="2_aswkr"]
 
-[node name="item_belt_up_000" instance=ExtResource("1_p7t2n")]
+[node name="belt_up_000" instance=ExtResource("1_p7t2n")]
 direction = Vector2(0, -1)
 
 [node name="belt" parent="." index="1"]
