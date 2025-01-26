@@ -1,0 +1,134 @@
+[gd_scene load_steps=18 format=3 uid="uid://xkd2fq6c4aeo"]
+
+[ext_resource type="PackedScene" uid="uid://c8vl5y0q7ua3b" path="res://assets/levels/scenes/level.tscn" id="1_3gdde"]
+[ext_resource type="PackedScene" uid="uid://bbehyped0t73w" path="res://assets/props/chute/chute_entry_right.tscn" id="2_ymvoe"]
+[ext_resource type="Script" uid="uid://dip6wdi7oacqt" path="res://scripts/props/item_info.gd" id="3_fpsi2"]
+[ext_resource type="Resource" uid="uid://buvtu0snttan0" path="res://assets/props/item/item_infos/item_info_husky.tres" id="4_mhti0"]
+[ext_resource type="PackedScene" uid="uid://bevkk63dtnl4m" path="res://assets/props/chute/chute_exit_left.tscn" id="5_mn73r"]
+[ext_resource type="PackedScene" uid="uid://c7jr2tlmcby2e" path="res://assets/props/belt/belt_right.tscn" id="7_72clv"]
+[ext_resource type="PackedScene" uid="uid://dj0k635q02lwu" path="res://assets/props/belt/belt_up.tscn" id="8_g381p"]
+[ext_resource type="PackedScene" uid="uid://buqbn7w8cx67a" path="res://assets/props/belt/belt_left.tscn" id="9_d432t"]
+[ext_resource type="PackedScene" uid="uid://b5rbam8pcmykb" path="res://assets/dialogue_system/dialogue_system.tscn" id="9_e63tf"]
+[ext_resource type="Script" uid="uid://dfktug68yfw7d" path="res://scripts/dialogue_entry.gd" id="10_e63tf"]
+
+[sub_resource type="Resource" id="Resource_3gdde"]
+script = ExtResource("10_e63tf")
+dialogue = "[b]Oi, Fish Man![/b] Welcome to the wonderful world of underwater recycling."
+metadata/_custom_type_script = ExtResource("10_e63tf")
+
+[sub_resource type="Resource" id="Resource_ymvoe"]
+script = ExtResource("10_e63tf")
+dialogue = "Look, you've got one job here. [i]One[/i]. Make sure these items on the conveyor belt exit in the correct order."
+metadata/_custom_type_script = ExtResource("10_e63tf")
+
+[sub_resource type="Resource" id="Resource_fpsi2"]
+script = ExtResource("10_e63tf")
+dialogue = "You will need to [b]click and hold[/b] on an item to form a bubble."
+metadata/_custom_type_script = ExtResource("10_e63tf")
+
+[sub_resource type="Resource" id="Resource_mhti0"]
+script = ExtResource("10_e63tf")
+dialogue = "Once you've done that, you'll need to [b]launch[/b] the item in the right direction. Use your brain, mate - don't just go flinging things everywhere. You've got to [i]think[/i]."
+metadata/_custom_type_script = ExtResource("10_e63tf")
+
+[sub_resource type="Resource" id="Resource_omd5s"]
+script = ExtResource("10_e63tf")
+dialogue = "After that, [b]click on the bubbled item[/b] to pop the bubble right over a conveyor belt, and BOOM. It's sorted. Easy, right?"
+metadata/_custom_type_script = ExtResource("10_e63tf")
+
+[sub_resource type="Resource" id="Resource_64u3x"]
+script = ExtResource("10_e63tf")
+dialogue = "Remember. If [i]anything falls on the floor[/i] or [i]if anything exits the chute out of order[/i], you're done for. Got it? It's not rocket science, just basic sorting."
+metadata/_custom_type_script = ExtResource("10_e63tf")
+
+[sub_resource type="Resource" id="Resource_72clv"]
+script = ExtResource("10_e63tf")
+dialogue = "Right, get cracking. And don't waste my time!"
+metadata/_custom_type_script = ExtResource("10_e63tf")
+
+[node name="level_0" instance=ExtResource("1_3gdde")]
+
+[node name="wall_poster_1" parent="geometry" index="0"]
+position = Vector2(229, -304)
+
+[node name="chute_entry_right_000" parent="chutes" index="0" instance=ExtResource("2_ymvoe")]
+y_sort_enabled = false
+position = Vector2(-224, 96)
+item_infos = Array[ExtResource("3_fpsi2")]([ExtResource("4_mhti0")])
+
+[node name="chute_exit_left_000" parent="chutes" index="1" instance=ExtResource("5_mn73r")]
+position = Vector2(224, -160)
+item_infos = Array[ExtResource("3_fpsi2")]([ExtResource("4_mhti0")])
+
+[node name="item_belt_right_008" parent="belts" index="0" instance=ExtResource("7_72clv")]
+position = Vector2(-160, -160)
+
+[node name="item_belt_right_009" parent="belts" index="1" instance=ExtResource("7_72clv")]
+position = Vector2(-96, -160)
+
+[node name="item_belt_right_010" parent="belts" index="2" instance=ExtResource("7_72clv")]
+position = Vector2(-32, -160)
+
+[node name="item_belt_right_011" parent="belts" index="3" instance=ExtResource("7_72clv")]
+position = Vector2(32, -160)
+
+[node name="item_belt_right_012" parent="belts" index="4" instance=ExtResource("7_72clv")]
+position = Vector2(96, -160)
+
+[node name="item_belt_right_013" parent="belts" index="5" instance=ExtResource("7_72clv")]
+position = Vector2(160, -160)
+
+[node name="item_belt_right_002" parent="belts" index="6" instance=ExtResource("7_72clv")]
+position = Vector2(-160, 96)
+
+[node name="item_belt_right_003" parent="belts" index="7" instance=ExtResource("7_72clv")]
+position = Vector2(-96, 96)
+
+[node name="item_belt_right_004" parent="belts" index="8" instance=ExtResource("7_72clv")]
+position = Vector2(-32, 96)
+
+[node name="item_belt_right_005" parent="belts" index="9" instance=ExtResource("7_72clv")]
+position = Vector2(32, 96)
+
+[node name="item_belt_right_006" parent="belts" index="10" instance=ExtResource("7_72clv")]
+position = Vector2(96, 96)
+
+[node name="item_belt_right_007" parent="belts" index="11" instance=ExtResource("7_72clv")]
+position = Vector2(160, 96)
+
+[node name="item_belt_up_000" parent="belts" index="12" instance=ExtResource("8_g381p")]
+position = Vector2(224, 96)
+
+[node name="item_belt_up_002" parent="belts" index="13" instance=ExtResource("8_g381p")]
+position = Vector2(224, 32)
+
+[node name="item_belt_up_001" parent="belts" index="14" instance=ExtResource("8_g381p")]
+position = Vector2(-160, -32)
+
+[node name="item_belt_up_003" parent="belts" index="15" instance=ExtResource("8_g381p")]
+position = Vector2(-160, -96)
+
+[node name="item_belt_left_003" parent="belts" index="16" instance=ExtResource("9_d432t")]
+position = Vector2(224, -32)
+
+[node name="item_belt_left_004" parent="belts" index="17" instance=ExtResource("9_d432t")]
+position = Vector2(160, -32)
+
+[node name="item_belt_left_005" parent="belts" index="18" instance=ExtResource("9_d432t")]
+position = Vector2(96, -32)
+
+[node name="item_belt_left_006" parent="belts" index="19" instance=ExtResource("9_d432t")]
+position = Vector2(32, -32)
+
+[node name="item_belt_left_007" parent="belts" index="20" instance=ExtResource("9_d432t")]
+position = Vector2(-32, -32)
+
+[node name="item_belt_left_008" parent="belts" index="21" instance=ExtResource("9_d432t")]
+position = Vector2(-96, -32)
+
+[node name="canvas_layer" type="CanvasLayer" parent="." index="6"]
+
+[node name="dialogue_system" parent="canvas_layer" index="0" instance=ExtResource("9_e63tf")]
+dialogue_entries = Array[ExtResource("10_e63tf")]([SubResource("Resource_3gdde"), SubResource("Resource_ymvoe"), SubResource("Resource_fpsi2"), SubResource("Resource_mhti0"), SubResource("Resource_omd5s"), SubResource("Resource_64u3x"), SubResource("Resource_72clv")])
+
+[editable path="asset_zoo"]

@@ -7,6 +7,9 @@ signal ended(passed: bool)
 @onready
 var _chutes: Node2D = $chutes as Node2D
 
+@onready
+var _dialogue: Dialogue = $canvas_layer/dialogue_system as Dialogue
+
 var _chute_entries: Array[ChuteEntry] = []
 var _chute_exits: Array[ChuteExit] = []
 
@@ -36,7 +39,19 @@ func _ready() -> void:
 		if is_instance_valid(chute_exit):
 			chute_exit.item_destroyed.connect(_on_item_destroyed)
 			_chute_exits.append(chute_exit)
+		
+	# If dialogue is present, start chutes once the dialogue is finished
+	# Instantly start chutes otherwise
+	if is_instance_valid(_dialogue):
+		_dialogue.dialogue_ended.connect(_on_dialog_finished)
+	else:
+		print("no dialogue???")
+		_on_dialog_finished()
 
+func _on_dialog_finished() -> void:
+	for chute_entry: ChuteEntry in _chute_entries:
+		chute_entry.start()
+	
 # When an item is instantiated by an Item Input, we need the manager to listen
 # to when that item is dropped on the floor. This can be a fail state.
 func _on_item_instantiated(item: Item) -> void:

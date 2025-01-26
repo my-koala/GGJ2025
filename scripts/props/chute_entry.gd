@@ -28,12 +28,12 @@ var _thought: Thought = $thought as Thought
 @onready
 var _spawn_point: Marker2D = $spawn_point as Marker2D
 
-var _spawn_time: float = 0.0
+var _spawn_time: float = 9999
 
 func get_items_left() -> int:
 	return item_infos.size() - _item_info_index
 
-func _ready() -> void:
+func start() -> void:
 	if Engine.is_editor_hint():
 		return
 	
