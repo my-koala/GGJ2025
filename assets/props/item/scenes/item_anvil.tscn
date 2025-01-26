@@ -5,9 +5,7 @@
 
 [node name="item_anvil" instance=ExtResource("1_nrkxb")]
 mass = 20.0
-linear_damp = 128.0
 identifier = &"anvil"
-belt_speed_multiplier = null
 
 [node name="sprite_2d" parent="." index="1"]
 texture = ExtResource("2_nrkxb")
