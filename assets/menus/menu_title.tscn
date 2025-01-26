@@ -23,199 +23,197 @@ anchor_left = 0.25
 anchor_top = 0.25
 anchor_right = 0.75
 anchor_bottom = 0.75
-offset_top = 332.0
-offset_bottom = 132.0
+offset_top = 300.0
+offset_bottom = 157.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 20
 
 [node name="button_play" type="Button" parent="buttons"]
 layout_mode = 2
-text = "play"
+text = "Play"
 
 [node name="button_credits" type="Button" parent="buttons"]
 layout_mode = 2
-text = "credits"
+text = "Credits"
 
 [node name="button_quit" type="Button" parent="buttons"]
 layout_mode = 2
-text = "quit"
+text = "Quit"
 
 [node name="bubble_for_logo" type="Sprite2D" parent="."]
 position = Vector2(644, 161)
 texture = ExtResource("2_4kscx")
 
-[node name="canvas_layer" type="CanvasLayer" parent="."]
-scale = Vector2(0.5, 0.5)
-transform = Transform2D(0.5, 0, 0, 0.5, 0, 0)
-
-[node name="belts" type="Node2D" parent="canvas_layer"]
+[node name="belts" type="Node2D" parent="."]
 y_sort_enabled = true
-position = Vector2(24, 0)
+position = Vector2(16, 1)
+scale = Vector2(0.5, 0.5)
 
-[node name="belt_up_001" parent="canvas_layer/belts" instance=ExtResource("3_u4loh")]
+[node name="belt_up_001" parent="belts" instance=ExtResource("3_u4loh")]
 position = Vector2(1216, 768)
 monitorable = false
 
-[node name="belt_up_005" parent="canvas_layer/belts" instance=ExtResource("3_u4loh")]
+[node name="belt_up_005" parent="belts" instance=ExtResource("3_u4loh")]
 position = Vector2(1472, 768)
 monitorable = false
 
-[node name="belt_up_006" parent="canvas_layer/belts" instance=ExtResource("3_u4loh")]
+[node name="belt_up_006" parent="belts" instance=ExtResource("3_u4loh")]
 position = Vector2(1472, 704)
 monitorable = false
 
-[node name="belt_up_008" parent="canvas_layer/belts" instance=ExtResource("3_u4loh")]
+[node name="belt_up_008" parent="belts" instance=ExtResource("3_u4loh")]
 position = Vector2(1472, 576)
 monitorable = false
 
-[node name="belt_up_002" parent="canvas_layer/belts" instance=ExtResource("3_u4loh")]
+[node name="belt_up_002" parent="belts" instance=ExtResource("3_u4loh")]
 position = Vector2(1216, 704)
 monitorable = false
 
-[node name="belt_up_003" parent="canvas_layer/belts" instance=ExtResource("3_u4loh")]
+[node name="belt_up_003" parent="belts" instance=ExtResource("3_u4loh")]
 position = Vector2(1216, 640)
 monitorable = false
 
-[node name="belt_up_004" parent="canvas_layer/belts" instance=ExtResource("3_u4loh")]
+[node name="belt_up_004" parent="belts" instance=ExtResource("3_u4loh")]
 position = Vector2(1216, 576)
 monitorable = false
 
-[node name="belt_down_000" parent="canvas_layer/belts" instance=ExtResource("4_dxuwa")]
+[node name="belt_down_000" parent="belts" instance=ExtResource("4_dxuwa")]
 position = Vector2(1344, 512)
 monitorable = false
 
-[node name="belt_down_012" parent="canvas_layer/belts" instance=ExtResource("4_dxuwa")]
+[node name="belt_down_012" parent="belts" instance=ExtResource("4_dxuwa")]
 position = Vector2(1344, 704)
 monitorable = false
 
-[node name="belt_down_010" parent="canvas_layer/belts" instance=ExtResource("4_dxuwa")]
+[node name="belt_down_010" parent="belts" instance=ExtResource("4_dxuwa")]
 position = Vector2(1344, 576)
 monitorable = false
 
-[node name="belt_down_011" parent="canvas_layer/belts" instance=ExtResource("4_dxuwa")]
+[node name="belt_down_011" parent="belts" instance=ExtResource("4_dxuwa")]
 position = Vector2(1344, 640)
 monitorable = false
 
-[node name="belt_down_009" parent="canvas_layer/belts" instance=ExtResource("4_dxuwa")]
+[node name="belt_down_009" parent="belts" instance=ExtResource("4_dxuwa")]
 position = Vector2(832, 512)
 monitorable = false
 
-[node name="belt_down_008" parent="canvas_layer/belts" instance=ExtResource("4_dxuwa")]
+[node name="belt_down_008" parent="belts" instance=ExtResource("4_dxuwa")]
 position = Vector2(832, 512)
 monitorable = false
 
-[node name="belt_down_004" parent="canvas_layer/belts" instance=ExtResource("4_dxuwa")]
+[node name="belt_down_004" parent="belts" instance=ExtResource("4_dxuwa")]
 position = Vector2(1088, 512)
 monitorable = false
 
-[node name="belt_down_005" parent="canvas_layer/belts" instance=ExtResource("4_dxuwa")]
+[node name="belt_down_005" parent="belts" instance=ExtResource("4_dxuwa")]
 position = Vector2(1088, 576)
 monitorable = false
 
-[node name="belt_down_013" parent="canvas_layer/belts" instance=ExtResource("4_dxuwa")]
+[node name="belt_down_013" parent="belts" instance=ExtResource("4_dxuwa")]
 position = Vector2(1664, 576)
 monitorable = false
 
-[node name="belt_down_014" parent="canvas_layer/belts" instance=ExtResource("4_dxuwa")]
+[node name="belt_down_014" parent="belts" instance=ExtResource("4_dxuwa")]
 position = Vector2(1664, 640)
 monitorable = false
 
-[node name="belt_down_015" parent="canvas_layer/belts" instance=ExtResource("4_dxuwa")]
+[node name="belt_down_015" parent="belts" instance=ExtResource("4_dxuwa")]
 position = Vector2(1664, 704)
 monitorable = false
 
-[node name="belt_down_016" parent="canvas_layer/belts" instance=ExtResource("4_dxuwa")]
+[node name="belt_down_016" parent="belts" instance=ExtResource("4_dxuwa")]
 position = Vector2(1664, 768)
 monitorable = false
 
-[node name="belt_down_006" parent="canvas_layer/belts" instance=ExtResource("4_dxuwa")]
+[node name="belt_down_006" parent="belts" instance=ExtResource("4_dxuwa")]
 position = Vector2(1088, 640)
 monitorable = false
 
-[node name="belt_down_007" parent="canvas_layer/belts" instance=ExtResource("4_dxuwa")]
+[node name="belt_down_007" parent="belts" instance=ExtResource("4_dxuwa")]
 position = Vector2(1088, 704)
 monitorable = false
 
-[node name="belt_down_001" parent="canvas_layer/belts" instance=ExtResource("4_dxuwa")]
+[node name="belt_down_001" parent="belts" instance=ExtResource("4_dxuwa")]
 position = Vector2(832, 576)
 monitorable = false
 
-[node name="belt_down_002" parent="canvas_layer/belts" instance=ExtResource("4_dxuwa")]
+[node name="belt_down_002" parent="belts" instance=ExtResource("4_dxuwa")]
 position = Vector2(960, 640)
 monitorable = false
 
-[node name="belt_down_003" parent="canvas_layer/belts" instance=ExtResource("4_dxuwa")]
+[node name="belt_down_003" parent="belts" instance=ExtResource("4_dxuwa")]
 position = Vector2(960, 704)
 monitorable = false
 
-[node name="belt_left_000" parent="canvas_layer/belts" instance=ExtResource("5_co002")]
+[node name="belt_left_000" parent="belts" instance=ExtResource("5_co002")]
 position = Vector2(896, 512)
 monitorable = false
 
-[node name="belt_left_004" parent="canvas_layer/belts" instance=ExtResource("5_co002")]
+[node name="belt_left_004" parent="belts" instance=ExtResource("5_co002")]
 position = Vector2(960, 512)
 monitorable = false
 
-[node name="belt_left_005" parent="canvas_layer/belts" instance=ExtResource("5_co002")]
+[node name="belt_left_005" parent="belts" instance=ExtResource("5_co002")]
 position = Vector2(1216, 512)
 monitorable = false
 
-[node name="belt_left_007" parent="canvas_layer/belts" instance=ExtResource("5_co002")]
+[node name="belt_left_007" parent="belts" instance=ExtResource("5_co002")]
 position = Vector2(1472, 512)
 monitorable = false
 
-[node name="belt_left_008" parent="canvas_layer/belts" instance=ExtResource("5_co002")]
+[node name="belt_left_008" parent="belts" instance=ExtResource("5_co002")]
 position = Vector2(1408, 512)
 monitorable = false
 
-[node name="belt_left_006" parent="canvas_layer/belts" instance=ExtResource("5_co002")]
+[node name="belt_left_006" parent="belts" instance=ExtResource("5_co002")]
 position = Vector2(1152, 512)
 monitorable = false
 
-[node name="belt_left_001" parent="canvas_layer/belts" instance=ExtResource("5_co002")]
+[node name="belt_left_001" parent="belts" instance=ExtResource("5_co002")]
 position = Vector2(960, 768)
 monitorable = false
 
-[node name="belt_left_002" parent="canvas_layer/belts" instance=ExtResource("5_co002")]
+[node name="belt_left_002" parent="belts" instance=ExtResource("5_co002")]
 position = Vector2(896, 768)
 monitorable = false
 
-[node name="belt_left_003" parent="canvas_layer/belts" instance=ExtResource("5_co002")]
+[node name="belt_left_003" parent="belts" instance=ExtResource("5_co002")]
 position = Vector2(832, 768)
 monitorable = false
 
-[node name="belt_right_000" parent="canvas_layer/belts" instance=ExtResource("6_bf0nj")]
+[node name="belt_right_000" parent="belts" instance=ExtResource("6_bf0nj")]
 position = Vector2(832, 640)
 monitorable = false
 
-[node name="belt_right_006" parent="canvas_layer/belts" instance=ExtResource("6_bf0nj")]
+[node name="belt_right_006" parent="belts" instance=ExtResource("6_bf0nj")]
 position = Vector2(1600, 512)
 monitorable = false
 
-[node name="belt_right_007" parent="canvas_layer/belts" instance=ExtResource("6_bf0nj")]
+[node name="belt_right_007" parent="belts" instance=ExtResource("6_bf0nj")]
 position = Vector2(1664, 512)
 monitorable = false
 
-[node name="belt_right_008" parent="canvas_layer/belts" instance=ExtResource("6_bf0nj")]
+[node name="belt_right_008" parent="belts" instance=ExtResource("6_bf0nj")]
 position = Vector2(1728, 512)
 monitorable = false
 
-[node name="belt_right_004" parent="canvas_layer/belts" instance=ExtResource("6_bf0nj")]
+[node name="belt_right_004" parent="belts" instance=ExtResource("6_bf0nj")]
 position = Vector2(1344, 768)
 monitorable = false
 
-[node name="belt_right_005" parent="canvas_layer/belts" instance=ExtResource("6_bf0nj")]
+[node name="belt_right_005" parent="belts" instance=ExtResource("6_bf0nj")]
 position = Vector2(1408, 640)
 monitorable = false
 
-[node name="belt_right_001" parent="canvas_layer/belts" instance=ExtResource("6_bf0nj")]
+[node name="belt_right_001" parent="belts" instance=ExtResource("6_bf0nj")]
 position = Vector2(896, 640)
 monitorable = false
 
-[node name="belt_right_002" parent="canvas_layer/belts" instance=ExtResource("6_bf0nj")]
+[node name="belt_right_002" parent="belts" instance=ExtResource("6_bf0nj")]
 position = Vector2(1088, 768)
 monitorable = false
 
-[node name="belt_right_003" parent="canvas_layer/belts" instance=ExtResource("6_bf0nj")]
+[node name="belt_right_003" parent="belts" instance=ExtResource("6_bf0nj")]
 position = Vector2(1152, 768)
 monitorable = false

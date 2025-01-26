@@ -30,11 +30,14 @@ func _ready() -> void:
 	
 	_button_exit.pressed.connect(button_exit_pressed.emit)
 	
+	var level_index: int = 1
 	for level_info: LevelInfo in level_info_database.level_infos:
 		var level_button: Button = level_button_scene.instantiate() as Button
 		level_button.pressed.connect(_on_level_button_pressed.bind(level_info))
+		level_button.text = str(level_index)
 		_flow_container.add_child(level_button)
 		_level_buttons.append(level_button)
+		level_index += 1
 
 func _on_level_button_pressed(level_info: LevelInfo) -> void:
 	button_level_pressed.emit(level_info)

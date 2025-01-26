@@ -30,6 +30,8 @@ modulate_color = Color(0, 0, 0, 1)
 bg_color = Color(0.470917, 0.400185, 0.514713, 1)
 
 [resource]
+Button/colors/font_color = Color(0.509804, 0.286275, 0.184314, 1)
+Button/font_sizes/font_size = 32
 Button/styles/disabled = SubResource("StyleBoxTexture_e1x85")
 Button/styles/focus = SubResource("StyleBoxTexture_cjfk0")
 Button/styles/hover = SubResource("StyleBoxTexture_vj6dk")

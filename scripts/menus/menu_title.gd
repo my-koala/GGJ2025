@@ -12,8 +12,6 @@ var _button_play: Button = $buttons/button_play as Button
 var _button_credits: Button = $buttons/button_credits as Button
 @onready
 var _button_quit: Button = $buttons/button_quit as Button
-@onready
-var _canvas_layer: CanvasLayer = $canvas_layer as CanvasLayer
 
 func _ready() -> void:
 	if Engine.is_editor_hint():
@@ -51,7 +49,5 @@ func set_interactive(interactive: bool) -> void:
 func set_active(active: bool) -> void:
 	if active:
 		visible = true
-		_canvas_layer.visible = true
 	else:
 		visible = false
-		_canvas_layer.visible = false
