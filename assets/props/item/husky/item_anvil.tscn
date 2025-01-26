@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0do5ac4gsllo"]
+
+[ext_resource type="PackedScene" uid="uid://pic8ndslx525" path="res://assets/props/item/item.tscn" id="1_nrkxb"]
+[ext_resource type="Texture2D" uid="uid://dgxv5yvqxc7b1" path="res://assets/props/item/textures/item_anvil.tres" id="2_nrkxb"]
+
+[node name="item_anvil" instance=ExtResource("1_nrkxb")]
+mass = 20.0
+linear_damp = 128.0
+identifier = &"anvil"
+
+[node name="sprite_2d" parent="." index="1"]
+texture = ExtResource("2_nrkxb")
+offset = Vector2(0, -32)

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemInfo" load_steps=5 format=3 uid="uid://cko3omy02a0fd"]
+
+[ext_resource type="Texture2D" uid="uid://cst1k1cjvfuou" path="res://assets/props/item/item.png" id="1_ytva1"]
+[ext_resource type="Script" uid="uid://dip6wdi7oacqt" path="res://scripts/props/item_info.gd" id="2_dypae"]
+[ext_resource type="PackedScene" uid="uid://bujiosqxmdtgo" path="res://assets/props/item/husky/item_plastic.tscn" id="3_ytva1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ytva1"]
+atlas = ExtResource("1_ytva1")
+region = Rect2(128, 0, 128, 128)
+
+[resource]
+script = ExtResource("2_dypae")
+icon = SubResource("AtlasTexture_ytva1")
+identifier = &"plastic"
+packed_scene = ExtResource("3_ytva1")
+metadata/_custom_type_script = ExtResource("2_dypae")

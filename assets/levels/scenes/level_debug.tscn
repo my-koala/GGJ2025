@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://hje37ito51wp"]
+[gd_scene load_steps=12 format=3 uid="uid://hje37ito51wp"]
 
 [ext_resource type="PackedScene" uid="uid://c8vl5y0q7ua3b" path="res://assets/levels/scenes/level.tscn" id="1_36gu4"]
 [ext_resource type="Script" uid="uid://dip6wdi7oacqt" path="res://scripts/props/item_info.gd" id="3_gs41p"]
@@ -8,7 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://ctlwqfj210i8e" path="res://assets/props/chute/chute_exit.tscn" id="5_fsxq8"]
 [ext_resource type="PackedScene" uid="uid://b7eq87fdh4dmy" path="res://assets/props/chute/chute_exit_right.tscn" id="5_uokaw"]
 [ext_resource type="PackedScene" uid="uid://bbehyped0t73w" path="res://assets/props/chute/chute_entry_right.tscn" id="6_3dbkb"]
+[ext_resource type="PackedScene" uid="uid://d2hg70rrjbhwk" path="res://assets/props/belt/belt_down.tscn" id="10_68gjs"]
 [ext_resource type="PackedScene" uid="uid://c7jr2tlmcby2e" path="res://assets/props/belt/belt_right.tscn" id="10_s0oup"]
+[ext_resource type="PackedScene" uid="uid://c0do5ac4gsllo" path="res://assets/props/item/husky/item_anvil.tscn" id="11_ve11y"]
 
 [node name="level_debug" instance=ExtResource("1_36gu4")]
 
@@ -63,5 +65,29 @@ position = Vector2(-64, -128)
 
 [node name="item_belt_left_000" parent="belts" index="11" instance=ExtResource("4_0sq7a")]
 position = Vector2(128, -128)
+
+[node name="belt_down_000" parent="belts" index="12" instance=ExtResource("10_68gjs")]
+position = Vector2(256, -64)
+
+[node name="belt_down_001" parent="belts" index="13" instance=ExtResource("10_68gjs")]
+position = Vector2(256, 0)
+
+[node name="belt_down_002" parent="belts" index="14" instance=ExtResource("10_68gjs")]
+position = Vector2(256, 64)
+
+[node name="item_anvil" parent="items" index="0" instance=ExtResource("11_ve11y")]
+position = Vector2(256, 0)
+
+[node name="belt_down_000" parent="asset_zoo/belts" index="0"]
+y_sort_enabled = true
+
+[node name="belt_left_000" parent="asset_zoo/belts" index="1"]
+y_sort_enabled = true
+
+[node name="belt_right_000" parent="asset_zoo/belts" index="2"]
+y_sort_enabled = true
+
+[node name="belt_up_000" parent="asset_zoo/belts" index="3"]
+y_sort_enabled = true
 
 [editable path="asset_zoo"]

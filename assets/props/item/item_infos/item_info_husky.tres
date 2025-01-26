@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="ItemInfo" load_steps=4 format=3 uid="uid://buvtu0snttan0"]
 
-[ext_resource type="Texture2D" uid="uid://3l2kl4h30a3i" path="res://assets/props/item/husky/husky.png" id="1_5wcvf"]
+[ext_resource type="Texture2D" uid="uid://5l111ei1hfrk" path="res://assets/props/item/textures/item_husky.tres" id="1_orqwk"]
 [ext_resource type="Script" uid="uid://dip6wdi7oacqt" path="res://scripts/props/item_info.gd" id="2_orqwk"]
 [ext_resource type="PackedScene" uid="uid://bunge2le1ir2y" path="res://assets/props/item/husky/item_husky.tscn" id="3_orqwk"]
 
 [resource]
 script = ExtResource("2_orqwk")
-icon = ExtResource("1_5wcvf")
+icon = ExtResource("1_orqwk")
 identifier = &"husky"
 packed_scene = ExtResource("3_orqwk")
 metadata/_custom_type_script = ExtResource("2_orqwk")

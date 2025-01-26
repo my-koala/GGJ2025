@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3l2kl4h30a3i"
-path="res://.godot/imported/husky.png-82a3de486fc2ac375afe77951630711a.ctex"
+uid="uid://cst1k1cjvfuou"
+path="res://.godot/imported/item.png-d62deb18af55b2f1c1a31ff29f23949a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/props/item/husky/husky.png"
-dest_files=["res://.godot/imported/husky.png-82a3de486fc2ac375afe77951630711a.ctex"]
+source_file="res://assets/props/item/item.png"
+dest_files=["res://.godot/imported/item.png-d62deb18af55b2f1c1a31ff29f23949a.ctex"]
 
 [params]
 

@@ -11,7 +11,7 @@ bob_period = 2.0
 
 [node name="body" type="Sprite2D" parent="."]
 clip_children = 2
-position = Vector2(0, -1.5357)
+position = Vector2(0, 1.3295)
 texture = ExtResource("1_q25qi")
 offset = Vector2(0, -1.97791)
 region_enabled = true
@@ -23,7 +23,7 @@ region_rect = Rect2(0, 0, 128, 128)
 z_index = -1
 position = Vector2(36, 36)
 texture = ExtResource("1_q25qi")
-offset = Vector2(0, 0.767851)
+offset = Vector2(0, -0.66475)
 region_enabled = true
 region_rect = Rect2(128, 0, 64, 64)
 
@@ -31,6 +31,6 @@ region_rect = Rect2(128, 0, 64, 64)
 z_index = -2
 position = Vector2(54, 54)
 texture = ExtResource("1_q25qi")
-offset = Vector2(0, -0.383926)
+offset = Vector2(0, 0.332375)
 region_enabled = true
 region_rect = Rect2(192, 0, 64, 64)

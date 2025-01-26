@@ -31,50 +31,12 @@ metadata/_edit_lock_ = true
 y_sort_enabled = true
 metadata/_edit_lock_ = true
 
+[node name="items" type="Node2D" parent="."]
+y_sort_enabled = true
+metadata/_edit_lock_ = true
+
 [node name="asset_zoo" parent="." instance=ExtResource("3_ecg5t")]
 position = Vector2(0, -1024)
-metadata/_edit_lock_ = true
-
-[node name="belt_down_000" parent="asset_zoo" index="0"]
-metadata/_edit_lock_ = true
-
-[node name="belt_left_000" parent="asset_zoo" index="1"]
-metadata/_edit_lock_ = true
-
-[node name="belt_right_000" parent="asset_zoo" index="2"]
-metadata/_edit_lock_ = true
-
-[node name="belt_up_000" parent="asset_zoo" index="3"]
-metadata/_edit_lock_ = true
-
-[node name="chute_entry_000" parent="asset_zoo" index="4"]
-metadata/_edit_lock_ = true
-
-[node name="chute_entry_down_000" parent="asset_zoo" index="5"]
-metadata/_edit_lock_ = true
-
-[node name="chute_entry_left_000" parent="asset_zoo" index="6"]
-metadata/_edit_lock_ = true
-
-[node name="chute_entry_right_000" parent="asset_zoo" index="7"]
-metadata/_edit_lock_ = true
-
-[node name="chute_entry_up_000" parent="asset_zoo" index="8"]
-metadata/_edit_lock_ = true
-
-[node name="chute_exit_000" parent="asset_zoo" index="9"]
-metadata/_edit_lock_ = true
-
-[node name="chute_exit_down_000" parent="asset_zoo" index="10"]
-metadata/_edit_lock_ = true
-
-[node name="chute_exit_left_000" parent="asset_zoo" index="11"]
-metadata/_edit_lock_ = true
-
-[node name="chute_exit_right_000" parent="asset_zoo" index="12"]
-metadata/_edit_lock_ = true
-
-[node name="chute_exit_up_000" parent="asset_zoo" index="13"]
 metadata/_edit_lock_ = true
 
 [editable path="asset_zoo"]
