@@ -7,12 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://bevkk63dtnl4m" path="res://assets/props/chute/chute_exit_left.tscn" id="5_1ur70"]
 [ext_resource type="Resource" uid="uid://p7ojn1574vfb" path="res://assets/props/item/item_infos/item_info_bottle.tres" id="5_axmfg"]
 [ext_resource type="PackedScene" uid="uid://c7jr2tlmcby2e" path="res://assets/props/belt/belt_right.tscn" id="6_0ki71"]
-<<<<<<< HEAD
-=======
 [ext_resource type="Resource" uid="uid://cd65uywkbvhb2" path="res://assets/props/item/item_infos/item_info_bicycle.tres" id="6_omllw"]
 [ext_resource type="PackedScene" uid="uid://b5rbam8pcmykb" path="res://assets/dialogue_system/dialogue_system.tscn" id="7_c5tth"]
 [ext_resource type="Resource" uid="uid://cko3omy02a0fd" path="res://assets/props/item/item_infos/item_info_plastic.tres" id="7_lebjv"]
->>>>>>> 8a390e9 (assign items to every level)
 [ext_resource type="PackedScene" uid="uid://buqbn7w8cx67a" path="res://assets/props/belt/belt_left.tscn" id="7_vpue2"]
 [ext_resource type="PackedScene" uid="uid://dj0k635q02lwu" path="res://assets/props/belt/belt_up.tscn" id="8_1ur70"]
 [ext_resource type="Resource" uid="uid://fcjusydadrq4" path="res://assets/props/item/item_infos/item_info_flag.tres" id="8_07r3n"]
