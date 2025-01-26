@@ -44,29 +44,33 @@ metadata/_edit_lock_ = true
 collision_layer = 9
 collision_mask = 9
 custom_integrator = true
-belt_speed_multiplier = null
 drop_fall_time = 0.75
+drop_fall_height = 16.0
+drop_fall_scale = 0.25
 
 [node name="item_husky" parent="asset_zoo/items" index="1"]
 collision_layer = 9
 collision_mask = 9
 custom_integrator = true
-belt_speed_multiplier = null
 drop_fall_time = 0.75
+drop_fall_height = 16.0
+drop_fall_scale = 0.25
 
 [node name="item_plastic" parent="asset_zoo/items" index="2"]
 collision_layer = 9
 collision_mask = 9
 custom_integrator = true
-belt_speed_multiplier = null
 drop_fall_time = 0.75
+drop_fall_height = 16.0
+drop_fall_scale = 0.25
 
 [node name="item_urchin" parent="asset_zoo/items" index="3"]
 collision_layer = 9
 collision_mask = 9
 custom_integrator = true
-belt_speed_multiplier = null
 drop_fall_time = 0.75
+drop_fall_height = 16.0
+drop_fall_scale = 0.25
 
 [node name="canvas_layer" type="CanvasLayer" parent="."]
 

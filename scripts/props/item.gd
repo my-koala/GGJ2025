@@ -78,6 +78,10 @@ var drop_fall_time: float = 1.0
 var _drop_fall_time: float = 0.0
 var _drop_fall_rotation_max: float = 0.0
 var _drop_fall_rotation: float = 0.0
+@export
+var drop_fall_height: float = 8.0
+@export
+var drop_fall_scale: float = 0.25
 
 var _dropped: bool = false
 
@@ -120,11 +124,9 @@ func _physics_process(delta: float) -> void:
 				_drop_fall_time = minf(_drop_fall_time + delta, drop_fall_time)
 				_drop_fall_rotation = remap(_drop_fall_time, 0.0, drop_fall_time, 0.0, _drop_fall_rotation_max)
 				var weight: float = clampf(_drop_fall_time / drop_fall_time, 0.0, 1.0)
-				const drop_fall_height: float = 64.0
-				const drop_fall_scale: float = 0.125
 				_sprite.position.y = lerpf(0.0, drop_fall_height, weight)
 				_sprite.rotation = _drop_fall_rotation
-				_sprite.scale = lerpf(1.0, 0.5, weight) * Vector2.ONE
+				_sprite.scale = lerpf(1.0, drop_fall_scale, weight) * Vector2.ONE
 				_sprite.modulate = Color.WHITE.lerp(Color.BLACK, weight)
 			else:
 				_state = State.DROPPED

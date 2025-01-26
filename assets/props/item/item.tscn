@@ -19,6 +19,7 @@ can_sleep = false
 lock_rotation = true
 script = ExtResource("1_pgqwr")
 drop_fall_time = 0.5
+drop_fall_height = 16.0
 metadata/_custom_type_script = ExtResource("1_pgqwr")
 
 [node name="collision_shape_2d" type="CollisionShape2D" parent="."]
@@ -27,7 +28,7 @@ shape = SubResource("CircleShape2D_o0pvw")
 [node name="sprite_2d" type="Sprite2D" parent="."]
 
 [node name="explosion" parent="." instance=ExtResource("2_4saup")]
-position = Vector2(16, -82)
+position = Vector2(18, -111)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_4saup")
 
