@@ -45,6 +45,8 @@ func _ready() -> void:
 	_belt_scan.area_entered.connect(_on_belt_scan_area_entered)
 	_belt_scan.area_exited.connect(_on_belt_scan_area_exited)
 	
+	_bubble.read_input = false
+	
 	add_collision_exception_with(_bubble)
 
 func _on_belt_scan_area_entered(area: Area2D) -> void:
@@ -72,6 +74,8 @@ func _physics_process(delta: float) -> void:
 		var belt_velocity: Vector2 = belt.get_velocity()
 		_belts_velocity_max = _belts_velocity_max.max(belt_velocity)
 		_belts_velocity_min = _belts_velocity_min.min(belt_velocity)
+	
+	_bubble.read_input = !_belts.is_empty() || _bubble.is_bubble_created()
 	
 	match _state:
 		State.IDLE:
