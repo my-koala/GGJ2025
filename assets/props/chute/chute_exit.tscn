@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://ctlwqfj210i8e"]
+[gd_scene load_steps=8 format=3 uid="uid://ctlwqfj210i8e"]
 
 [ext_resource type="Script" uid="uid://crmh7bm1sm38a" path="res://scripts/props/chute_exit.gd" id="1_h0xdw"]
 [ext_resource type="Texture2D" uid="uid://bm6kiwwpjk6ff" path="res://assets/props/input/chute_exit_temp.png" id="2_c2ceq"]
 [ext_resource type="Script" uid="uid://b8d71iwpoj8gr" path="res://scripts/props/belt.gd" id="3_4wi1v"]
+[ext_resource type="PackedScene" uid="uid://cekssofwgq2dj" path="res://assets/props/thought/thought.tscn" id="4_n3ub1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c2ceq"]
 size = Vector2(64, 64)
@@ -48,3 +49,7 @@ metadata/_custom_type_script = ExtResource("3_4wi1v")
 
 [node name="collision_shape_2d" type="CollisionShape2D" parent="belt"]
 shape = SubResource("RectangleShape2D_4wi1v")
+
+[node name="thought" parent="." instance=ExtResource("4_n3ub1")]
+z_index = 256
+position = Vector2(-72, -72)

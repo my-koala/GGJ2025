@@ -16,6 +16,7 @@ process_callback = 0
 z_index = -128
 tile_map_data = PackedByteArray("AAD/////AAABAAEAAAD//wAAAAABAAEAAAAAAAAAAAABAAEAAAAAAP//AAABAAEAAAD+////AAABAAEAAAD+/wAAAAABAAEAAAABAAAAAAABAAEAAAABAP//AAABAAEAAAD9////AAABAAEAAAD9/wAAAAABAAEAAAACAP//AAABAAEAAAACAAAAAAABAAEAAAD9//7/AAABAAAAAAD+//7/AAABAAAAAAD///7/AAABAAAAAAAAAP7/AAABAAAAAAABAP7/AAABAAAAAAACAP7/AAABAAAAAAADAP7/AAACAAAAAAADAP//AAACAAEAAAD8//7/AAAAAAAAAAD8////AAAAAAEAAAD8/wEAAAAAAAIAAAADAAEAAAACAAIAAAADAAAAAAACAAEAAAD8/wAAAAAAAAEAAAD9/wEAAAABAAIAAAD+/wEAAAABAAIAAAD//wEAAAABAAIAAAAAAAEAAAABAAIAAAABAAEAAAABAAIAAAACAAEAAAABAAIAAAD7//3/AQAAAAAAAAD8//3/AQABAAAAAAD9//3/AQABAAAAAAD+//3/AQABAAAAAAD///3/AQABAAAAAAAAAP3/AQABAAAAAAABAP3/AQABAAAAAAACAP3/AQABAAAAAAADAP3/AQABAAAAAAAEAP7/AQACAAEAAAAEAP//AQACAAEAAAAEAAAAAQACAAEAAAAEAAEAAQACAAEAAAADAAIAAQABAAIAAAACAAIAAQABAAIAAAABAAIAAQABAAIAAAAAAAIAAQABAAIAAAD//wIAAQABAAIAAAD+/wIAAQABAAIAAAD9/wIAAQABAAIAAAD8/wIAAQABAAIAAAD7/wEAAQAAAAEAAAD7/wAAAQAAAAEAAAD7////AQAAAAEAAAD7//7/AQAAAAEAAAAEAP3/AQACAAAAAAAEAAIAAQACAAIAAAD7/wIAAQAAAAIAAAA=")
 tile_set = ExtResource("2_8m5s3")
+metadata/_edit_lock_ = true
 
 [node name="wall_poster_1" type="Sprite2D" parent="geometry"]
 position = Vector2(218, -301)
@@ -24,47 +25,56 @@ texture = ExtResource("4_kguka")
 
 [node name="chutes" type="Node2D" parent="."]
 y_sort_enabled = true
+metadata/_edit_lock_ = true
 
 [node name="belts" type="Node2D" parent="."]
 y_sort_enabled = true
+metadata/_edit_lock_ = true
 
 [node name="asset_zoo" parent="." instance=ExtResource("3_ecg5t")]
 position = Vector2(0, -1024)
+metadata/_edit_lock_ = true
 
 [node name="belt_down_000" parent="asset_zoo" index="0"]
-y_sort_enabled = false
+metadata/_edit_lock_ = true
 
 [node name="belt_left_000" parent="asset_zoo" index="1"]
-y_sort_enabled = false
+metadata/_edit_lock_ = true
 
 [node name="belt_right_000" parent="asset_zoo" index="2"]
-y_sort_enabled = false
+metadata/_edit_lock_ = true
 
 [node name="belt_up_000" parent="asset_zoo" index="3"]
-y_sort_enabled = false
+metadata/_edit_lock_ = true
+
+[node name="chute_entry_000" parent="asset_zoo" index="4"]
+metadata/_edit_lock_ = true
 
 [node name="chute_entry_down_000" parent="asset_zoo" index="5"]
-y_sort_enabled = false
+metadata/_edit_lock_ = true
 
 [node name="chute_entry_left_000" parent="asset_zoo" index="6"]
-y_sort_enabled = false
+metadata/_edit_lock_ = true
 
 [node name="chute_entry_right_000" parent="asset_zoo" index="7"]
-y_sort_enabled = false
+metadata/_edit_lock_ = true
 
 [node name="chute_entry_up_000" parent="asset_zoo" index="8"]
-y_sort_enabled = false
+metadata/_edit_lock_ = true
+
+[node name="chute_exit_000" parent="asset_zoo" index="9"]
+metadata/_edit_lock_ = true
 
 [node name="chute_exit_down_000" parent="asset_zoo" index="10"]
-y_sort_enabled = false
+metadata/_edit_lock_ = true
 
 [node name="chute_exit_left_000" parent="asset_zoo" index="11"]
-y_sort_enabled = false
+metadata/_edit_lock_ = true
 
 [node name="chute_exit_right_000" parent="asset_zoo" index="12"]
-y_sort_enabled = false
+metadata/_edit_lock_ = true
 
 [node name="chute_exit_up_000" parent="asset_zoo" index="13"]
-y_sort_enabled = false
+metadata/_edit_lock_ = true
 
 [editable path="asset_zoo"]

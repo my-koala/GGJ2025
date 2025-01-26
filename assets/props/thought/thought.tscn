@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://cekssofwgq2dj"]
+
+[ext_resource type="Texture2D" uid="uid://c83is0qln8uqk" path="res://assets/props/thought/thought.png" id="1_q25qi"]
+[ext_resource type="Script" uid="uid://dcyrj03fyaelw" path="res://scripts/props/thought.gd" id="2_jqfx8"]
+
+[node name="thought" type="Node2D"]
+script = ExtResource("2_jqfx8")
+anchor_offset = Vector2(72, 72)
+bob_amplitude = 2.0
+bob_period = 2.0
+
+[node name="body" type="Sprite2D" parent="."]
+clip_children = 2
+position = Vector2(0, -1.5357)
+texture = ExtResource("1_q25qi")
+offset = Vector2(0, -1.97791)
+region_enabled = true
+region_rect = Rect2(0, 0, 128, 128)
+
+[node name="display" type="Sprite2D" parent="body"]
+
+[node name="a" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(36, 36)
+texture = ExtResource("1_q25qi")
+offset = Vector2(0, 0.767851)
+region_enabled = true
+region_rect = Rect2(128, 0, 64, 64)
+
+[node name="b" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(54, 54)
+texture = ExtResource("1_q25qi")
+offset = Vector2(0, -0.383926)
+region_enabled = true
+region_rect = Rect2(192, 0, 64, 64)

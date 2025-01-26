@@ -29,7 +29,7 @@ func _ready() -> void:
 		var chute_entry: ChuteEntry = node as ChuteEntry
 		if is_instance_valid(chute_entry):
 			chute_entry.item_instantiated.connect(_on_item_instantiated)
-			_total_items += chute_entry.items.size()
+			_total_items += chute_entry.item_infos.size()
 			_chute_entries.append(chute_entry)
 		
 		var chute_exit: ChuteExit = node as ChuteExit

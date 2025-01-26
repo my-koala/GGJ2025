@@ -1,12 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://hje37ito51wp"]
+[gd_scene load_steps=10 format=3 uid="uid://hje37ito51wp"]
 
 [ext_resource type="PackedScene" uid="uid://c8vl5y0q7ua3b" path="res://assets/levels/scenes/level.tscn" id="1_36gu4"]
+[ext_resource type="Script" uid="uid://dip6wdi7oacqt" path="res://scripts/props/item_info.gd" id="3_gs41p"]
 [ext_resource type="PackedScene" uid="uid://dj0k635q02lwu" path="res://assets/props/belt/belt_up.tscn" id="3_xfglt"]
 [ext_resource type="PackedScene" uid="uid://buqbn7w8cx67a" path="res://assets/props/belt/belt_left.tscn" id="4_0sq7a"]
+[ext_resource type="Resource" uid="uid://buvtu0snttan0" path="res://assets/props/item/item_infos/item_info_husky.tres" id="4_68gjs"]
 [ext_resource type="PackedScene" uid="uid://ctlwqfj210i8e" path="res://assets/props/chute/chute_exit.tscn" id="5_fsxq8"]
 [ext_resource type="PackedScene" uid="uid://b7eq87fdh4dmy" path="res://assets/props/chute/chute_exit_right.tscn" id="5_uokaw"]
 [ext_resource type="PackedScene" uid="uid://bbehyped0t73w" path="res://assets/props/chute/chute_entry_right.tscn" id="6_3dbkb"]
-[ext_resource type="PackedScene" uid="uid://bunge2le1ir2y" path="res://assets/props/item/husky/item_husky.tscn" id="6_n45ye"]
 [ext_resource type="PackedScene" uid="uid://c7jr2tlmcby2e" path="res://assets/props/belt/belt_right.tscn" id="10_s0oup"]
 
 [node name="level_debug" instance=ExtResource("1_36gu4")]
@@ -17,16 +18,15 @@ position = Vector2(229, -304)
 [node name="chute_entry_right_000" parent="chutes" index="0" instance=ExtResource("6_3dbkb")]
 y_sort_enabled = false
 position = Vector2(-192, 128)
-items = Array[PackedScene]([ExtResource("6_n45ye")])
+item_infos = Array[ExtResource("3_gs41p")]([ExtResource("4_68gjs")])
 
 [node name="chute_exit_right_000" parent="chutes" index="1" instance=ExtResource("5_uokaw")]
 position = Vector2(-128, -128)
-items_expected = Array[StringName]([&"husky"])
+item_infos = Array[ExtResource("3_gs41p")]([ExtResource("4_68gjs")])
 item_center_check = false
 
 [node name="chute_exit_000" parent="chutes" index="2" instance=ExtResource("5_fsxq8")]
 position = Vector2(320, 0)
-items_expected = Array[StringName]([&"husky"])
 
 [node name="item_belt_right_000" parent="belts" index="0" instance=ExtResource("10_s0oup")]
 position = Vector2(-128, 128)

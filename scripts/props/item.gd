@@ -18,7 +18,7 @@ enum State {
 }
 var _state: State = State.IDLE
 
-## Identifier used by exits for filtering items.
+## Unique item identifier (should match corresponding ItemInfo).
 @export
 var identifier: StringName = &""
 
