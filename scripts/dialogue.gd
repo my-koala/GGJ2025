@@ -35,6 +35,9 @@ var talking_speed: float = 5
 @export
 var rich_text_label: RichTextLabel
 
+@onready
+var _playing_sfx: AudioStreamPlayer = $talking_sfx as AudioStreamPlayer
+
 # Internal signal that emits when the user presses a keyboard or mouse
 signal _user_interacted()
 
@@ -55,12 +58,15 @@ func play_dialogue() -> void:
 	self.visible = true
 	dialogue_started.emit()
 	for entry: DialogueEntry in dialogue_entries:
-		var animatedTexture: AnimatedTexture = agent as AnimatedTexture
+		_playing_sfx.play()
 		
+		var animatedTexture: AnimatedTexture = agent as AnimatedTexture
 		if is_instance_valid(animatedTexture):
 			animatedTexture.speed_scale = 1.0
 		
 		await _play_dialogue_entry(entry)
+		
+		_playing_sfx.stop()
 		
 		if is_instance_valid(animatedTexture):
 			animatedTexture.speed_scale = 0.0

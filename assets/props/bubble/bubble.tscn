@@ -1,9 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://ej43syhrhoib"]
+[gd_scene load_steps=12 format=3 uid="uid://ej43syhrhoib"]
 
 [ext_resource type="Script" uid="uid://bh6b1astuir51" path="res://scripts/props/bubble.gd" id="1_3twi3"]
 [ext_resource type="Shader" uid="uid://bcsjteo3vkejw" path="res://shaders/bubble.tres" id="2_ldtnw"]
 [ext_resource type="Texture2D" uid="uid://cuva3qvgravg2" path="res://assets/props/bubble/bubble_mask.png" id="3_dgltc"]
 [ext_resource type="Texture2D" uid="uid://dxtok5dows46k" path="res://assets/props/bubble/bubble.png" id="4_snm8d"]
+[ext_resource type="AudioStream" uid="uid://cjbv0gnctlvba" path="res://assets/sounds/Fill.mp3" id="5_dgltc"]
+[ext_resource type="AudioStream" uid="uid://dttk8rmx757qd" path="res://assets/sounds/Pop.mp3" id="6_snm8d"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_3twi3"]
 friction = 0.5
@@ -39,7 +41,7 @@ jiggle_period = 8.0
 [node name="sprite_2d" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_pik2t")
 position = Vector2(0, -16)
-scale = Vector2(0.976208, 0.948362)
+scale = Vector2(0.983643, 0.936819)
 
 [node name="temp" type="Sprite2D" parent="sprite_2d"]
 z_index = 128
@@ -60,3 +62,11 @@ monitorable = false
 
 [node name="collision_shape_2d" type="CollisionShape2D" parent="pickable"]
 shape = SubResource("CircleShape2D_3twi3")
+
+[node name="fill_sfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_dgltc")
+volume_db = -15.0
+
+[node name="pop_sfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_snm8d")
+volume_db = -15.0

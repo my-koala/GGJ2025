@@ -36,6 +36,12 @@ var _collision_shape: CollisionShape2D = $collision_shape_2d as CollisionShape2D
 @onready
 var _pickable: Area2D = $pickable as Area2D
 
+@onready
+var _fill_sfx: AudioStreamPlayer = $fill_sfx as AudioStreamPlayer
+
+@onready
+var _pop_sfx: AudioStreamPlayer = $pop_sfx as AudioStreamPlayer
+
 var _bubble_created: bool = false
 func is_bubble_created() -> bool:
 	return _bubble_created
@@ -48,6 +54,7 @@ func bubble_create() -> void:
 		_sprite.visible = true
 		_bubble_launched = false
 		_collision_shape.disabled = false
+		_fill_sfx.play()
 		bubble_created.emit()
 
 var _bubble_launched: bool = false
@@ -62,6 +69,7 @@ func bubble_destroy() -> void:
 		_bubble_created = false
 		_sprite.visible = false
 		_collision_shape.disabled = true
+		_pop_sfx.play()
 		bubble_destroyed.emit()
 
 func _ready() -> void:

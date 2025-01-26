@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://cfquoavtiknus"]
+[gd_scene load_steps=24 format=3 uid="uid://cfquoavtiknus"]
 
 [ext_resource type="PackedScene" uid="uid://c8vl5y0q7ua3b" path="res://assets/levels/scenes/level.tscn" id="1_1et6b"]
 [ext_resource type="PackedScene" uid="uid://bbehyped0t73w" path="res://assets/props/chute/chute_entry_right.tscn" id="2_rxabv"]
@@ -8,7 +8,6 @@
 [ext_resource type="Resource" uid="uid://p7ojn1574vfb" path="res://assets/props/item/item_infos/item_info_bottle.tres" id="5_axmfg"]
 [ext_resource type="PackedScene" uid="uid://c7jr2tlmcby2e" path="res://assets/props/belt/belt_right.tscn" id="6_0ki71"]
 [ext_resource type="Resource" uid="uid://cd65uywkbvhb2" path="res://assets/props/item/item_infos/item_info_bicycle.tres" id="6_omllw"]
-[ext_resource type="PackedScene" uid="uid://b5rbam8pcmykb" path="res://assets/dialogue_system/dialogue_system.tscn" id="7_c5tth"]
 [ext_resource type="Resource" uid="uid://cko3omy02a0fd" path="res://assets/props/item/item_infos/item_info_plastic.tres" id="7_lebjv"]
 [ext_resource type="PackedScene" uid="uid://buqbn7w8cx67a" path="res://assets/props/belt/belt_left.tscn" id="7_vpue2"]
 [ext_resource type="PackedScene" uid="uid://dj0k635q02lwu" path="res://assets/props/belt/belt_up.tscn" id="8_1ur70"]
@@ -162,22 +161,6 @@ position = Vector2(32, 992)
 
 [node name="belt_left_001" parent="asset_zoo/belts" index="21" instance=ExtResource("7_vpue2")]
 position = Vector2(32, 1056)
-
-[node name="item_anvil" parent="asset_zoo/items" index="0"]
-collision_layer = 9
-collision_mask = 9
-
-[node name="item_husky" parent="asset_zoo/items" index="1"]
-collision_layer = 9
-collision_mask = 9
-
-[node name="item_plastic" parent="asset_zoo/items" index="2"]
-collision_layer = 9
-collision_mask = 9
-
-[node name="item_urchin" parent="asset_zoo/items" index="3"]
-collision_layer = 9
-collision_mask = 9
 
 [node name="dialogue_system" parent="canvas_layer" index="0"]
 dialogue_entries = Array[ExtResource("8_iest2")]([SubResource("Resource_3gdde"), SubResource("Resource_ymvoe"), SubResource("Resource_fpsi2"), SubResource("Resource_mhti0"), SubResource("Resource_omd5s"), SubResource("Resource_c5tth"), SubResource("Resource_iest2"), SubResource("Resource_vpue2")])

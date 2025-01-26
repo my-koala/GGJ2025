@@ -48,7 +48,7 @@ script = ExtResource("10_e63tf")
 dialogue = "Right, get cracking. And don't waste my time!"
 metadata/_custom_type_script = ExtResource("10_e63tf")
 
-[node name="level_0" instance=ExtResource("1_3gdde")]
+[node name="level_1" instance=ExtResource("1_3gdde")]
 
 [node name="wall_poster_1" parent="geometry" index="0"]
 position = Vector2(229, -304)
