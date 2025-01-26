@@ -11,6 +11,9 @@ item_center_check = false
 [node name="sprite_2d" parent="." index="0"]
 region_rect = Rect2(128, 0, 64, 144)
 
+[node name="collision_shape_2d" parent="." index="1"]
+disabled = false
+
 [node name="collision_shape_2d" parent="item_detect" index="0"]
 position = Vector2(0, 32)
 shape = SubResource("RectangleShape2D_81kco")
