@@ -78,28 +78,7 @@ position = Vector2(257, 9)
 collision_layer = 9
 collision_mask = 9
 custom_integrator = true
-belt_speed_multiplier = null
-drop_fall_height = null
-drop_fall_scale = null
-
-[node name="item_anvil" parent="asset_zoo/items" index="0"]
-belt_speed_multiplier = null
-drop_fall_height = null
-drop_fall_scale = null
-
-[node name="item_husky" parent="asset_zoo/items" index="1"]
-belt_speed_multiplier = null
-drop_fall_height = null
-drop_fall_scale = null
-
-[node name="item_plastic" parent="asset_zoo/items" index="2"]
-belt_speed_multiplier = null
-drop_fall_height = null
-drop_fall_scale = null
-
-[node name="item_urchin" parent="asset_zoo/items" index="3"]
-belt_speed_multiplier = null
-drop_fall_height = null
-drop_fall_scale = null
+drop_fall_height = 16.0
+drop_fall_scale = 0.25
 
 [editable path="asset_zoo"]

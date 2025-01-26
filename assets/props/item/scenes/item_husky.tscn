@@ -5,8 +5,6 @@
 
 [node name="item_husky" instance=ExtResource("1_x8tj1")]
 identifier = &"husky"
-drop_fall_height = null
-drop_fall_scale = null
 
 [node name="sprite_2d" parent="." index="1"]
 texture = ExtResource("2_gawok")
