@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bbehyped0t73w" path="res://assets/props/chute/chute_entry_right.tscn" id="6_3dbkb"]
 [ext_resource type="PackedScene" uid="uid://d2hg70rrjbhwk" path="res://assets/props/belt/belt_down.tscn" id="10_68gjs"]
 [ext_resource type="PackedScene" uid="uid://c7jr2tlmcby2e" path="res://assets/props/belt/belt_right.tscn" id="10_s0oup"]
-[ext_resource type="PackedScene" uid="uid://c0do5ac4gsllo" path="res://assets/props/item/husky/item_anvil.tscn" id="11_ve11y"]
+[ext_resource type="PackedScene" uid="uid://c0do5ac4gsllo" path="res://assets/props/item/scenes/item_anvil.tscn" id="11_ve11y"]
 
 [node name="level_debug" instance=ExtResource("1_36gu4")]
 
@@ -18,14 +18,12 @@
 position = Vector2(229, -304)
 
 [node name="chute_entry_right_000" parent="chutes" index="0" instance=ExtResource("6_3dbkb")]
-y_sort_enabled = false
 position = Vector2(-192, 128)
 item_infos = Array[ExtResource("3_gs41p")]([ExtResource("4_68gjs")])
 
 [node name="chute_exit_right_000" parent="chutes" index="1" instance=ExtResource("5_uokaw")]
 position = Vector2(-128, -128)
 item_infos = Array[ExtResource("3_gs41p")]([ExtResource("4_68gjs")])
-item_center_check = false
 
 [node name="chute_exit_000" parent="chutes" index="2" instance=ExtResource("5_fsxq8")]
 position = Vector2(320, 0)
@@ -76,6 +74,7 @@ position = Vector2(256, 0)
 position = Vector2(256, 64)
 
 [node name="item_anvil" parent="items" index="0" instance=ExtResource("11_ve11y")]
-position = Vector2(256, 0)
+position = Vector2(257, 9)
+custom_integrator = true
 
 [editable path="asset_zoo"]
