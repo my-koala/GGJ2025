@@ -32,6 +32,9 @@ var _belt_scan: Area2D = $belt_scan as Area2D
 @onready
 var _sprite: Sprite2D = $sprite_2d as Sprite2D
 
+@onready
+var _explosion: Explosion = $explosion as Explosion
+
 ## Array of colliding Belts.
 var _belts: Array[Belt] = []
 
@@ -73,6 +76,11 @@ var _drop_fall_time: float = 0.0
 var _drop_fall_rotation_max: float = 0.0
 var _drop_fall_rotation: float = 0.0
 
+var _dropped: bool = false
+var _dropped_wait: float = 0.25
+var _dropped_wait_time: float = 0.0
+var _dropped_waited: bool = false
+
 func _physics_process(delta: float) -> void:
 	if Engine.is_editor_hint():
 		return
@@ -102,6 +110,10 @@ func _physics_process(delta: float) -> void:
 				_state = State.IDLE
 		State.DROP:
 			# TODO: animated drop
+			collision_layer = 0
+			collision_mask = 0
+			_bubble.collision_layer = 0
+			_bubble.collision_mask = 0
 			if is_zero_approx(_drop_fall_rotation_max):
 				_drop_fall_rotation_max = signf(randf() - 0.5) * randf_range(0.25, 0.5)
 			if _drop_fall_time < drop_fall_time:
@@ -115,10 +127,17 @@ func _physics_process(delta: float) -> void:
 				_sprite.scale = lerpf(1.0, 0.5, weight) * Vector2.ONE
 				_sprite.modulate = Color.WHITE.lerp(Color.BLACK, weight)
 			else:
-				item_dropped.emit()
 				_state = State.DROPPED
 		State.DROPPED:
-			pass
+			if !_dropped:
+				_dropped = true
+				_sprite.modulate.a = 0.0
+				_explosion.explode()
+			if _dropped_wait_time < _dropped_wait:
+				_dropped_wait_time += delta
+			elif !_dropped_waited:
+				_dropped_waited = true
+				item_dropped.emit()
 
 func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 	match _state:
