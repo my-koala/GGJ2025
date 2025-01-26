@@ -1,15 +1,14 @@
-[gd_scene load_steps=12 format=3 uid="uid://srio544gi0pg"]
+[gd_scene load_steps=11 format=3 uid="uid://srio544gi0pg"]
 
 [ext_resource type="PackedScene" uid="uid://cadnddkadj1bt" path="res://assets/tiles/tile_scenes/belt_test/belt_test_right.tscn" id="1_2w5tk"]
-[ext_resource type="Script" path="res://scripts/level.gd" id="1_fmkrf"]
+[ext_resource type="Script" uid="uid://bd24x5hdgvi76" path="res://scripts/level/level.gd" id="1_fmkrf"]
 [ext_resource type="PackedScene" uid="uid://dmd6guegx31yg" path="res://assets/tiles/tile_scenes/belt_test/belt_test_up.tscn" id="2_fmkrf"]
 [ext_resource type="PackedScene" uid="uid://6wa1a78ux7c1" path="res://assets/tiles/tile_scenes/belt_test/belt_test_left.tscn" id="3_rpsmi"]
 [ext_resource type="PackedScene" uid="uid://dmanjl013mh5d" path="res://assets/tiles/tile_scenes/belt_test/belt_test_down.tscn" id="4_7v0kt"]
 [ext_resource type="PackedScene" uid="uid://bunge2le1ir2y" path="res://assets/items/item_husky.tscn" id="6_40i4i"]
-[ext_resource type="Script" path="res://scripts/item_input.gd" id="7_tlaqs"]
+[ext_resource type="Script" uid="uid://bm1otnmdoj0h3" path="res://scripts/item_input.gd" id="7_tlaqs"]
 [ext_resource type="Texture2D" uid="uid://cb4ig45wj083l" path="res://assets/tiles/tile_scenes/input_output/input_output_test.png" id="8_kbb2g"]
 [ext_resource type="Script" uid="uid://crmh7bm1sm38a" path="res://scripts/item_output.gd" id="9_ihsyp"]
-[ext_resource type="Script" uid="uid://dncb1k2j1xn0n" path="res://scripts/game_manager.gd" id="10_g615w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6sv45"]
 
@@ -199,8 +198,6 @@ texture = ExtResource("8_kbb2g")
 region_enabled = true
 region_rect = Rect2(16, 0, 16, 16)
 
-[node name="game_manager" type="Node2D" parent="." node_paths=PackedStringArray("itemInputs", "itemOutputs")]
-script = ExtResource("10_g615w")
-itemInputs = [NodePath("../item_input")]
-itemOutputs = [NodePath("../item_output")]
-metadata/_custom_type_script = ExtResource("10_g615w")
+[node name="camera_2d" type="Camera2D" parent="."]
+zoom = Vector2(4, 4)
+process_callback = 0

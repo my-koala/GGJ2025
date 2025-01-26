@@ -32,10 +32,23 @@ gdscript/warnings/integer_division=0
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
+window/stretch/mode="canvas_items"
 
 [editor]
 
 naming/node_name_casing=2
+
+[file_customization]
+
+folder_colors={
+"res://assets/": "red",
+"res://documents/": "orange",
+"res://scripts/": "purple"
+}
+
+[gui]
+
+theme/custom="uid://bv0qfh1mb8pui"
 
 [layer_names]
 

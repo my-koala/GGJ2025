@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=3 uid="uid://teg1nwa66kng"]
+
+[ext_resource type="Script" uid="uid://ltejv6xihsaq" path="res://scripts/menus/menu_title.gd" id="1_dhjyv"]
+
+[node name="menu_title" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dhjyv")
+
+[node name="title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -93.5
+offset_top = 64.0
+offset_right = 93.5
+offset_bottom = 87.0
+grow_horizontal = 2
+text = "insert title of game here"
+horizontal_alignment = 1
+
+[node name="buttons" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.25
+anchor_top = 0.25
+anchor_right = 0.75
+anchor_bottom = 0.75
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="button_play" type="Button" parent="buttons"]
+layout_mode = 2
+text = "play"
+
+[node name="button_credits" type="Button" parent="buttons"]
+layout_mode = 2
+text = "credits"
+
+[node name="button_quit" type="Button" parent="buttons"]
+layout_mode = 2
+text = "quit"

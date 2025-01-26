@@ -1,253 +1,76 @@
-[gd_scene load_steps=17 format=4 uid="uid://dwaef6dipcc72"]
+[gd_scene load_steps=8 format=3 uid="uid://dwaef6dipcc72"]
 
-[ext_resource type="PackedScene" uid="uid://cadnddkadj1bt" path="res://assets/tiles/tile_scenes/belt_test/belt_test_right.tscn" id="1_j84mu"]
-[ext_resource type="TileSet" uid="uid://ejf7mh4w5e0g" path="res://assets/tiles/tile_sets/belts.tres" id="1_xch4i"]
-[ext_resource type="PackedScene" uid="uid://dmd6guegx31yg" path="res://assets/tiles/tile_scenes/belt_test/belt_test_up.tscn" id="2_yti63"]
-[ext_resource type="PackedScene" uid="uid://6wa1a78ux7c1" path="res://assets/tiles/tile_scenes/belt_test/belt_test_left.tscn" id="3_dg683"]
-[ext_resource type="PackedScene" uid="uid://dmanjl013mh5d" path="res://assets/tiles/tile_scenes/belt_test/belt_test_down.tscn" id="4_3yvm8"]
-[ext_resource type="PackedScene" uid="uid://bunge2le1ir2y" path="res://assets/items/item_husky.tscn" id="6_xajwi"]
-[ext_resource type="Script" path="res://scripts/item_input.gd" id="7_dg683"]
-[ext_resource type="Script" uid="uid://crmh7bm1sm38a" path="res://scripts/item_output.gd" id="8_3yvm8"]
-[ext_resource type="Texture2D" uid="uid://cb4ig45wj083l" path="res://assets/tiles/tile_scenes/input_output/input_output_test.png" id="9_6sv45"]
-[ext_resource type="Script" uid="uid://dncb1k2j1xn0n" path="res://scripts/game_manager.gd" id="10_by4fb"]
-[ext_resource type="PackedScene" uid="uid://b5rbam8pcmykb" path="res://assets/dialogue_system/dialogue_system.tscn" id="11_in5wb"]
-[ext_resource type="Script" uid="uid://dfktug68yfw7d" path="res://scripts/dialogue_entry.gd" id="12_74c7k"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6sv45"]
-
-[sub_resource type="Resource" id="Resource_b3jqf"]
-script = ExtResource("12_74c7k")
-dialogue = "[i][b]BLIMEY![/b][/i] Who designed such a system?"
-metadata/_custom_type_script = ExtResource("12_74c7k")
-
-[sub_resource type="Resource" id="Resource_u3ouf"]
-script = ExtResource("12_74c7k")
-dialogue = "What a nasty piece of work, innit?"
-metadata/_custom_type_script = ExtResource("12_74c7k")
-
-[sub_resource type="Resource" id="Resource_m2px1"]
-script = ExtResource("12_74c7k")
-dialogue = "I need to fire the person who designed this."
-metadata/_custom_type_script = ExtResource("12_74c7k")
+[ext_resource type="Script" uid="uid://8pmukl06mun1" path="res://scripts/main/main.gd" id="1_irre0"]
+[ext_resource type="PackedScene" uid="uid://by816hhrmnrns" path="res://assets/menus/menu_level_failed.tscn" id="3_j84mu"]
+[ext_resource type="Texture2D" uid="uid://bj4qjhoi450yi" path="res://assets/transition/bubble_temp.png" id="3_k5mrd"]
+[ext_resource type="PackedScene" uid="uid://d3whkymwy01f4" path="res://assets/menus/menu_level_passed.tscn" id="4_yti63"]
+[ext_resource type="PackedScene" uid="uid://dyin3btnxrag2" path="res://assets/menus/menu_level_select.tscn" id="5_dg683"]
+[ext_resource type="PackedScene" uid="uid://teg1nwa66kng" path="res://assets/menus/menu_title.tscn" id="5_xajwi"]
+[ext_resource type="Script" uid="uid://cyxejsihb7g3x" path="res://scripts/gui/overlay.gd" id="6_3yvm8"]
 
 [node name="main" type="Node"]
+script = ExtResource("1_irre0")
 
-[node name="map" type="Node2D" parent="."]
+[node name="world" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
 
-[node name="camera_2d" type="Camera2D" parent="map"]
-zoom = Vector2(4, 4)
-process_callback = 0
+[node name="play" type="Node2D" parent="world"]
 
-[node name="level_0" type="Node2D" parent="map"]
+[node name="menus" type="CanvasLayer" parent="."]
+layer = 2
 
-[node name="belts" type="Node2D" parent="map/level_0"]
-y_sort_enabled = true
+[node name="menu_title" parent="menus" instance=ExtResource("5_xajwi")]
 
-[node name="belt_test_right_000" parent="map/level_0/belts" instance=ExtResource("1_j84mu")]
-position = Vector2(-48, 0)
-speed = 128.0
-
-[node name="belt_test_right_001" parent="map/level_0/belts" instance=ExtResource("1_j84mu")]
-position = Vector2(-32, 0)
-speed = 64.0
-
-[node name="belt_test_right_002" parent="map/level_0/belts" instance=ExtResource("1_j84mu")]
-position = Vector2(-16, 0)
-speed = 64.0
-
-[node name="belt_test_right_003" parent="map/level_0/belts" instance=ExtResource("1_j84mu")]
-speed = 64.0
-
-[node name="belt_test_right_004" parent="map/level_0/belts" instance=ExtResource("1_j84mu")]
-position = Vector2(16, 0)
-speed = 64.0
-
-[node name="belt_test_right_005" parent="map/level_0/belts" instance=ExtResource("1_j84mu")]
-position = Vector2(32, 0)
-speed = 64.0
-
-[node name="belt_test_right_006" parent="map/level_0/belts" instance=ExtResource("1_j84mu")]
-position = Vector2(48, 0)
-speed = 64.0
-
-[node name="belt_test_right_007" parent="map/level_0/belts" instance=ExtResource("1_j84mu")]
-position = Vector2(-80, -64)
-speed = 32.0
-
-[node name="belt_test_up_000" parent="map/level_0/belts" instance=ExtResource("2_yti63")]
-position = Vector2(64, 0)
-speed = 32.0
-
-[node name="belt_test_up_001" parent="map/level_0/belts" instance=ExtResource("2_yti63")]
-position = Vector2(64, -16)
-speed = 32.0
-
-[node name="belt_test_up_002" parent="map/level_0/belts" instance=ExtResource("2_yti63")]
-position = Vector2(64, -32)
-speed = 32.0
-
-[node name="belt_test_up_003" parent="map/level_0/belts" instance=ExtResource("2_yti63")]
-position = Vector2(64, -48)
-speed = 8.0
-
-[node name="belt_test_left_000" parent="map/level_0/belts" instance=ExtResource("3_dg683")]
-position = Vector2(64, -64)
-speed = 32.0
-
-[node name="belt_test_left_001" parent="map/level_0/belts" instance=ExtResource("3_dg683")]
-position = Vector2(48, -64)
-speed = 32.0
-
-[node name="belt_test_left_002" parent="map/level_0/belts" instance=ExtResource("3_dg683")]
-position = Vector2(32, -64)
-speed = 32.0
-
-[node name="belt_test_left_003" parent="map/level_0/belts" instance=ExtResource("3_dg683")]
-position = Vector2(16, -64)
-speed = 32.0
-
-[node name="belt_test_left_004" parent="map/level_0/belts" instance=ExtResource("3_dg683")]
-position = Vector2(0, -64)
-speed = 32.0
-
-[node name="belt_test_left_005" parent="map/level_0/belts" instance=ExtResource("3_dg683")]
-position = Vector2(-16, -32)
-speed = 32.0
-
-[node name="belt_test_left_006" parent="map/level_0/belts" instance=ExtResource("3_dg683")]
-position = Vector2(-32, -32)
-speed = 32.0
-
-[node name="belt_test_left_007" parent="map/level_0/belts" instance=ExtResource("3_dg683")]
-position = Vector2(-80, -80)
-speed = 32.0
-
-[node name="belt_test_left_008" parent="map/level_0/belts" instance=ExtResource("3_dg683")]
-position = Vector2(48, -48)
-speed = 32.0
-
-[node name="belt_test_left_009" parent="map/level_0/belts" instance=ExtResource("3_dg683")]
-position = Vector2(32, -48)
-speed = 32.0
-
-[node name="belt_test_left_010" parent="map/level_0/belts" instance=ExtResource("3_dg683")]
-position = Vector2(16, -48)
-speed = 32.0
-
-[node name="belt_test_left_011" parent="map/level_0/belts" instance=ExtResource("3_dg683")]
-position = Vector2(0, -48)
-speed = 32.0
-
-[node name="belt_test_left_012" parent="map/level_0/belts" instance=ExtResource("3_dg683")]
-position = Vector2(64, 32)
-speed = 32.0
-
-[node name="belt_test_left_013" parent="map/level_0/belts" instance=ExtResource("3_dg683")]
-position = Vector2(48, 32)
-speed = 32.0
-
-[node name="belt_test_left_014" parent="map/level_0/belts" instance=ExtResource("3_dg683")]
-position = Vector2(32, 32)
-speed = 32.0
-
-[node name="belt_test_left_015" parent="map/level_0/belts" instance=ExtResource("3_dg683")]
-position = Vector2(16, 32)
-speed = 32.0
-
-[node name="belt_test_left_016" parent="map/level_0/belts" instance=ExtResource("3_dg683")]
-position = Vector2(0, 32)
-speed = 32.0
-
-[node name="belt_test_left_017" parent="map/level_0/belts" instance=ExtResource("3_dg683")]
-position = Vector2(-16, 32)
-speed = 32.0
-
-[node name="belt_test_left_018" parent="map/level_0/belts" instance=ExtResource("3_dg683")]
-position = Vector2(-32, 32)
-speed = 32.0
-
-[node name="belt_test_left_019" parent="map/level_0/belts" instance=ExtResource("3_dg683")]
-position = Vector2(-48, 32)
-speed = 32.0
-
-[node name="belt_test_left_020" parent="map/level_0/belts" instance=ExtResource("3_dg683")]
-position = Vector2(-64, 32)
-speed = 32.0
-
-[node name="belt_test_down_000" parent="map/level_0/belts" instance=ExtResource("4_3yvm8")]
-position = Vector2(-16, -64)
-speed = 32.0
-
-[node name="belt_test_down_001" parent="map/level_0/belts" instance=ExtResource("4_3yvm8")]
-position = Vector2(-16, -48)
-speed = 32.0
-
-[node name="belt_test_down_002" parent="map/level_0/belts" instance=ExtResource("4_3yvm8")]
-position = Vector2(-48, -32)
-speed = 32.0
-
-[node name="belt_test_down_003" parent="map/level_0/belts" instance=ExtResource("4_3yvm8")]
-position = Vector2(-48, -16)
-speed = 32.0
-
-[node name="tile_map_layer" type="TileMapLayer" parent="map/level_0"]
-process_mode = 4
-visible = false
-y_sort_enabled = true
-tile_map_data = PackedByteArray("AAD8/wAAAQAAAAAAAAACAP3/AAAAAAAAAgACAP7/AAAAAAAAAQACAP//AAAAAAAAAQACAAAAAAAAAAAAAQACAAEAAAAAAAAAAQACAAIAAAAAAAAAAQD8/wMAAAAAAAAAAAD9/wMAAAAAAAAAAAD+/wMAAAAAAAAAAAD///3/AQAAAAIAAAD//wMAAAAAAAAAAAAAAP3/AAAAAAAAAgAAAAMAAAAAAAAAAAABAP3/AAAAAAAAAgABAAMAAAAAAAAAAAACAAMAAAAAAAAAAAADAP3/AAAAAAAAAgD9/wAAAQAAAAAAAAD+/wAAAQAAAAAAAAD//wAAAQAAAAIAAAD/////AQAAAAIAAAD///7/AQAAAAIAAAD///z/AQAAAAQAAAD+//z/AQAAAAQAAAD9//z/AQAAAAQAAAD8//z/AQAAAAQAAAD7//z/AQAAAAQAAAD6//z/AQAAAAYAAAD6//3/AQAAAAYAAAD6//7/AQAAAAYAAAD6////AQAAAAYAAAD6/wAAAQAAAAAAAAD7/wAAAQAAAAAAAAA=")
-tile_set = ExtResource("1_xch4i")
-
-[node name="item_husky" parent="map/level_0" instance=ExtResource("6_xajwi")]
-position = Vector2(64, 0)
-
-[node name="item_husky2" parent="map/level_0" instance=ExtResource("6_xajwi")]
-position = Vector2(-80, -71)
-
-[node name="item_input" type="Node2D" parent="map/level_0"]
-position = Vector2(64, 32)
-script = ExtResource("7_dg683")
-items = Array[PackedScene]([ExtResource("6_xajwi")])
-metadata/_custom_type_script = ExtResource("7_dg683")
-
-[node name="sprite_2d" type="Sprite2D" parent="map/level_0/item_input"]
-texture = ExtResource("9_6sv45")
-region_enabled = true
-region_rect = Rect2(0, 0, 16, 16)
-
-[node name="item_output" type="Area2D" parent="map/level_0"]
-position = Vector2(-64, 32)
-script = ExtResource("8_3yvm8")
-items_expected = Array[StringName]([&"husky"])
-metadata/_custom_type_script = ExtResource("8_3yvm8")
-
-[node name="collision_shape_2d" type="CollisionShape2D" parent="map/level_0/item_output"]
-shape = SubResource("RectangleShape2D_6sv45")
-
-[node name="sprite_2d" type="Sprite2D" parent="map/level_0/item_output"]
-texture = ExtResource("9_6sv45")
-region_enabled = true
-region_rect = Rect2(16, 0, 16, 16)
-
-[node name="game_manager" type="Node2D" parent="map/level_0" node_paths=PackedStringArray("itemInputs", "itemOutputs")]
-script = ExtResource("10_by4fb")
-itemInputs = [NodePath("../item_input")]
-itemOutputs = [NodePath("../item_output")]
-metadata/_custom_type_script = ExtResource("10_by4fb")
-
-[node name="gui" type="Control" parent="."]
+[node name="overlay" type="Control" parent="menus"]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="canvas_layer" type="CanvasLayer" parent="."]
-
-[node name="dialogue_system" parent="canvas_layer" instance=ExtResource("11_in5wb")]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 0.0
-offset_bottom = 0.0
 grow_horizontal = 2
 grow_vertical = 2
-dialogue_entries = Array[ExtResource("12_74c7k")]([SubResource("Resource_b3jqf"), SubResource("Resource_u3ouf"), SubResource("Resource_m2px1")])
+script = ExtResource("6_3yvm8")
+metadata/_custom_type_script = ExtResource("6_3yvm8")
+
+[node name="color_rect" type="ColorRect" parent="menus/overlay"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.112784, 0.0932818, 0.168569, 0.262745)
+
+[node name="menu_level_select" parent="menus" instance=ExtResource("5_dg683")]
+
+[node name="menu_level_passed" parent="menus" instance=ExtResource("4_yti63")]
+
+[node name="menu_level_failed" parent="menus" instance=ExtResource("3_j84mu")]
+
+[node name="screen" type="CanvasLayer" parent="."]
+layer = 4
+
+[node name="loading" type="Control" parent="screen"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="label" type="Label" parent="screen/loading"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "Loading Level..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="transition" type="TextureRect" parent="screen"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("3_k5mrd")

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://c8vl5y0q7ua3b"]
+
+[ext_resource type="Script" uid="uid://bd24x5hdgvi76" path="res://scripts/level/level.gd" id="1_uuog7"]
+
+[node name="level" type="Node2D"]
+script = ExtResource("1_uuog7")
+
+[node name="camera_2d" type="Camera2D" parent="."]
+zoom = Vector2(4, 4)
+process_callback = 0

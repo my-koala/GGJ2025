@@ -1,56 +1,36 @@
 @tool
-extends Node2D
-class_name GameManager
+extends Node
+class_name Level
 
-## Emitted when the level has reached a passing state (we win!)
-signal on_level_pass()
+signal ended(passed: bool)
 
-## Emitted when the level has reached a failing state (an item was dropped or the wrong item was in an output) 
-signal on_level_fail()
-
-## All item inputs/spawners in the level
 @export
-var itemInputs: Array[ItemInput] = []
+var _item_inputs: Array[ItemInput] = []
 
-## All item outputs/chutes in the level
 @export
-var itemOutputs: Array[ItemOutput] = []
+var _item_outputs: Array[ItemOutput] = []
 
 var _total_items: int = 0
 var _items_destroyed: int = 0
 
 # Call when the level is considered a success
 func _pass_level() -> void:
-	print("level won!")
-	on_level_pass.emit()
+	ended.emit(true)
 
 # Call when the level is considered failed
 func _fail_level() -> void:
-	print("level failed")
-	on_level_fail.emit()
+	ended.emit(false)
 
 func _ready() -> void:
 	if Engine.is_editor_hint():
 		return
 	
-	for input: ItemInput in itemInputs:
+	for input: ItemInput in _item_inputs:
 		input.item_instantiated.connect(_on_item_instantiated)
 		_total_items += input.items.size()
 		
-	for output: ItemOutput in itemOutputs:
+	for output: ItemOutput in _item_outputs:
 		output.item_destroyed.connect(_on_item_destroyed)
-
-# In Unity, I am used to unsubscribing from all events in OnDestroy() for safety
-# This seems to be the equivalent in Godot, although I'm unsure how necessary this is
-func _exit_tree() -> void:
-	if Engine.is_editor_hint():
-		return
-	
-	for input: ItemInput in itemInputs:
-		input.item_instantiated.disconnect(_on_item_instantiated)
-	
-	for output: ItemOutput in itemOutputs:
-		output.item_destroyed.disconnect(_on_item_destroyed)
 
 # When an item is instantiated by an Item Input, we need the manager to listen
 # to when that item is dropped on the floor. This can be a fail state.

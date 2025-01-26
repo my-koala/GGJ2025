@@ -1,0 +1,66 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3whkymwy01f4"]
+
+[ext_resource type="Script" uid="uid://bfab1ewtv2wdu" path="res://scripts/menus/menu_level_passed.gd" id="1_hyyoq"]
+[ext_resource type="Script" uid="uid://lx0st8e77yp" path="res://scripts/gui/slide.gd" id="3_fesm1"]
+
+[node name="menu_level_passed" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_hyyoq")
+
+[node name="slide" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_fesm1")
+metadata/_custom_type_script = ExtResource("3_fesm1")
+
+[node name="panel" type="Panel" parent="slide"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.25
+anchor_top = 0.125
+anchor_right = 0.75
+anchor_bottom = 0.875
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="label_status" type="Label" parent="slide/panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.1
+anchor_right = 1.0
+anchor_bottom = 0.2
+offset_left = -50.5
+offset_right = 50.5
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 48
+text = "Level Complete!"
+horizontal_alignment = 1
+
+[node name="button_next" type="Button" parent="slide/panel"]
+layout_mode = 0
+offset_left = 185.0
+offset_top = 321.0
+offset_right = 441.0
+offset_bottom = 393.0
+theme_override_font_sizes/font_size = 32
+text = "Next Level"
+
+[node name="button_exit" type="Button" parent="slide/panel"]
+layout_mode = 0
+offset_left = 185.0
+offset_top = 427.0
+offset_right = 441.0
+offset_bottom = 499.0
+theme_override_font_sizes/font_size = 32
+text = "Main Menu"
