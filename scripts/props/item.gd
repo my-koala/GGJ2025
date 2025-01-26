@@ -9,7 +9,7 @@ class_name Item
 # while in bubble, "disable" movement physics, and track position to bubble rigidbody
 
 ## Emitted when this item is "dropped" (bubble is popped without being over a conveyor) 
-signal item_dropped(item: Item)
+signal item_dropped()
 
 enum State {
 	IDLE,
@@ -85,6 +85,7 @@ func _physics_process(delta: float) -> void:
 				_drop_grace_time += delta
 				if _drop_grace_time > drop_grace_time:
 					_state = State.DROP
+					item_dropped.emit()
 			else:
 				_drop_grace_time = 0.0
 		State.BUBBLE:

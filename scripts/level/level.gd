@@ -45,8 +45,7 @@ func _on_item_instantiated(item: Item) -> void:
 # When an item has fallen, it is a fail state
 # We disconnect the item drop event as well just for safety
 #  (Also to ensure we aren't spammed drop events every frame, hehe)
-func _on_item_dropped(item: Item) -> void:
-	item.item_dropped.disconnect(_on_item_dropped)
+func _on_item_dropped() -> void:
 	_fail_level()
 
 func _on_item_destroyed(item: Item, correct: bool) -> void:
