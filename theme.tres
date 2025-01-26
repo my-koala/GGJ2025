@@ -1,7 +1,38 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://bv0qfh1mb8pui"]
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://bv0qfh1mb8pui"]
+
+[ext_resource type="Texture2D" uid="uid://b7xnw2lga5ax8" path="res://assets/artwork/Buttons/button_sprite_sheet.png" id="1_e1x85"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e1x85"]
+texture = ExtResource("1_e1x85")
+region_rect = Rect2(160, 192, 704, 640)
+modulate_color = Color(0.72, 0.72, 0.72, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cjfk0"]
+texture = ExtResource("1_e1x85")
+region_rect = Rect2(160, 192, 704, 640)
+modulate_color = Color(1, 1, 0.580392, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vj6dk"]
+texture = ExtResource("1_e1x85")
+region_rect = Rect2(160, 192, 704, 640)
+modulate_color = Color(1, 1, 0.862745, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_110ce"]
+texture = ExtResource("1_e1x85")
+region_rect = Rect2(160, 192, 704, 640)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_05tig"]
+texture = ExtResource("1_e1x85")
+region_rect = Rect2(160, 192, 704, 640)
+modulate_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wvktn"]
 bg_color = Color(0.470917, 0.400185, 0.514713, 1)
 
 [resource]
+Button/styles/disabled = SubResource("StyleBoxTexture_e1x85")
+Button/styles/focus = SubResource("StyleBoxTexture_cjfk0")
+Button/styles/hover = SubResource("StyleBoxTexture_vj6dk")
+Button/styles/normal = SubResource("StyleBoxTexture_110ce")
+Button/styles/pressed = SubResource("StyleBoxTexture_05tig")
 Panel/styles/panel = SubResource("StyleBoxFlat_wvktn")
