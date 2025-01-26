@@ -8,11 +8,10 @@ signal ended(passed: bool)
 var _chutes: Node2D = $chutes as Node2D
 
 @onready
-<<<<<<< HEAD
 var _dialogue: Dialogue = $canvas_layer/dialogue_system as Dialogue
-=======
+
+@onready
 var _camera: Camera2D = $camera_2d as Camera2D
->>>>>>> 0ee32dd (Added camera shake on item drop.)
 
 var _chute_entries: Array[ChuteEntry] = []
 var _chute_exits: Array[ChuteExit] = []
@@ -62,12 +61,10 @@ func _ready() -> void:
 		print("no dialogue???")
 		_on_dialog_finished()
 
-<<<<<<< HEAD
 func _on_dialog_finished() -> void:
 	for chute_entry: ChuteEntry in _chute_entries:
 		chute_entry.start()
-	
-=======
+
 func _process(delta: float) -> void:
 	if Engine.is_editor_hint():
 		return
@@ -75,7 +72,6 @@ func _process(delta: float) -> void:
 	_camera_shake = _camera_shake * pow(1.0 - camera_shake_decay, delta)
 	_camera.offset = Vector2(randf(), randf()) * minf(_camera_shake, camera_shake_strength)
 
->>>>>>> 0ee32dd (Added camera shake on item drop.)
 # When an item is instantiated by an Item Input, we need the manager to listen
 # to when that item is dropped on the floor. This can be a fail state.
 func _on_item_instantiated(item: Item) -> void:
