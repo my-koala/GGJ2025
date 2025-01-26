@@ -40,7 +40,7 @@ var _camera_shake: float = 0.0
 func _ready() -> void:
 	if Engine.is_editor_hint():
 		return
-	
+	_camera.make_current()
 	for node: Node in _chutes.get_children():
 		var chute_entry: ChuteEntry = node as ChuteEntry
 		if is_instance_valid(chute_entry):
