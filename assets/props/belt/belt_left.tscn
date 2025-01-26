@@ -5,5 +5,12 @@
 [node name="belt_left_000" instance=ExtResource("1_whnjs")]
 direction = Vector2(-1, 0)
 
-[node name="belt" parent="." index="1"]
+[node name="belt" parent="visual" index="1"]
 rotation = 3.14159
+region_rect = Rect2(0, 0, 64, 64)
+
+[node name="overlay" parent="visual" index="2"]
+region_rect = Rect2(128, 64, 64, 64)
+
+[node name="support" parent="visual" index="3"]
+region_rect = Rect2(128, 128, 64, 64)

@@ -1,13 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://d2hg70rrjbhwk"]
+[gd_scene load_steps=2 format=3 uid="uid://d2hg70rrjbhwk"]
 
 [ext_resource type="PackedScene" uid="uid://10j3gm2iies0" path="res://assets/props/belt/belt.tscn" id="1_a68ob"]
-[ext_resource type="Texture2D" uid="uid://dc2c4xdivoffm" path="res://assets/artwork/conveyer/conveyer_bottom_end2.png" id="2_wbnkm"]
 
 [node name="belt_down_000" instance=ExtResource("1_a68ob")]
 direction = Vector2(0, 1)
 
-[node name="belt" parent="." index="1"]
+[node name="underlay" parent="visual" index="0"]
 rotation = 1.5708
 
-[node name="support" parent="." index="3"]
-texture = ExtResource("2_wbnkm")
+[node name="belt" parent="visual" index="1"]
+rotation = 1.5708
+region_rect = Rect2(0, 0, 64, 64)
+
+[node name="overlay" parent="visual" index="2"]
+rotation = 1.5708
+region_rect = Rect2(128, 64, 64, 64)

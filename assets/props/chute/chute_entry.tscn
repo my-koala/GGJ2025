@@ -11,6 +11,7 @@ size = Vector2(64, 64)
 size = Vector2(64, 64)
 
 [node name="chute_entry_000" type="StaticBody2D"]
+y_sort_enabled = true
 script = ExtResource("1_beuih")
 
 [node name="sprite_2d" type="Sprite2D" parent="."]

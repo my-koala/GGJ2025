@@ -18,44 +18,56 @@
 [node name="asset_zoo" type="Node2D"]
 
 [node name="belt_down_000" parent="." instance=ExtResource("1_i1fy7")]
+y_sort_enabled = false
 position = Vector2(256, 0)
 
 [node name="belt_left_000" parent="." instance=ExtResource("2_v4a0n")]
+y_sort_enabled = false
 position = Vector2(384, 0)
 
 [node name="belt_right_000" parent="." instance=ExtResource("3_srpe5")]
+y_sort_enabled = false
 position = Vector2(512, 0)
 
 [node name="belt_up_000" parent="." instance=ExtResource("4_xdm2m")]
+y_sort_enabled = false
 position = Vector2(128, 0)
 
 [node name="chute_entry_000" parent="." instance=ExtResource("5_edws2")]
 position = Vector2(0, 128)
 
 [node name="chute_entry_down_000" parent="." instance=ExtResource("6_khcsl")]
+y_sort_enabled = false
 position = Vector2(128, 128)
 
 [node name="chute_entry_left_000" parent="." instance=ExtResource("7_kgolq")]
+y_sort_enabled = false
 position = Vector2(256, 128)
 
 [node name="chute_entry_right_000" parent="." instance=ExtResource("8_oi0qg")]
+y_sort_enabled = false
 position = Vector2(384, 128)
 
 [node name="chute_entry_up_000" parent="." instance=ExtResource("9_mj0cx")]
+y_sort_enabled = false
 position = Vector2(512, 128)
 
 [node name="chute_exit_000" parent="." instance=ExtResource("10_tag8k")]
 position = Vector2(0, 256)
 
 [node name="chute_exit_down_000" parent="." instance=ExtResource("11_m5r3d")]
+y_sort_enabled = false
 position = Vector2(128, 256)
 
 [node name="chute_exit_left_000" parent="." instance=ExtResource("12_wqi4e")]
+y_sort_enabled = false
 position = Vector2(256, 256)
 
 [node name="chute_exit_right_000" parent="." instance=ExtResource("13_u6dnh")]
+y_sort_enabled = false
 position = Vector2(384, 256)
 item_center_check = false
 
 [node name="chute_exit_up_000" parent="." instance=ExtResource("14_blg8r")]
+y_sort_enabled = false
 position = Vector2(512, 256)

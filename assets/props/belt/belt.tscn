@@ -1,13 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://10j3gm2iies0"]
+[gd_scene load_steps=4 format=3 uid="uid://10j3gm2iies0"]
 
 [ext_resource type="Script" uid="uid://b8d71iwpoj8gr" path="res://scripts/props/belt.gd" id="1_efu5p"]
-[ext_resource type="Texture2D" uid="uid://ckephoxxolsbb" path="res://assets/artwork/conveyer/conveyer_belt.png" id="2_clhca"]
-[ext_resource type="Texture2D" uid="uid://bp0ts46tuafqm" path="res://assets/artwork/conveyer/conveyer_bottom.png" id="4_kjfa7"]
+[ext_resource type="Texture2D" uid="uid://bbc7shs5ba88c" path="res://assets/props/belt/belt.png" id="2_q8fm2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_efu5p"]
 size = Vector2(64, 64)
 
 [node name="belt_000" type="Area2D"]
+y_sort_enabled = true
 collision_layer = 2
 collision_mask = 0
 input_pickable = false
@@ -19,14 +19,29 @@ metadata/_custom_type_script = ExtResource("1_efu5p")
 [node name="collision_shape_2d" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_efu5p")
 
-[node name="belt" type="Sprite2D" parent="."]
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("2_clhca")
+[node name="visual" type="Node2D" parent="."]
+position = Vector2(0, -32)
 
-[node name="overlay" type="Sprite2D" parent="."]
-scale = Vector2(0.25, 0.25)
+[node name="underlay" type="Sprite2D" parent="visual"]
+position = Vector2(0, 32)
+texture = ExtResource("2_q8fm2")
+region_enabled = true
+region_rect = Rect2(64, 0, 64, 64)
 
-[node name="support" type="Sprite2D" parent="."]
-position = Vector2(0, 64)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("4_kjfa7")
+[node name="belt" type="Sprite2D" parent="visual"]
+position = Vector2(0, 32)
+texture = ExtResource("2_q8fm2")
+region_enabled = true
+region_rect = Rect2(128, 0, 64, 64)
+
+[node name="overlay" type="Sprite2D" parent="visual"]
+position = Vector2(0, 32)
+texture = ExtResource("2_q8fm2")
+region_enabled = true
+region_rect = Rect2(0, 64, 64, 64)
+
+[node name="support" type="Sprite2D" parent="visual"]
+position = Vector2(0, 96)
+texture = ExtResource("2_q8fm2")
+region_enabled = true
+region_rect = Rect2(0, 128, 64, 64)

@@ -10,7 +10,11 @@
 
 [node name="level_debug" instance=ExtResource("1_36gu4")]
 
+[node name="wall_poster_1" parent="geometry" index="0"]
+position = Vector2(229, -304)
+
 [node name="chute_entry_right_000" parent="chutes" index="0" instance=ExtResource("6_3dbkb")]
+y_sort_enabled = false
 position = Vector2(-192, 128)
 items = Array[PackedScene]([ExtResource("6_n45ye")])
 

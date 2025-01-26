@@ -31,4 +31,40 @@ y_sort_enabled = true
 [node name="asset_zoo" parent="." instance=ExtResource("3_ecg5t")]
 position = Vector2(0, -1024)
 
+[node name="belt_down_000" parent="asset_zoo" index="0"]
+y_sort_enabled = false
+
+[node name="belt_left_000" parent="asset_zoo" index="1"]
+y_sort_enabled = false
+
+[node name="belt_right_000" parent="asset_zoo" index="2"]
+y_sort_enabled = false
+
+[node name="belt_up_000" parent="asset_zoo" index="3"]
+y_sort_enabled = false
+
+[node name="chute_entry_down_000" parent="asset_zoo" index="5"]
+y_sort_enabled = false
+
+[node name="chute_entry_left_000" parent="asset_zoo" index="6"]
+y_sort_enabled = false
+
+[node name="chute_entry_right_000" parent="asset_zoo" index="7"]
+y_sort_enabled = false
+
+[node name="chute_entry_up_000" parent="asset_zoo" index="8"]
+y_sort_enabled = false
+
+[node name="chute_exit_down_000" parent="asset_zoo" index="10"]
+y_sort_enabled = false
+
+[node name="chute_exit_left_000" parent="asset_zoo" index="11"]
+y_sort_enabled = false
+
+[node name="chute_exit_right_000" parent="asset_zoo" index="12"]
+y_sort_enabled = false
+
+[node name="chute_exit_up_000" parent="asset_zoo" index="13"]
+y_sort_enabled = false
+
 [editable path="asset_zoo"]
