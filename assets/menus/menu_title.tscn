@@ -49,6 +49,7 @@ scale = Vector2(0.5, 0.5)
 transform = Transform2D(0.5, 0, 0, 0.5, 0, 0)
 
 [node name="belts" type="Node2D" parent="canvas_layer"]
+y_sort_enabled = true
 position = Vector2(24, 0)
 
 [node name="belt_up_001" parent="canvas_layer/belts" instance=ExtResource("3_u4loh")]

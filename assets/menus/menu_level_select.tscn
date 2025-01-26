@@ -1,12 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dyin3btnxrag2"]
+[gd_scene load_steps=5 format=3 uid="uid://dyin3btnxrag2"]
 
 [ext_resource type="Script" uid="uid://bnl01t7jnxf0k" path="res://scripts/menus/menu_level_select.gd" id="1_opnc5"]
 [ext_resource type="Resource" uid="uid://bew4r0dw4ruwq" path="res://assets/levels/level_info_database.tres" id="2_33l1m"]
 [ext_resource type="PackedScene" uid="uid://cjb8abm0mcqmb" path="res://assets/menus/menu_level_select_button.tscn" id="3_n6457"]
 [ext_resource type="Script" uid="uid://lx0st8e77yp" path="res://scripts/gui/slide.gd" id="4_33l1m"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_848ev"]
-font_size = 32
 
 [node name="menu_level_select" type="Control"]
 layout_mode = 3
@@ -42,30 +39,13 @@ grow_vertical = 2
 
 [node name="header" type="Label" parent="slide/panel"]
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -90.5
-offset_top = 24.0
-offset_right = 90.5
-offset_bottom = 69.0
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 44.265
+offset_bottom = 132.265
 grow_horizontal = 2
-text = "Select Level"
-label_settings = SubResource("LabelSettings_848ev")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="level_name" type="Label" parent="slide/panel"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -54.5
-offset_top = 94.97
-offset_right = 54.5
-offset_bottom = 117.97
-grow_horizontal = 2
-text = "<Level Name>"
+theme_override_font_sizes/font_size = 64
+text = "Select a Level"
 horizontal_alignment = 1
 
 [node name="flow_container" type="FlowContainer" parent="slide/panel"]
@@ -80,15 +60,14 @@ alignment = 1
 
 [node name="button_exit" type="Button" parent="slide/panel"]
 layout_mode = 1
-anchors_preset = 12
+anchors_preset = -1
+anchor_left = 0.25
 anchor_top = 1.0
-anchor_right = 1.0
+anchor_right = 0.75
 anchor_bottom = 1.0
-offset_left = 16.0
-offset_top = -48.0
-offset_right = -16.0
-offset_bottom = -16.0
+offset_bottom = -32.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_font_sizes/font_size = 32
 disabled = true
 text = "Back to Title"
