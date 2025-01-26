@@ -107,7 +107,6 @@ position = Vector2(-96, 0)
 position = Vector2(-32, 0)
 
 [node name="canvas_layer" type="CanvasLayer" parent="." index="6"]
-visible = false
 
 [node name="dialogue_system" parent="canvas_layer" index="0" instance=ExtResource("9_st2on")]
 dialogue_entries = Array[ExtResource("10_blbmo")]([SubResource("Resource_3gdde"), SubResource("Resource_ymvoe"), SubResource("Resource_fpsi2"), SubResource("Resource_mhti0"), SubResource("Resource_omd5s")])
