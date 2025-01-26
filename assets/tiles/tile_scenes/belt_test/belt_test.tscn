@@ -21,5 +21,6 @@ shape = SubResource("RectangleShape2D_3rf22")
 texture = ExtResource("2_8tiuh")
 offset = Vector2(0, 8)
 hframes = 16
+frame = 2
 region_enabled = true
 region_rect = Rect2(0, 0, 256, 32)
