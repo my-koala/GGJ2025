@@ -15,6 +15,7 @@ enum State {
 	IDLE,
 	BUBBLE,
 	DROP,
+	DROPPED,
 }
 var _state: State = State.IDLE
 
@@ -27,6 +28,9 @@ var _bubble: Bubble = $bubble as Bubble
 
 @onready
 var _belt_scan: Area2D = $belt_scan as Area2D
+
+@onready
+var _sprite: Sprite2D = $sprite_2d as Sprite2D
 
 ## Array of colliding Belts.
 var _belts: Array[Belt] = []
@@ -60,8 +64,14 @@ func _on_belt_scan_area_exited(area: Area2D) -> void:
 		_belts.erase(belt)
 
 @export
-var drop_grace_time: float = 0.1
+var drop_grace_time: float = 0.001
 var _drop_grace_time: float = 0.0
+
+@export
+var drop_fall_time: float = 1.0
+var _drop_fall_time: float = 0.0
+var _drop_fall_rotation_max: float = 0.0
+var _drop_fall_rotation: float = 0.0
 
 func _physics_process(delta: float) -> void:
 	if Engine.is_editor_hint():
@@ -85,7 +95,6 @@ func _physics_process(delta: float) -> void:
 				_drop_grace_time += delta
 				if _drop_grace_time > drop_grace_time:
 					_state = State.DROP
-					item_dropped.emit()
 			else:
 				_drop_grace_time = 0.0
 		State.BUBBLE:
@@ -93,7 +102,23 @@ func _physics_process(delta: float) -> void:
 				_state = State.IDLE
 		State.DROP:
 			# TODO: animated drop
-			modulate = Color.BLACK
+			if is_zero_approx(_drop_fall_rotation_max):
+				_drop_fall_rotation_max = signf(randf() - 0.5) * randf_range(0.25, 0.5)
+			if _drop_fall_time < drop_fall_time:
+				_drop_fall_time = minf(_drop_fall_time + delta, drop_fall_time)
+				_drop_fall_rotation = remap(_drop_fall_time, 0.0, drop_fall_time, 0.0, _drop_fall_rotation_max)
+				var weight: float = clampf(_drop_fall_time / drop_fall_time, 0.0, 1.0)
+				const drop_fall_height: float = 64.0
+				const drop_fall_scale: float = 0.125
+				_sprite.position.y = lerpf(0.0, drop_fall_height, weight)
+				_sprite.rotation = _drop_fall_rotation
+				_sprite.scale = lerpf(1.0, 0.5, weight) * Vector2.ONE
+				_sprite.modulate = Color.WHITE.lerp(Color.BLACK, weight)
+			else:
+				item_dropped.emit()
+				_state = State.DROPPED
+		State.DROPPED:
+			pass
 
 func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 	match _state:

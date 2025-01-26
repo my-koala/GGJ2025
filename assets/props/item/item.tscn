@@ -17,8 +17,8 @@ collision_mask = 9
 physics_material_override = SubResource("PhysicsMaterial_f3o2e")
 can_sleep = false
 lock_rotation = true
-custom_integrator = true
 script = ExtResource("1_pgqwr")
+drop_fall_time = 0.5
 metadata/_custom_type_script = ExtResource("1_pgqwr")
 
 [node name="collision_shape_2d" type="CollisionShape2D" parent="."]
