@@ -182,8 +182,16 @@ func _load_level_instance(level_info: LevelInfo) -> Level:
 	
 	if is_instance_valid(level_info):
 		# le fake the loading (for now)
-		await get_tree().create_timer(1.0).timeout
-		level_instance = level_info.packed_scene.instantiate() as Level
+		#await get_tree().create_timer(1.0).timeout
+		var scene_path: String = level_info.packed_scene.resource_path
+		ResourceLoader.load_threaded_request(scene_path)
+		while ResourceLoader.load_threaded_get_status(scene_path) == ResourceLoader.THREAD_LOAD_IN_PROGRESS:
+			await get_tree().physics_frame
+		var level_packed_scene: PackedScene = ResourceLoader.load_threaded_get(scene_path) as PackedScene
+		if is_instance_valid(level_packed_scene):
+			level_instance = level_packed_scene.instantiate() as Level
+		else:
+			push_error("failed to load the level thign bro")
 	
 	_loading_level_instance = false
 	return level_instance
