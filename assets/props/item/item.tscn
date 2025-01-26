@@ -1,9 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://pic8ndslx525"]
+[gd_scene load_steps=7 format=3 uid="uid://pic8ndslx525"]
 
 [ext_resource type="Script" uid="uid://d2og1gl874xp2" path="res://scripts/props/item.gd" id="1_pgqwr"]
 [ext_resource type="PackedScene" uid="uid://bp4y478sokeya" path="res://assets/props/explosion/explosion.tscn" id="2_4saup"]
 [ext_resource type="PackedScene" uid="uid://ej43syhrhoib" path="res://assets/props/bubble/bubble.tscn" id="2_m02vc"]
-[ext_resource type="Texture2D" uid="uid://cy1sl1nrgpts6" path="res://assets/props/explosion/textures/static_0005.png" id="3_4saup"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_f3o2e"]
 
@@ -14,6 +13,7 @@ radius = 24.0
 radius = 32.0
 
 [node name="item" type="RigidBody2D"]
+collision_layer = 9
 physics_material_override = SubResource("PhysicsMaterial_f3o2e")
 can_sleep = false
 lock_rotation = true
@@ -30,7 +30,6 @@ shape = SubResource("CircleShape2D_o0pvw")
 [node name="explosion" parent="." instance=ExtResource("2_4saup")]
 position = Vector2(18, -111)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("3_4saup")
 
 [node name="belt_scan" type="Area2D" parent="."]
 collision_layer = 0

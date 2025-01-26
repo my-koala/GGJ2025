@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://xkd2fq6c4aeo"]
+[gd_scene load_steps=20 format=3 uid="uid://xkd2fq6c4aeo"]
 
 [ext_resource type="PackedScene" uid="uid://c8vl5y0q7ua3b" path="res://assets/levels/scenes/level.tscn" id="1_3gdde"]
 [ext_resource type="PackedScene" uid="uid://bbehyped0t73w" path="res://assets/props/chute/chute_entry_right.tscn" id="2_ymvoe"]
@@ -129,22 +129,6 @@ position = Vector2(-32, -32)
 
 [node name="item_belt_left_008" parent="belts" index="21" instance=ExtResource("9_d432t")]
 position = Vector2(-96, -32)
-
-[node name="item_anvil" parent="asset_zoo/items" index="0"]
-collision_layer = 9
-collision_mask = 9
-
-[node name="item_husky" parent="asset_zoo/items" index="1"]
-collision_layer = 9
-collision_mask = 9
-
-[node name="item_plastic" parent="asset_zoo/items" index="2"]
-collision_layer = 9
-collision_mask = 9
-
-[node name="item_urchin" parent="asset_zoo/items" index="3"]
-collision_layer = 9
-collision_mask = 9
 
 [node name="dialogue_system" parent="canvas_layer" index="0"]
 dialogue_entries = Array[ExtResource("10_e63tf")]([SubResource("Resource_3gdde"), SubResource("Resource_ymvoe"), SubResource("Resource_fpsi2"), SubResource("Resource_mhti0"), SubResource("Resource_omd5s"), SubResource("Resource_64u3x"), SubResource("Resource_72clv")])
