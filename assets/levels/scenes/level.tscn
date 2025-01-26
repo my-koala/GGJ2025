@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=4 uid="uid://c8vl5y0q7ua3b"]
+[gd_scene load_steps=6 format=4 uid="uid://c8vl5y0q7ua3b"]
 
 [ext_resource type="Script" uid="uid://bd24x5hdgvi76" path="res://scripts/level/level.gd" id="1_uuog7"]
 [ext_resource type="TileSet" uid="uid://bnr6afut1lj70" path="res://assets/tiles/tile_sets/geometry.tres" id="2_8m5s3"]
 [ext_resource type="PackedScene" uid="uid://cyvnkcfvx2w6w" path="res://assets/asset_zoo.tscn" id="3_ecg5t"]
 [ext_resource type="Texture2D" uid="uid://b4ukhv7wppjf7" path="res://assets/artwork/tile_background/wall_poster1.png" id="4_kguka"]
+[ext_resource type="PackedScene" uid="uid://b5rbam8pcmykb" path="res://assets/dialogue_system/dialogue_system.tscn" id="5_jy6jw"]
 
 [node name="level" type="Node2D"]
 y_sort_enabled = true
@@ -54,5 +55,10 @@ drop_fall_time = 0.75
 [node name="item_urchin" parent="asset_zoo/items" index="3"]
 custom_integrator = true
 drop_fall_time = 0.75
+
+[node name="canvas_layer" type="CanvasLayer" parent="."]
+
+[node name="dialogue_system" parent="canvas_layer" instance=ExtResource("5_jy6jw")]
+metadata/_edit_use_anchors_ = true
 
 [editable path="asset_zoo"]

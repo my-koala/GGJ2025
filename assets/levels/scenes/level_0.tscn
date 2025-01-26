@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://xkd2fq6c4aeo"]
+[gd_scene load_steps=17 format=3 uid="uid://xkd2fq6c4aeo"]
 
 [ext_resource type="PackedScene" uid="uid://c8vl5y0q7ua3b" path="res://assets/levels/scenes/level.tscn" id="1_3gdde"]
 [ext_resource type="PackedScene" uid="uid://bbehyped0t73w" path="res://assets/props/chute/chute_entry_right.tscn" id="2_ymvoe"]
@@ -8,7 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://c7jr2tlmcby2e" path="res://assets/props/belt/belt_right.tscn" id="7_72clv"]
 [ext_resource type="PackedScene" uid="uid://dj0k635q02lwu" path="res://assets/props/belt/belt_up.tscn" id="8_g381p"]
 [ext_resource type="PackedScene" uid="uid://buqbn7w8cx67a" path="res://assets/props/belt/belt_left.tscn" id="9_d432t"]
-[ext_resource type="PackedScene" uid="uid://b5rbam8pcmykb" path="res://assets/dialogue_system/dialogue_system.tscn" id="9_e63tf"]
 [ext_resource type="Script" uid="uid://dfktug68yfw7d" path="res://scripts/dialogue_entry.gd" id="10_e63tf"]
 
 [sub_resource type="Resource" id="Resource_3gdde"]
@@ -126,9 +125,7 @@ position = Vector2(-32, -32)
 [node name="item_belt_left_008" parent="belts" index="21" instance=ExtResource("9_d432t")]
 position = Vector2(-96, -32)
 
-[node name="canvas_layer" type="CanvasLayer" parent="." index="6"]
-
-[node name="dialogue_system" parent="canvas_layer" index="0" instance=ExtResource("9_e63tf")]
+[node name="dialogue_system" parent="canvas_layer" index="0"]
 dialogue_entries = Array[ExtResource("10_e63tf")]([SubResource("Resource_3gdde"), SubResource("Resource_ymvoe"), SubResource("Resource_fpsi2"), SubResource("Resource_mhti0"), SubResource("Resource_omd5s"), SubResource("Resource_64u3x"), SubResource("Resource_72clv")])
 
 [editable path="asset_zoo"]
