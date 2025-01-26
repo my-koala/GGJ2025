@@ -12,6 +12,3 @@ position = Vector2(0, -64)
 
 [node name="collision_shape_2d" parent="." index="2"]
 disabled = false
-
-[node name="belt" parent="." index="3"]
-monitorable = false
