@@ -1,0 +1,58 @@
+[gd_scene load_steps=3 format=3 uid="uid://xfh0shhsc1ml"]
+
+[ext_resource type="Script" uid="uid://cqhs3lx4to6u5" path="res://scripts/menus/menu_credits.gd" id="1_t6xow"]
+[ext_resource type="Script" uid="uid://lx0st8e77yp" path="res://scripts/gui/slide.gd" id="2_upn0u"]
+
+[node name="menu_credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_t6xow")
+
+[node name="slide" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_upn0u")
+metadata/_custom_type_script = ExtResource("2_upn0u")
+
+[node name="panel" type="Panel" parent="slide"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2
+anchor_top = 0.1
+anchor_right = 0.8
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="label" type="Label" parent="slide/panel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 27.225
+offset_bottom = 115.225
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 64
+text = "Credits"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="button_exit" type="Button" parent="slide/panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.25
+anchor_top = 1.0
+anchor_right = 0.75
+anchor_bottom = 1.0
+offset_bottom = -32.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Back to Title"

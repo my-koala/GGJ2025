@@ -217,3 +217,8 @@ monitorable = false
 [node name="belt_right_003" parent="belts" instance=ExtResource("6_bf0nj")]
 position = Vector2(1152, 768)
 monitorable = false
+
+[node name="fishman" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0

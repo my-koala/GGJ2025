@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dwaef6dipcc72"]
+[gd_scene load_steps=10 format=3 uid="uid://dwaef6dipcc72"]
 
 [ext_resource type="Script" uid="uid://8pmukl06mun1" path="res://scripts/main/main.gd" id="1_irre0"]
 [ext_resource type="PackedScene" uid="uid://by816hhrmnrns" path="res://assets/menus/menu_level_failed.tscn" id="3_j84mu"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://teg1nwa66kng" path="res://assets/menus/menu_title.tscn" id="5_xajwi"]
 [ext_resource type="Script" uid="uid://cyxejsihb7g3x" path="res://scripts/gui/overlay.gd" id="6_3yvm8"]
 [ext_resource type="Texture2D" uid="uid://clj50lpbhm8mu" path="res://assets/artwork/Main Menu/Background Wall Scroll.png" id="7_3yvm8"]
+[ext_resource type="PackedScene" uid="uid://xfh0shhsc1ml" path="res://assets/menus/menu_credits.tscn" id="8_6sv45"]
 
 [node name="main" type="Node"]
 script = ExtResource("1_irre0")
@@ -57,6 +58,8 @@ color = Color(0.112784, 0.0932818, 0.168569, 0.262745)
 [node name="menu_level_passed" parent="menus" instance=ExtResource("4_yti63")]
 
 [node name="menu_level_failed" parent="menus" instance=ExtResource("3_j84mu")]
+
+[node name="menu_credits" parent="menus" instance=ExtResource("8_6sv45")]
 
 [node name="screen" type="CanvasLayer" parent="."]
 layer = 4

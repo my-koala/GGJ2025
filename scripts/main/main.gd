@@ -26,6 +26,7 @@ enum MenuState {
 	LEVEL_SELECT,
 	LEVEL_PASSED,
 	LEVEL_FAILED,
+	CREDITS,
 }
 var _menu_state: MenuState = MenuState.NONE
 
@@ -49,6 +50,8 @@ var _menu_level_select: MenuLevelSelect = $menus/menu_level_select as MenuLevelS
 var _menu_level_passed: MenuLevelPassed = $menus/menu_level_passed as MenuLevelPassed
 @onready
 var _menu_level_failed: MenuLevelFailed = $menus/menu_level_failed as MenuLevelFailed
+@onready
+var _menu_credits: MenuCredits = $menus/menu_credits as MenuCredits
 
 # need to load next level on middle of transition though...
 var _level_info: LevelInfo = null
@@ -66,6 +69,7 @@ func _ready() -> void:
 	# TODO: credits, quit??
 	
 	_menu_title.button_play_pressed.connect(_set_menu_state.bind(MenuState.LEVEL_SELECT))
+	_menu_title.button_credits_pressed.connect(_set_menu_state.bind(MenuState.CREDITS))
 	
 	_menu_level_select.button_level_pressed.connect(_load_level)
 	_menu_level_select.button_exit_pressed.connect(_set_menu_state.bind(MenuState.TITLE))
@@ -75,6 +79,8 @@ func _ready() -> void:
 	
 	_menu_level_failed.button_retry_pressed.connect(_reload_level)
 	_menu_level_failed.button_exit_pressed.connect(_quit_to_title)
+	
+	_menu_credits.button_exit_pressed.connect(_set_menu_state.bind(MenuState.TITLE))
 
 func _load_level(level_info: LevelInfo) -> void:
 	_set_state(State.TRANSITION)
@@ -209,6 +215,7 @@ func _unload_level_instance() -> void:
 
 func _on_level_ended(passed: bool) -> void:
 	if passed:
+		_level_info.completed = true
 		_set_menu_state(MenuState.LEVEL_PASSED)
 	else:
 		_set_menu_state(MenuState.LEVEL_FAILED)
@@ -266,6 +273,9 @@ func _set_menu_state(menu_state: MenuState) -> void:
 			
 			_menu_level_failed.set_active(false)
 			_menu_level_failed.set_interactive(false)
+			
+			_menu_credits.set_active(false)
+			_menu_credits.set_interactive(false)
 		MenuState.TITLE:
 			_menu_overlay.enabled = false
 			
@@ -280,6 +290,9 @@ func _set_menu_state(menu_state: MenuState) -> void:
 			
 			_menu_level_failed.set_active(false)
 			_menu_level_failed.set_interactive(false)
+			
+			_menu_credits.set_active(false)
+			_menu_credits.set_interactive(false)
 		MenuState.LEVEL_SELECT:
 			_menu_overlay.enabled = true
 			
@@ -294,6 +307,9 @@ func _set_menu_state(menu_state: MenuState) -> void:
 			
 			_menu_level_failed.set_active(false)
 			_menu_level_failed.set_interactive(false)
+			
+			_menu_credits.set_active(false)
+			_menu_credits.set_interactive(false)
 		MenuState.LEVEL_PASSED:
 			_menu_overlay.enabled = true
 			
@@ -308,6 +324,9 @@ func _set_menu_state(menu_state: MenuState) -> void:
 			
 			_menu_level_failed.set_active(false)
 			_menu_level_failed.set_interactive(false)
+			
+			_menu_credits.set_active(false)
+			_menu_credits.set_interactive(false)
 		MenuState.LEVEL_FAILED:
 			_menu_overlay.enabled = true
 			
@@ -322,3 +341,23 @@ func _set_menu_state(menu_state: MenuState) -> void:
 			
 			_menu_level_failed.set_active(true)
 			_menu_level_failed.set_interactive(true)
+			
+			_menu_credits.set_active(false)
+			_menu_credits.set_interactive(false)
+		MenuState.CREDITS:
+			_menu_overlay.enabled = true
+			
+			_menu_title.set_active(false)
+			_menu_title.set_interactive(false)
+			
+			_menu_level_select.set_active(false)
+			_menu_level_select.set_interactive(false)
+			
+			_menu_level_passed.set_active(false)
+			_menu_level_passed.set_interactive(false)
+			
+			_menu_level_failed.set_active(false)
+			_menu_level_failed.set_interactive(false)
+			
+			_menu_credits.set_active(true)
+			_menu_credits.set_interactive(true)
