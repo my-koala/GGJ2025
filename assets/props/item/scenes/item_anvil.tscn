@@ -7,7 +7,7 @@
 mass = 20.0
 linear_damp = 128.0
 identifier = &"anvil"
-drop_grace_time = 0.1
+belt_speed_multiplier = null
 
 [node name="sprite_2d" parent="." index="1"]
 texture = ExtResource("2_nrkxb")

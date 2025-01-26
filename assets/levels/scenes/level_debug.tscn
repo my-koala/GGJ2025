@@ -78,21 +78,18 @@ position = Vector2(257, 9)
 collision_layer = 9
 collision_mask = 9
 custom_integrator = true
+belt_speed_multiplier = null
 
 [node name="item_anvil" parent="asset_zoo/items" index="0"]
-collision_layer = 9
-collision_mask = 9
+belt_speed_multiplier = null
 
 [node name="item_husky" parent="asset_zoo/items" index="1"]
-collision_layer = 9
-collision_mask = 9
+belt_speed_multiplier = null
 
 [node name="item_plastic" parent="asset_zoo/items" index="2"]
-collision_layer = 9
-collision_mask = 9
+belt_speed_multiplier = null
 
 [node name="item_urchin" parent="asset_zoo/items" index="3"]
-collision_layer = 9
-collision_mask = 9
+belt_speed_multiplier = null
 
 [editable path="asset_zoo"]

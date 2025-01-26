@@ -23,6 +23,9 @@ var _state: State = State.IDLE
 @export
 var identifier: StringName = &""
 
+@export
+var belt_speed_multiplier: float = 1.0
+
 @onready
 var _bubble: Bubble = $bubble as Bubble
 
@@ -135,7 +138,7 @@ func _physics_process(delta: float) -> void:
 func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 	match _state:
 		State.IDLE:
-			state.linear_velocity = _belts_velocity_max + _belts_velocity_min
+			state.linear_velocity = belt_speed_multiplier * (_belts_velocity_max + _belts_velocity_min)
 		State.BUBBLE:
 			state.transform = _bubble.global_transform
 			state.linear_velocity = Vector2.ZERO
