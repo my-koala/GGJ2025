@@ -37,6 +37,8 @@ var _play: Node2D = $world/play as Node2D
 @onready
 var _screen_transition: TextureRect = $screen/transition as TextureRect
 @onready
+var _screen_transition_sfx: AudioStreamPlayer = $screen/transition/transition_sfx as AudioStreamPlayer
+@onready
 var _screen_loading: Control = $screen/loading as Control
 
 @onready
@@ -178,6 +180,8 @@ func _play_transition() -> void:
 	_screen_transition.position.y = start
 	tween.tween_property(_screen_transition, "position:y", halfway, 0.25)
 	tween.tween_property(_screen_transition, "position:y", end, 0.25)
+	
+	_screen_transition_sfx.play()
 	
 	await tween.step_finished
 
