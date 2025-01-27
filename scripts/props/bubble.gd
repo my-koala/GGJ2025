@@ -19,6 +19,9 @@ signal bubble_destroyed()
 @export
 var read_input: bool = true
 
+@export
+var can_bubble: bool = true
+
 var _input_mouse_clicked: bool = false# Mouse was clicked over pickable this physics frame.
 var _input_mouse_clicking: bool = false# Mouse is currently clicked over pickable since last input event.
 var _input_mouse_hovering: bool = false# Mouse is hovering over pickable since last input event.
@@ -38,6 +41,8 @@ func is_bubble_created() -> bool:
 	return _bubble_created
 
 func bubble_create() -> void:
+	if !can_bubble:
+		return
 	if !_bubble_created:
 		_bubble_created = true
 		_sprite.visible = true
