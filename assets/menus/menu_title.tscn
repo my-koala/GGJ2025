@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://teg1nwa66kng"]
+[gd_scene load_steps=13 format=3 uid="uid://teg1nwa66kng"]
 
 [ext_resource type="Script" uid="uid://ltejv6xihsaq" path="res://scripts/menus/menu_title.gd" id="1_dhjyv"]
 [ext_resource type="Texture2D" uid="uid://dpoo6747kw3lv" path="res://assets/artwork/Logo/Bubble For Logo.png" id="2_4kscx"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://d2hg70rrjbhwk" path="res://assets/props/belt/belt_down.tscn" id="4_dxuwa"]
 [ext_resource type="PackedScene" uid="uid://buqbn7w8cx67a" path="res://assets/props/belt/belt_left.tscn" id="5_co002"]
 [ext_resource type="PackedScene" uid="uid://c7jr2tlmcby2e" path="res://assets/props/belt/belt_right.tscn" id="6_bf0nj"]
+[ext_resource type="Texture2D" uid="uid://cmyeg5u2sucf" path="res://assets/artwork/fishman_sprites/John Fishman Portrait.png" id="9_bf0nj"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_ldrj4"]
 noise_type = 2
@@ -38,8 +39,10 @@ anchor_left = 0.25
 anchor_top = 0.25
 anchor_right = 0.75
 anchor_bottom = 0.75
-offset_top = 300.0
-offset_bottom = 157.0
+offset_left = 163.0
+offset_top = 297.0
+offset_right = 163.0
+offset_bottom = 154.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 20
@@ -320,5 +323,9 @@ monitorable = false
 
 [node name="fishman" type="TextureRect" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -12.0
+offset_top = 359.0
+offset_right = 888.0
+offset_bottom = 1159.0
+scale = Vector2(0.525, 0.525)
+texture = ExtResource("9_bf0nj")

@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://8jcxfmlyxmmd"]
+
+[ext_resource type="Script" uid="uid://lx0st8e77yp" path="res://scripts/gui/slide.gd" id="1_i4qe2"]
+
+[node name="menu_options" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="slide" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_i4qe2")
+metadata/_custom_type_script = ExtResource("1_i4qe2")
+
+[node name="panel" type="Panel" parent="slide"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0

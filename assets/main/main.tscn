@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://teg1nwa66kng" path="res://assets/menus/menu_title.tscn" id="5_xajwi"]
 [ext_resource type="Script" uid="uid://cyxejsihb7g3x" path="res://scripts/gui/overlay.gd" id="6_3yvm8"]
 [ext_resource type="Texture2D" uid="uid://clj50lpbhm8mu" path="res://assets/artwork/Main Menu/Background Wall Scroll.png" id="7_3yvm8"]
-[ext_resource type="PackedScene" path="res://assets/menus/menu_credits.tscn" id="8_6sv45"]
+[ext_resource type="PackedScene" uid="uid://xfh0shhsc1ml" path="res://assets/menus/menu_credits.tscn" id="8_6sv45"]
 [ext_resource type="AudioStream" uid="uid://vye62n6fib8b" path="res://assets/sounds/Bubble Screenwipe.mp3" id="11_irre0"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_74c7k"]
