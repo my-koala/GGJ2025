@@ -97,6 +97,60 @@ position = Vector2(-96, 160)
 [node name="item_belt_right_007" parent="belts" index="11" instance=ExtResource("6_0ki71")]
 position = Vector2(-32, 160)
 
+[node name="belt_left_002" parent="belts" index="12" instance=ExtResource("7_vpue2")]
+position = Vector2(-32, 32)
+
+[node name="belt_left_003" parent="belts" index="13" instance=ExtResource("7_vpue2")]
+position = Vector2(-96, 32)
+
+[node name="belt_left_004" parent="belts" index="14" instance=ExtResource("7_vpue2")]
+position = Vector2(-160, 32)
+
+[node name="belt_left_005" parent="belts" index="15" instance=ExtResource("7_vpue2")]
+position = Vector2(-224, 32)
+
+[node name="belt_left_006" parent="belts" index="16" instance=ExtResource("7_vpue2")]
+position = Vector2(-288, 32)
+
+[node name="belt_right_001" parent="belts" index="17" instance=ExtResource("6_0ki71")]
+position = Vector2(-352, -160)
+
+[node name="belt_up_003" parent="belts" index="18" instance=ExtResource("8_1ur70")]
+position = Vector2(-352, -96)
+
+[node name="belt_up_001" parent="belts" index="19" instance=ExtResource("8_1ur70")]
+position = Vector2(-352, -32)
+
+[node name="belt_up_002" parent="belts" index="20" instance=ExtResource("8_1ur70")]
+position = Vector2(-352, 32)
+
+[node name="belt_right_002" parent="belts" index="21" instance=ExtResource("6_0ki71")]
+position = Vector2(-288, -160)
+
+[node name="belt_right_003" parent="belts" index="22" instance=ExtResource("6_0ki71")]
+position = Vector2(-224, -160)
+
+[node name="belt_right_004" parent="belts" index="23" instance=ExtResource("6_0ki71")]
+position = Vector2(-160, -160)
+
+[node name="belt_right_005" parent="belts" index="24" instance=ExtResource("6_0ki71")]
+position = Vector2(-96, -160)
+
+[node name="belt_right_006" parent="belts" index="25" instance=ExtResource("6_0ki71")]
+position = Vector2(-32, -160)
+
+[node name="belt_down_003" parent="belts" index="26" instance=ExtResource("9_0ki71")]
+position = Vector2(32, -160)
+
+[node name="belt_down_001" parent="belts" index="27" instance=ExtResource("9_0ki71")]
+position = Vector2(32, -96)
+
+[node name="belt_down_002" parent="belts" index="28" instance=ExtResource("9_0ki71")]
+position = Vector2(32, -32)
+
+[node name="belt_left_001" parent="belts" index="29" instance=ExtResource("7_vpue2")]
+position = Vector2(32, 32)
+
 [node name="chute_entry_right_000" parent="chutes" index="0" instance=ExtResource("2_rxabv")]
 y_sort_enabled = false
 position = Vector2(-416, 160)
@@ -107,60 +161,6 @@ spawn_delay = 3.0
 [node name="chute_exit_left_001" parent="chutes" index="1" instance=ExtResource("5_1ur70")]
 position = Vector2(416, 160)
 item_infos = Array[ExtResource("3_cg1gs")]([ExtResource("6_omllw"), ExtResource("8_07r3n"), ExtResource("7_lebjv"), ExtResource("9_dec52"), ExtResource("4_3p4ce"), ExtResource("5_axmfg")])
-
-[node name="belt_left_002" parent="asset_zoo/belts" index="4" instance=ExtResource("7_vpue2")]
-position = Vector2(-32, 1056)
-
-[node name="belt_left_003" parent="asset_zoo/belts" index="5" instance=ExtResource("7_vpue2")]
-position = Vector2(-96, 1056)
-
-[node name="belt_left_004" parent="asset_zoo/belts" index="6" instance=ExtResource("7_vpue2")]
-position = Vector2(-160, 1056)
-
-[node name="belt_left_005" parent="asset_zoo/belts" index="7" instance=ExtResource("7_vpue2")]
-position = Vector2(-224, 1056)
-
-[node name="belt_left_006" parent="asset_zoo/belts" index="8" instance=ExtResource("7_vpue2")]
-position = Vector2(-288, 1056)
-
-[node name="belt_right_001" parent="asset_zoo/belts" index="9" instance=ExtResource("6_0ki71")]
-position = Vector2(-352, 864)
-
-[node name="belt_up_003" parent="asset_zoo/belts" index="10" instance=ExtResource("8_1ur70")]
-position = Vector2(-352, 928)
-
-[node name="belt_up_001" parent="asset_zoo/belts" index="11" instance=ExtResource("8_1ur70")]
-position = Vector2(-352, 992)
-
-[node name="belt_up_002" parent="asset_zoo/belts" index="12" instance=ExtResource("8_1ur70")]
-position = Vector2(-352, 1056)
-
-[node name="belt_right_002" parent="asset_zoo/belts" index="13" instance=ExtResource("6_0ki71")]
-position = Vector2(-288, 864)
-
-[node name="belt_right_003" parent="asset_zoo/belts" index="14" instance=ExtResource("6_0ki71")]
-position = Vector2(-224, 864)
-
-[node name="belt_right_004" parent="asset_zoo/belts" index="15" instance=ExtResource("6_0ki71")]
-position = Vector2(-160, 864)
-
-[node name="belt_right_005" parent="asset_zoo/belts" index="16" instance=ExtResource("6_0ki71")]
-position = Vector2(-96, 864)
-
-[node name="belt_right_006" parent="asset_zoo/belts" index="17" instance=ExtResource("6_0ki71")]
-position = Vector2(-32, 864)
-
-[node name="belt_down_003" parent="asset_zoo/belts" index="18" instance=ExtResource("9_0ki71")]
-position = Vector2(32, 864)
-
-[node name="belt_down_001" parent="asset_zoo/belts" index="19" instance=ExtResource("9_0ki71")]
-position = Vector2(32, 928)
-
-[node name="belt_down_002" parent="asset_zoo/belts" index="20" instance=ExtResource("9_0ki71")]
-position = Vector2(32, 992)
-
-[node name="belt_left_001" parent="asset_zoo/belts" index="21" instance=ExtResource("7_vpue2")]
-position = Vector2(32, 1056)
 
 [node name="dialogue_system" parent="canvas_layer" index="0"]
 dialogue_entries = Array[ExtResource("8_iest2")]([SubResource("Resource_3gdde"), SubResource("Resource_ymvoe"), SubResource("Resource_fpsi2"), SubResource("Resource_mhti0"), SubResource("Resource_omd5s"), SubResource("Resource_c5tth"), SubResource("Resource_iest2"), SubResource("Resource_vpue2")])

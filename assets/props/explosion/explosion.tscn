@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://bp4y478sokeya"]
+[gd_scene load_steps=3 format=3 uid="uid://bp4y478sokeya"]
 
+[ext_resource type="AudioStream" uid="uid://cvun4mka7q6w2" path="res://assets/sounds/explosion.mp3" id="2_5l3ma"]
 [ext_resource type="Script" uid="uid://diyjunv531yaa" path="res://scripts/props/explosion.gd" id="2_etcej"]
 
 [node name="explosion" type="Sprite2D"]
 script = ExtResource("2_etcej")
+
+[node name="audio_stream_player_2d" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_5l3ma")
+volume_db = -20.991
