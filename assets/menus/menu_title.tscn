@@ -1,11 +1,26 @@
-[gd_scene load_steps=7 format=3 uid="uid://teg1nwa66kng"]
+[gd_scene load_steps=12 format=3 uid="uid://teg1nwa66kng"]
 
 [ext_resource type="Script" uid="uid://ltejv6xihsaq" path="res://scripts/menus/menu_title.gd" id="1_dhjyv"]
 [ext_resource type="Texture2D" uid="uid://dpoo6747kw3lv" path="res://assets/artwork/Logo/Bubble For Logo.png" id="2_4kscx"]
+[ext_resource type="Shader" uid="uid://bcsjteo3vkejw" path="res://shaders/bubble.tres" id="2_co002"]
+[ext_resource type="Texture2D" uid="uid://dup1pcd3as2fh" path="res://assets/artwork/Logo/Bubble Mask.png" id="3_bf0nj"]
 [ext_resource type="PackedScene" uid="uid://dj0k635q02lwu" path="res://assets/props/belt/belt_up.tscn" id="3_u4loh"]
 [ext_resource type="PackedScene" uid="uid://d2hg70rrjbhwk" path="res://assets/props/belt/belt_down.tscn" id="4_dxuwa"]
 [ext_resource type="PackedScene" uid="uid://buqbn7w8cx67a" path="res://assets/props/belt/belt_left.tscn" id="5_co002"]
 [ext_resource type="PackedScene" uid="uid://c7jr2tlmcby2e" path="res://assets/props/belt/belt_right.tscn" id="6_bf0nj"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_ldrj4"]
+noise_type = 2
+frequency = 0.0285
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_mgcid"]
+noise = SubResource("FastNoiseLite_ldrj4")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_e4s75"]
+shader = ExtResource("2_co002")
+shader_parameter/Distortion_Map = SubResource("NoiseTexture2D_mgcid")
+shader_parameter/Main_Texture = ExtResource("2_4kscx")
+shader_parameter/Bubble_Map = ExtResource("3_bf0nj")
 
 [node name="menu_title" type="Control"]
 layout_mode = 3
@@ -42,6 +57,7 @@ layout_mode = 2
 text = "Quit"
 
 [node name="bubble_for_logo" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_e4s75")
 position = Vector2(644, 161)
 texture = ExtResource("2_4kscx")
 
@@ -51,171 +67,255 @@ position = Vector2(16, 1)
 scale = Vector2(0.5, 0.5)
 
 [node name="belt_up_001" parent="belts" instance=ExtResource("3_u4loh")]
-position = Vector2(1216, 768)
+position = Vector2(944, 768)
 monitorable = false
 
 [node name="belt_up_005" parent="belts" instance=ExtResource("3_u4loh")]
-position = Vector2(1472, 768)
+position = Vector2(1200, 768)
+monitorable = false
+
+[node name="belt_up_007" parent="belts" instance=ExtResource("3_u4loh")]
+position = Vector2(1584, 574)
+monitorable = false
+
+[node name="belt_up_010" parent="belts" instance=ExtResource("3_u4loh")]
+position = Vector2(1584, 638)
+monitorable = false
+
+[node name="belt_up_011" parent="belts" instance=ExtResource("3_u4loh")]
+position = Vector2(1584, 702)
+monitorable = false
+
+[node name="belt_up_012" parent="belts" instance=ExtResource("3_u4loh")]
+position = Vector2(1584, 766)
+monitorable = false
+
+[node name="belt_up_009" parent="belts" instance=ExtResource("3_u4loh")]
+position = Vector2(1584, 510)
 monitorable = false
 
 [node name="belt_up_006" parent="belts" instance=ExtResource("3_u4loh")]
-position = Vector2(1472, 704)
+position = Vector2(1200, 704)
 monitorable = false
 
 [node name="belt_up_008" parent="belts" instance=ExtResource("3_u4loh")]
-position = Vector2(1472, 576)
+position = Vector2(1200, 576)
 monitorable = false
 
 [node name="belt_up_002" parent="belts" instance=ExtResource("3_u4loh")]
-position = Vector2(1216, 704)
+position = Vector2(944, 704)
 monitorable = false
 
 [node name="belt_up_003" parent="belts" instance=ExtResource("3_u4loh")]
-position = Vector2(1216, 640)
+position = Vector2(944, 640)
 monitorable = false
 
 [node name="belt_up_004" parent="belts" instance=ExtResource("3_u4loh")]
-position = Vector2(1216, 576)
+position = Vector2(944, 576)
 monitorable = false
 
 [node name="belt_down_000" parent="belts" instance=ExtResource("4_dxuwa")]
-position = Vector2(1344, 512)
+position = Vector2(1072, 512)
 monitorable = false
 
 [node name="belt_down_012" parent="belts" instance=ExtResource("4_dxuwa")]
-position = Vector2(1344, 704)
+position = Vector2(1072, 704)
 monitorable = false
 
 [node name="belt_down_010" parent="belts" instance=ExtResource("4_dxuwa")]
-position = Vector2(1344, 576)
+position = Vector2(1072, 576)
 monitorable = false
 
 [node name="belt_down_011" parent="belts" instance=ExtResource("4_dxuwa")]
-position = Vector2(1344, 640)
+position = Vector2(1072, 640)
 monitorable = false
 
 [node name="belt_down_009" parent="belts" instance=ExtResource("4_dxuwa")]
-position = Vector2(832, 512)
+position = Vector2(560, 512)
 monitorable = false
 
 [node name="belt_down_008" parent="belts" instance=ExtResource("4_dxuwa")]
-position = Vector2(832, 512)
+position = Vector2(560, 512)
 monitorable = false
 
 [node name="belt_down_004" parent="belts" instance=ExtResource("4_dxuwa")]
-position = Vector2(1088, 512)
+position = Vector2(816, 512)
 monitorable = false
 
 [node name="belt_down_005" parent="belts" instance=ExtResource("4_dxuwa")]
-position = Vector2(1088, 576)
+position = Vector2(816, 576)
 monitorable = false
 
 [node name="belt_down_013" parent="belts" instance=ExtResource("4_dxuwa")]
-position = Vector2(1664, 576)
+position = Vector2(1392, 576)
 monitorable = false
 
 [node name="belt_down_014" parent="belts" instance=ExtResource("4_dxuwa")]
-position = Vector2(1664, 640)
+position = Vector2(1392, 640)
 monitorable = false
 
 [node name="belt_down_015" parent="belts" instance=ExtResource("4_dxuwa")]
-position = Vector2(1664, 704)
+position = Vector2(1392, 704)
 monitorable = false
 
 [node name="belt_down_016" parent="belts" instance=ExtResource("4_dxuwa")]
-position = Vector2(1664, 768)
+position = Vector2(1392, 768)
 monitorable = false
 
 [node name="belt_down_006" parent="belts" instance=ExtResource("4_dxuwa")]
-position = Vector2(1088, 640)
+position = Vector2(816, 640)
 monitorable = false
 
 [node name="belt_down_007" parent="belts" instance=ExtResource("4_dxuwa")]
-position = Vector2(1088, 704)
+position = Vector2(816, 704)
 monitorable = false
 
 [node name="belt_down_001" parent="belts" instance=ExtResource("4_dxuwa")]
-position = Vector2(832, 576)
+position = Vector2(560, 576)
 monitorable = false
 
 [node name="belt_down_002" parent="belts" instance=ExtResource("4_dxuwa")]
-position = Vector2(960, 640)
+position = Vector2(688, 640)
 monitorable = false
 
 [node name="belt_down_003" parent="belts" instance=ExtResource("4_dxuwa")]
-position = Vector2(960, 704)
+position = Vector2(688, 704)
 monitorable = false
 
 [node name="belt_left_000" parent="belts" instance=ExtResource("5_co002")]
-position = Vector2(896, 512)
+position = Vector2(624, 512)
 monitorable = false
 
 [node name="belt_left_004" parent="belts" instance=ExtResource("5_co002")]
-position = Vector2(960, 512)
+position = Vector2(688, 512)
 monitorable = false
 
 [node name="belt_left_005" parent="belts" instance=ExtResource("5_co002")]
-position = Vector2(1216, 512)
+position = Vector2(944, 512)
 monitorable = false
 
 [node name="belt_left_007" parent="belts" instance=ExtResource("5_co002")]
-position = Vector2(1472, 512)
+position = Vector2(1200, 512)
 monitorable = false
 
 [node name="belt_left_008" parent="belts" instance=ExtResource("5_co002")]
-position = Vector2(1408, 512)
+position = Vector2(1136, 512)
 monitorable = false
 
 [node name="belt_left_006" parent="belts" instance=ExtResource("5_co002")]
-position = Vector2(1152, 512)
+position = Vector2(880, 512)
 monitorable = false
 
 [node name="belt_left_001" parent="belts" instance=ExtResource("5_co002")]
-position = Vector2(960, 768)
+position = Vector2(688, 768)
 monitorable = false
 
 [node name="belt_left_002" parent="belts" instance=ExtResource("5_co002")]
-position = Vector2(896, 768)
+position = Vector2(624, 768)
 monitorable = false
 
 [node name="belt_left_003" parent="belts" instance=ExtResource("5_co002")]
-position = Vector2(832, 768)
+position = Vector2(560, 768)
 monitorable = false
 
 [node name="belt_right_000" parent="belts" instance=ExtResource("6_bf0nj")]
-position = Vector2(832, 640)
+position = Vector2(560, 640)
 monitorable = false
 
 [node name="belt_right_006" parent="belts" instance=ExtResource("6_bf0nj")]
-position = Vector2(1600, 512)
+position = Vector2(1328, 512)
 monitorable = false
 
 [node name="belt_right_007" parent="belts" instance=ExtResource("6_bf0nj")]
-position = Vector2(1664, 512)
+position = Vector2(1392, 512)
 monitorable = false
 
 [node name="belt_right_008" parent="belts" instance=ExtResource("6_bf0nj")]
-position = Vector2(1728, 512)
+position = Vector2(1456, 512)
 monitorable = false
 
 [node name="belt_right_004" parent="belts" instance=ExtResource("6_bf0nj")]
-position = Vector2(1344, 768)
+position = Vector2(1072, 768)
 monitorable = false
 
 [node name="belt_right_005" parent="belts" instance=ExtResource("6_bf0nj")]
-position = Vector2(1408, 640)
+position = Vector2(1136, 640)
+monitorable = false
+
+[node name="belt_up_013" parent="belts" instance=ExtResource("3_u4loh")]
+position = Vector2(1968, 766)
+monitorable = false
+
+[node name="belt_up_014" parent="belts" instance=ExtResource("3_u4loh")]
+position = Vector2(1968, 702)
+monitorable = false
+
+[node name="belt_up_015" parent="belts" instance=ExtResource("3_u4loh")]
+position = Vector2(1968, 574)
+monitorable = false
+
+[node name="belt_down_017" parent="belts" instance=ExtResource("4_dxuwa")]
+position = Vector2(1840, 510)
+monitorable = false
+
+[node name="belt_down_018" parent="belts" instance=ExtResource("4_dxuwa")]
+position = Vector2(1840, 702)
+monitorable = false
+
+[node name="belt_down_019" parent="belts" instance=ExtResource("4_dxuwa")]
+position = Vector2(1840, 574)
+monitorable = false
+
+[node name="belt_down_020" parent="belts" instance=ExtResource("4_dxuwa")]
+position = Vector2(1840, 638)
+monitorable = false
+
+[node name="belt_left_009" parent="belts" instance=ExtResource("5_co002")]
+position = Vector2(1968, 510)
+monitorable = false
+
+[node name="belt_left_010" parent="belts" instance=ExtResource("5_co002")]
+position = Vector2(1904, 510)
+monitorable = false
+
+[node name="belt_right_014" parent="belts" instance=ExtResource("6_bf0nj")]
+position = Vector2(1840, 766)
+monitorable = false
+
+[node name="belt_right_015" parent="belts" instance=ExtResource("6_bf0nj")]
+position = Vector2(1904, 638)
+monitorable = false
+
+[node name="belt_right_009" parent="belts" instance=ExtResource("6_bf0nj")]
+position = Vector2(1648, 510)
+monitorable = false
+
+[node name="belt_right_010" parent="belts" instance=ExtResource("6_bf0nj")]
+position = Vector2(1712, 510)
+monitorable = false
+
+[node name="belt_right_011" parent="belts" instance=ExtResource("6_bf0nj")]
+position = Vector2(1648, 638)
+monitorable = false
+
+[node name="belt_right_012" parent="belts" instance=ExtResource("6_bf0nj")]
+position = Vector2(1648, 766)
+monitorable = false
+
+[node name="belt_right_013" parent="belts" instance=ExtResource("6_bf0nj")]
+position = Vector2(1712, 766)
 monitorable = false
 
 [node name="belt_right_001" parent="belts" instance=ExtResource("6_bf0nj")]
-position = Vector2(896, 640)
+position = Vector2(624, 640)
 monitorable = false
 
 [node name="belt_right_002" parent="belts" instance=ExtResource("6_bf0nj")]
-position = Vector2(1088, 768)
+position = Vector2(816, 768)
 monitorable = false
 
 [node name="belt_right_003" parent="belts" instance=ExtResource("6_bf0nj")]
-position = Vector2(1152, 768)
+position = Vector2(880, 768)
 monitorable = false
 
 [node name="fishman" type="TextureRect" parent="."]
