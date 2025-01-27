@@ -32,7 +32,7 @@ metadata/_custom_type_script = ExtResource("15_sjq75")
 
 [sub_resource type="Resource" id="Resource_n5vp7"]
 script = ExtResource("15_sjq75")
-dialogue = "By this point, you should've figured out how to do your job. Just [b]move these Anvils out of the way[/b] and keep everything in order."
+dialogue = "You just need to [b]shove these Anvils out of the belts[/b]. They're not like the other items - no need to get all precious with 'em."
 metadata/_custom_type_script = ExtResource("15_sjq75")
 
 [node name="level_0" instance=ExtResource("1_csg1b")]
@@ -44,15 +44,15 @@ position = Vector2(229, -304)
 y_sort_enabled = false
 position = Vector2(-416, 160)
 item_infos = Array[ExtResource("3_xinvl")]([ExtResource("4_oyi8m"), ExtResource("4_oyi8m"), ExtResource("5_n5vp7"), ExtResource("5_n5vp7"), ExtResource("5_n5vp7"), ExtResource("4_oyi8m")])
-spawn_frequency = 3.0
-spawn_delay = 4.5
+spawn_frequency = 5.0
+spawn_delay = 7.5
 
 [node name="chute_entry_right_001" parent="chutes" index="1" instance=ExtResource("2_yqyq6")]
 y_sort_enabled = false
 position = Vector2(-416, -168)
 item_infos = Array[ExtResource("3_xinvl")]([ExtResource("5_n5vp7"), ExtResource("5_n5vp7"), ExtResource("4_oyi8m"), ExtResource("4_oyi8m"), ExtResource("5_n5vp7"), ExtResource("4_oyi8m")])
-spawn_frequency = 3.0
-spawn_delay = 3.0
+spawn_frequency = 5.0
+spawn_delay = 5.0
 
 [node name="chute_exit_left_001" parent="chutes" index="2" instance=ExtResource("10_2ooa5")]
 position = Vector2(416, 160)
@@ -136,31 +136,15 @@ position = Vector2(-32, -168)
 
 [node name="item_anvil" parent="items" index="0" instance=ExtResource("8_vp5s1")]
 position = Vector2(-160, -152)
-drop_grace_time = 0.001
 
 [node name="item_anvil2" parent="items" index="1" instance=ExtResource("8_vp5s1")]
 position = Vector2(152, -152)
-drop_grace_time = 0.001
 
 [node name="item_anvil3" parent="items" index="2" instance=ExtResource("8_vp5s1")]
 position = Vector2(-160, 176)
-drop_grace_time = 0.001
 
 [node name="item_anvil4" parent="items" index="3" instance=ExtResource("8_vp5s1")]
 position = Vector2(152, 176)
-drop_grace_time = 0.001
-
-[node name="item_anvil" parent="asset_zoo/items" index="0"]
-drop_grace_time = 0.001
-
-[node name="item_husky" parent="asset_zoo/items" index="1"]
-drop_grace_time = 0.001
-
-[node name="item_plastic" parent="asset_zoo/items" index="2"]
-drop_grace_time = 0.001
-
-[node name="item_urchin" parent="asset_zoo/items" index="3"]
-drop_grace_time = 0.001
 
 [node name="dialogue_system" parent="canvas_layer" index="0"]
 dialogue_entries = Array[ExtResource("15_sjq75")]([SubResource("Resource_csg1b"), SubResource("Resource_yqyq6"), SubResource("Resource_xinvl"), SubResource("Resource_oyi8m"), SubResource("Resource_n5vp7")])

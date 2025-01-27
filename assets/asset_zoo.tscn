@@ -78,15 +78,11 @@ metadata/_edit_lock_ = true
 
 [node name="item_anvil" parent="items" instance=ExtResource("15_blg8r")]
 position = Vector2(256, 0)
-drop_grace_time = 0.001
 
 [node name="item_husky" parent="items" instance=ExtResource("16_dskkk")]
-drop_grace_time = 0.001
 
 [node name="item_plastic" parent="items" instance=ExtResource("17_lxnim")]
 position = Vector2(128, 0)
-drop_grace_time = 0.001
 
 [node name="item_urchin" parent="items" instance=ExtResource("18_b3ncw")]
 position = Vector2(384, 0)
-drop_grace_time = 0.001

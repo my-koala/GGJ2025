@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="LevelInfoDatabase" load_steps=11 format=3 uid="uid://bew4r0dw4ruwq"]
+[gd_resource type="Resource" script_class="LevelInfoDatabase" load_steps=13 format=3 uid="uid://bew4r0dw4ruwq"]
 
 [ext_resource type="Script" uid="uid://c3vpxugd4v0wq" path="res://scripts/level/level_info.gd" id="1_swb3w"]
 [ext_resource type="PackedScene" uid="uid://xkd2fq6c4aeo" path="res://assets/levels/scenes/level_0.tscn" id="2_l65i7"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://o6w6r60aaoog" path="res://assets/levels/scenes/level_1.tscn" id="3_uxqwt"]
 [ext_resource type="PackedScene" uid="uid://cfquoavtiknus" path="res://assets/levels/scenes/level_2.tscn" id="4_l65i7"]
 [ext_resource type="PackedScene" uid="uid://bd504ae3sg2hs" path="res://assets/levels/scenes/level_3.tscn" id="5_erufh"]
+[ext_resource type="PackedScene" uid="uid://b5je14e0n4rpp" path="res://assets/levels/scenes/level_4.tscn" id="6_spa7e"]
 
 [sub_resource type="Resource" id="Resource_l65i7"]
 script = ExtResource("1_swb3w")
@@ -35,7 +36,14 @@ name = &"A Bubble and a Hard Place"
 difficulty = 1
 metadata/_custom_type_script = ExtResource("1_swb3w")
 
+[sub_resource type="Resource" id="Resource_7kgam"]
+script = ExtResource("1_swb3w")
+packed_scene = ExtResource("6_spa7e")
+name = &"A Prickly Situation"
+difficulty = 2
+metadata/_custom_type_script = ExtResource("1_swb3w")
+
 [resource]
 script = ExtResource("2_u1fod")
-level_infos = Array[ExtResource("1_swb3w")]([SubResource("Resource_l65i7"), SubResource("Resource_u1fod"), SubResource("Resource_erufh"), SubResource("Resource_spa7e")])
+level_infos = Array[ExtResource("1_swb3w")]([SubResource("Resource_l65i7"), SubResource("Resource_u1fod"), SubResource("Resource_erufh"), SubResource("Resource_spa7e"), SubResource("Resource_7kgam")])
 metadata/_custom_type_script = ExtResource("2_u1fod")

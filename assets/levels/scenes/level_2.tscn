@@ -56,7 +56,7 @@ script = ExtResource("8_iest2")
 dialogue = "Now, get on with it. I've got a lunch to get to."
 metadata/_custom_type_script = ExtResource("8_iest2")
 
-[node name="level_0" instance=ExtResource("1_1et6b")]
+[node name="level_1" instance=ExtResource("1_1et6b")]
 
 [node name="wall_poster_1" parent="geometry" index="0"]
 position = Vector2(229, -304)
@@ -161,18 +161,6 @@ position = Vector2(32, 992)
 
 [node name="belt_left_001" parent="asset_zoo/belts" index="21" instance=ExtResource("7_vpue2")]
 position = Vector2(32, 1056)
-
-[node name="item_anvil" parent="asset_zoo/items" index="0"]
-drop_grace_time = 0.001
-
-[node name="item_husky" parent="asset_zoo/items" index="1"]
-drop_grace_time = 0.001
-
-[node name="item_plastic" parent="asset_zoo/items" index="2"]
-drop_grace_time = 0.001
-
-[node name="item_urchin" parent="asset_zoo/items" index="3"]
-drop_grace_time = 0.001
 
 [node name="dialogue_system" parent="canvas_layer" index="0"]
 dialogue_entries = Array[ExtResource("8_iest2")]([SubResource("Resource_3gdde"), SubResource("Resource_ymvoe"), SubResource("Resource_fpsi2"), SubResource("Resource_mhti0"), SubResource("Resource_omd5s"), SubResource("Resource_c5tth"), SubResource("Resource_iest2"), SubResource("Resource_vpue2")])

@@ -77,18 +77,5 @@ position = Vector2(256, 64)
 position = Vector2(257, 9)
 collision_mask = 9
 custom_integrator = true
-drop_grace_time = 0.001
-
-[node name="item_anvil" parent="asset_zoo/items" index="0"]
-drop_grace_time = 0.001
-
-[node name="item_husky" parent="asset_zoo/items" index="1"]
-drop_grace_time = 0.001
-
-[node name="item_plastic" parent="asset_zoo/items" index="2"]
-drop_grace_time = 0.001
-
-[node name="item_urchin" parent="asset_zoo/items" index="3"]
-drop_grace_time = 0.001
 
 [editable path="asset_zoo"]

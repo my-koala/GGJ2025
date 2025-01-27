@@ -1,0 +1,160 @@
+[gd_scene load_steps=21 format=3 uid="uid://b5je14e0n4rpp"]
+
+[ext_resource type="PackedScene" uid="uid://c8vl5y0q7ua3b" path="res://assets/levels/scenes/level.tscn" id="1_y1wnq"]
+[ext_resource type="PackedScene" uid="uid://bbehyped0t73w" path="res://assets/props/chute/chute_entry_right.tscn" id="2_u4hx1"]
+[ext_resource type="Script" uid="uid://dip6wdi7oacqt" path="res://scripts/props/item_info.gd" id="3_8eav3"]
+[ext_resource type="Resource" uid="uid://cko3omy02a0fd" path="res://assets/props/item/item_infos/item_info_plastic.tres" id="4_8ic8o"]
+[ext_resource type="Resource" uid="uid://or3knto76bkw" path="res://assets/props/item/item_infos/item_info_banana.tres" id="4_q1ug8"]
+[ext_resource type="Resource" uid="uid://p7ojn1574vfb" path="res://assets/props/item/item_infos/item_info_bottle.tres" id="5_y83nr"]
+[ext_resource type="Resource" uid="uid://dguk7yimd6o5s" path="res://assets/props/item/item_infos/item_info_conk.tres" id="6_p2yso"]
+[ext_resource type="PackedScene" uid="uid://bevkk63dtnl4m" path="res://assets/props/chute/chute_exit_left.tscn" id="6_t41k4"]
+[ext_resource type="PackedScene" uid="uid://c7jr2tlmcby2e" path="res://assets/props/belt/belt_right.tscn" id="7_8ic8o"]
+[ext_resource type="Resource" uid="uid://cd65uywkbvhb2" path="res://assets/props/item/item_infos/item_info_bicycle.tres" id="8_r3b5s"]
+[ext_resource type="Script" uid="uid://dfktug68yfw7d" path="res://scripts/dialogue_entry.gd" id="9_r3b5s"]
+[ext_resource type="PackedScene" uid="uid://dj0k635q02lwu" path="res://assets/props/belt/belt_up.tscn" id="11_utbov"]
+[ext_resource type="PackedScene" uid="uid://buqbn7w8cx67a" path="res://assets/props/belt/belt_left.tscn" id="12_ornuy"]
+[ext_resource type="PackedScene" uid="uid://d2hg70rrjbhwk" path="res://assets/props/belt/belt_down.tscn" id="13_tfats"]
+[ext_resource type="PackedScene" uid="uid://cuexjjvr7pki7" path="res://assets/props/item/scenes/item_urchin.tscn" id="14_qydvu"]
+
+[sub_resource type="Resource" id="Resource_csg1b"]
+script = ExtResource("9_r3b5s")
+dialogue = "Well, I'll be [i]blasted[/i]. What are these, [b]Urchins[/b]!? On the conveyor belts!? If I ever get my hands on the old crew, I'll..."
+metadata/_custom_type_script = ExtResource("9_r3b5s")
+
+[sub_resource type="Resource" id="Resource_yqyq6"]
+script = ExtResource("9_r3b5s")
+dialogue = "[i]Ahem.[/i] It's fine. It's just a little surprise. You know what? It's not even surprising anymore."
+metadata/_custom_type_script = ExtResource("9_r3b5s")
+
+[sub_resource type="Resource" id="Resource_xinvl"]
+script = ExtResource("9_r3b5s")
+dialogue = "Here's the deal, Fish Man: These [b]Urchins[/b] are not to be messed with. They can [i]easily pop your bubbles[/i] and send them falling to the ground."
+metadata/_custom_type_script = ExtResource("9_r3b5s")
+
+[sub_resource type="Resource" id="Resource_oyi8m"]
+script = ExtResource("9_r3b5s")
+dialogue = "[b]Sort your items with caution.[/b] I know you've been doing alright, but this is a whole new level of tricky."
+metadata/_custom_type_script = ExtResource("9_r3b5s")
+
+[sub_resource type="Resource" id="Resource_n5vp7"]
+script = ExtResource("9_r3b5s")
+dialogue = "Now, off you go, FIsh Man. Show me what you've got."
+metadata/_custom_type_script = ExtResource("9_r3b5s")
+
+[node name="level_0" instance=ExtResource("1_y1wnq")]
+
+[node name="wall_poster_1" parent="geometry" index="0"]
+position = Vector2(229, -304)
+
+[node name="belt_right_003" parent="belts" index="0" instance=ExtResource("7_8ic8o")]
+position = Vector2(416, 0)
+
+[node name="belt_right_004" parent="belts" index="1" instance=ExtResource("7_8ic8o")]
+position = Vector2(352, 0)
+
+[node name="belt_right_005" parent="belts" index="2" instance=ExtResource("7_8ic8o")]
+position = Vector2(288, 0)
+
+[node name="belt_up_000" parent="belts" index="3" instance=ExtResource("11_utbov")]
+position = Vector2(32, 96)
+
+[node name="belt_up_004" parent="belts" index="4" instance=ExtResource("11_utbov")]
+position = Vector2(32, 160)
+
+[node name="belt_up_001" parent="belts" index="5" instance=ExtResource("11_utbov")]
+position = Vector2(32, 32)
+
+[node name="belt_up_002" parent="belts" index="6" instance=ExtResource("11_utbov")]
+position = Vector2(32, -32)
+
+[node name="belt_up_003" parent="belts" index="7" instance=ExtResource("11_utbov")]
+position = Vector2(32, -96)
+
+[node name="belt_left_000" parent="belts" index="8" instance=ExtResource("12_ornuy")]
+position = Vector2(96, 160)
+
+[node name="belt_down_000" parent="belts" index="9" instance=ExtResource("13_tfats")]
+position = Vector2(96, 96)
+
+[node name="belt_down_001" parent="belts" index="10" instance=ExtResource("13_tfats")]
+position = Vector2(96, 32)
+
+[node name="belt_down_002" parent="belts" index="11" instance=ExtResource("13_tfats")]
+position = Vector2(96, -32)
+
+[node name="belt_down_003" parent="belts" index="12" instance=ExtResource("13_tfats")]
+position = Vector2(96, -96)
+
+[node name="belt_right_006" parent="belts" index="13" instance=ExtResource("7_8ic8o")]
+position = Vector2(32, -160)
+
+[node name="belt_up_005" parent="belts" index="14" instance=ExtResource("11_utbov")]
+position = Vector2(-288, 96)
+
+[node name="belt_up_006" parent="belts" index="15" instance=ExtResource("11_utbov")]
+position = Vector2(-288, 160)
+
+[node name="belt_up_007" parent="belts" index="16" instance=ExtResource("11_utbov")]
+position = Vector2(-288, 32)
+
+[node name="belt_up_008" parent="belts" index="17" instance=ExtResource("11_utbov")]
+position = Vector2(-288, -32)
+
+[node name="belt_up_009" parent="belts" index="18" instance=ExtResource("11_utbov")]
+position = Vector2(-288, -96)
+
+[node name="belt_right_007" parent="belts" index="19" instance=ExtResource("7_8ic8o")]
+position = Vector2(-288, -160)
+
+[node name="belt_right_008" parent="belts" index="20" instance=ExtResource("7_8ic8o")]
+position = Vector2(-224, -160)
+
+[node name="belt_right_009" parent="belts" index="21" instance=ExtResource("7_8ic8o")]
+position = Vector2(-352, 0)
+
+[node name="belt_down_004" parent="belts" index="22" instance=ExtResource("13_tfats")]
+position = Vector2(96, -160)
+
+[node name="belt_left_001" parent="belts" index="23" instance=ExtResource("12_ornuy")]
+position = Vector2(-160, 160)
+
+[node name="belt_left_002" parent="belts" index="24" instance=ExtResource("12_ornuy")]
+position = Vector2(-224, 160)
+
+[node name="belt_down_005" parent="belts" index="25" instance=ExtResource("13_tfats")]
+position = Vector2(-160, 96)
+
+[node name="belt_down_006" parent="belts" index="26" instance=ExtResource("13_tfats")]
+position = Vector2(-160, 32)
+
+[node name="belt_down_007" parent="belts" index="27" instance=ExtResource("13_tfats")]
+position = Vector2(-160, -32)
+
+[node name="belt_down_008" parent="belts" index="28" instance=ExtResource("13_tfats")]
+position = Vector2(-160, -96)
+
+[node name="belt_down_009" parent="belts" index="29" instance=ExtResource("13_tfats")]
+position = Vector2(-160, -160)
+
+[node name="chute_entry_right_001" parent="chutes" index="0" instance=ExtResource("2_u4hx1")]
+y_sort_enabled = false
+position = Vector2(-416, 0)
+item_infos = Array[ExtResource("3_8eav3")]([ExtResource("8_r3b5s"), ExtResource("5_y83nr"), ExtResource("6_p2yso"), ExtResource("4_q1ug8"), ExtResource("4_8ic8o")])
+spawn_frequency = 1.5
+spawn_delay = 3.0
+
+[node name="chute_exit_left_002" parent="chutes" index="1" instance=ExtResource("6_t41k4")]
+position = Vector2(480, 0)
+item_infos = Array[ExtResource("3_8eav3")]([ExtResource("6_p2yso"), ExtResource("4_q1ug8"), ExtResource("8_r3b5s"), ExtResource("5_y83nr"), ExtResource("4_8ic8o")])
+
+[node name="item_urchin" parent="items" index="0" instance=ExtResource("14_qydvu")]
+position = Vector2(96, -144)
+
+[node name="item_urchin2" parent="items" index="1" instance=ExtResource("14_qydvu")]
+visible = false
+position = Vector2(32, 160)
+
+[node name="dialogue_system" parent="canvas_layer" index="0"]
+dialogue_entries = Array[ExtResource("9_r3b5s")]([SubResource("Resource_csg1b"), SubResource("Resource_yqyq6"), SubResource("Resource_xinvl"), SubResource("Resource_oyi8m"), SubResource("Resource_n5vp7")])
+
+[editable path="asset_zoo"]

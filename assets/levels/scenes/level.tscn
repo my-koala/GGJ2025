@@ -24,11 +24,11 @@ position = Vector2(218, -301)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_kguka")
 
-[node name="chutes" type="Node2D" parent="."]
+[node name="belts" type="Node2D" parent="."]
 y_sort_enabled = true
 metadata/_edit_lock_ = true
 
-[node name="belts" type="Node2D" parent="."]
+[node name="chutes" type="Node2D" parent="."]
 y_sort_enabled = true
 metadata/_edit_lock_ = true
 
