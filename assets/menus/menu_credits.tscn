@@ -33,6 +33,61 @@ anchor_bottom = 0.9
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="credit1" type="Label" parent="slide/panel"]
+layout_mode = 0
+offset_left = 86.0
+offset_top = 158.0
+offset_right = 350.0
+offset_bottom = 217.0
+theme_override_font_sizes/font_size = 20
+text = "Programmer
+James \"MyKoala\" Brusewitz"
+horizontal_alignment = 1
+
+[node name="credit2" type="Label" parent="slide/panel"]
+layout_mode = 0
+offset_left = 495.0
+offset_top = 160.0
+offset_right = 629.0
+offset_bottom = 219.0
+theme_override_font_sizes/font_size = 20
+text = "Programmer
+Caeden Statia"
+horizontal_alignment = 1
+
+[node name="credit3" type="Label" parent="slide/panel"]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 317.0
+offset_right = 256.0
+offset_bottom = 376.0
+theme_override_font_sizes/font_size = 20
+text = "Sounds and Artist
+Prahas Pisipati"
+horizontal_alignment = 1
+
+[node name="credit4" type="Label" parent="slide/panel"]
+layout_mode = 0
+offset_left = 307.0
+offset_top = 331.0
+offset_right = 457.0
+offset_bottom = 390.0
+theme_override_font_sizes/font_size = 20
+text = "Artist
+Wyatt Sylvester"
+horizontal_alignment = 1
+
+[node name="credit5" type="Label" parent="slide/panel"]
+layout_mode = 0
+offset_left = 497.0
+offset_top = 295.0
+offset_right = 700.0
+offset_bottom = 354.0
+theme_override_font_sizes/font_size = 20
+text = "Artist
+Dan \"Apollo\" Nguyen"
+horizontal_alignment = 1
+
 [node name="label" type="Label" parent="slide/panel"]
 layout_mode = 1
 anchors_preset = 10
