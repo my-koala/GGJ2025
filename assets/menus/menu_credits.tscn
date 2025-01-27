@@ -57,32 +57,32 @@ horizontal_alignment = 1
 
 [node name="credit3" type="Label" parent="slide/panel"]
 layout_mode = 0
-offset_left = 85.0
-offset_top = 317.0
-offset_right = 256.0
-offset_bottom = 376.0
+offset_left = 73.0
+offset_top = 289.0
+offset_right = 283.0
+offset_bottom = 348.0
 theme_override_font_sizes/font_size = 20
 text = "Sounds and Artist
-Prahas Pisipati"
+Prahas \"B39_\" Pisipati"
 horizontal_alignment = 1
 
 [node name="credit4" type="Label" parent="slide/panel"]
 layout_mode = 0
-offset_left = 307.0
-offset_top = 331.0
-offset_right = 457.0
-offset_bottom = 390.0
+offset_left = 271.0
+offset_top = 366.0
+offset_right = 515.0
+offset_bottom = 425.0
 theme_override_font_sizes/font_size = 20
 text = "Artist
-Wyatt Sylvester"
+Wyatt \"Phyzith\" Sylvester"
 horizontal_alignment = 1
 
 [node name="credit5" type="Label" parent="slide/panel"]
 layout_mode = 0
-offset_left = 497.0
-offset_top = 295.0
-offset_right = 700.0
-offset_bottom = 354.0
+offset_left = 498.0
+offset_top = 283.0
+offset_right = 701.0
+offset_bottom = 342.0
 theme_override_font_sizes/font_size = 20
 text = "Artist
 Dan \"Apollo\" Nguyen"
