@@ -39,21 +39,6 @@ metadata/_custom_type_script = ExtResource("10_blbmo")
 [node name="wall_poster_1" parent="geometry" index="0"]
 position = Vector2(229, -304)
 
-[node name="chute_entry_right_000" parent="chutes" index="0" instance=ExtResource("2_b5acj")]
-y_sort_enabled = false
-position = Vector2(-416, 0)
-item_infos = Array[ExtResource("3_6iupr")]([ExtResource("4_8tqqt"), ExtResource("5_gppl4"), ExtResource("4_8tqqt"), ExtResource("5_gppl4"), ExtResource("5_gppl4"), ExtResource("4_8tqqt")])
-spawn_frequency = 3.0
-spawn_delay = 3.0
-
-[node name="chute_exit_left_000" parent="chutes" index="1" instance=ExtResource("5_s8uh7")]
-position = Vector2(416, -160)
-item_infos = Array[ExtResource("3_6iupr")]([ExtResource("4_8tqqt")])
-
-[node name="chute_exit_left_001" parent="chutes" index="2" instance=ExtResource("5_s8uh7")]
-position = Vector2(416, 160)
-item_infos = Array[ExtResource("3_6iupr")]([ExtResource("5_gppl4")])
-
 [node name="item_belt_right_009" parent="belts" index="0" instance=ExtResource("6_f6q5q")]
 position = Vector2(96, -160)
 
@@ -107,6 +92,21 @@ position = Vector2(-96, 0)
 
 [node name="item_belt_right_007" parent="belts" index="17" instance=ExtResource("6_f6q5q")]
 position = Vector2(-32, 0)
+
+[node name="chute_entry_right_000" parent="chutes" index="0" instance=ExtResource("2_b5acj")]
+y_sort_enabled = false
+position = Vector2(-416, 0)
+item_infos = Array[ExtResource("3_6iupr")]([ExtResource("4_8tqqt"), ExtResource("5_gppl4"), ExtResource("4_8tqqt"), ExtResource("5_gppl4"), ExtResource("5_gppl4"), ExtResource("4_8tqqt")])
+spawn_frequency = 3.0
+spawn_delay = 3.0
+
+[node name="chute_exit_left_000" parent="chutes" index="1" instance=ExtResource("5_s8uh7")]
+position = Vector2(416, -160)
+item_infos = Array[ExtResource("3_6iupr")]([ExtResource("4_8tqqt")])
+
+[node name="chute_exit_left_001" parent="chutes" index="2" instance=ExtResource("5_s8uh7")]
+position = Vector2(416, 160)
+item_infos = Array[ExtResource("3_6iupr")]([ExtResource("5_gppl4")])
 
 [node name="dialogue_system" parent="canvas_layer" index="0"]
 dialogue_entries = Array[ExtResource("10_blbmo")]([SubResource("Resource_3gdde"), SubResource("Resource_ymvoe"), SubResource("Resource_fpsi2"), SubResource("Resource_mhti0"), SubResource("Resource_omd5s")])

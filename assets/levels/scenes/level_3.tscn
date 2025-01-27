@@ -35,32 +35,10 @@ script = ExtResource("15_sjq75")
 dialogue = "You just need to [b]shove these Anvils out of the belts[/b]. They're not like the other items - no need to get all precious with 'em."
 metadata/_custom_type_script = ExtResource("15_sjq75")
 
-[node name="level_0" instance=ExtResource("1_csg1b")]
+[node name="level_1" instance=ExtResource("1_csg1b")]
 
 [node name="wall_poster_1" parent="geometry" index="0"]
 position = Vector2(229, -304)
-
-[node name="chute_entry_right_000" parent="chutes" index="0" instance=ExtResource("2_yqyq6")]
-y_sort_enabled = false
-position = Vector2(-416, 160)
-item_infos = Array[ExtResource("3_xinvl")]([ExtResource("4_oyi8m"), ExtResource("4_oyi8m"), ExtResource("5_n5vp7"), ExtResource("5_n5vp7"), ExtResource("5_n5vp7"), ExtResource("4_oyi8m")])
-spawn_frequency = 5.0
-spawn_delay = 7.5
-
-[node name="chute_entry_right_001" parent="chutes" index="1" instance=ExtResource("2_yqyq6")]
-y_sort_enabled = false
-position = Vector2(-416, -168)
-item_infos = Array[ExtResource("3_xinvl")]([ExtResource("5_n5vp7"), ExtResource("5_n5vp7"), ExtResource("4_oyi8m"), ExtResource("4_oyi8m"), ExtResource("5_n5vp7"), ExtResource("4_oyi8m")])
-spawn_frequency = 5.0
-spawn_delay = 5.0
-
-[node name="chute_exit_left_001" parent="chutes" index="2" instance=ExtResource("10_2ooa5")]
-position = Vector2(416, 160)
-item_infos = Array[ExtResource("3_xinvl")]([ExtResource("5_n5vp7")])
-
-[node name="chute_exit_left_002" parent="chutes" index="3" instance=ExtResource("10_2ooa5")]
-position = Vector2(416, -168)
-item_infos = Array[ExtResource("3_xinvl")]([ExtResource("4_oyi8m")])
 
 [node name="item_belt_right_014" parent="belts" index="0" instance=ExtResource("11_m8rvj")]
 position = Vector2(352, 160)
@@ -133,6 +111,28 @@ position = Vector2(-96, -168)
 
 [node name="item_belt_right_013" parent="belts" index="23" instance=ExtResource("11_m8rvj")]
 position = Vector2(-32, -168)
+
+[node name="chute_entry_right_000" parent="chutes" index="0" instance=ExtResource("2_yqyq6")]
+y_sort_enabled = false
+position = Vector2(-416, 160)
+item_infos = Array[ExtResource("3_xinvl")]([ExtResource("4_oyi8m"), ExtResource("4_oyi8m"), ExtResource("5_n5vp7"), ExtResource("5_n5vp7"), ExtResource("5_n5vp7"), ExtResource("4_oyi8m")])
+spawn_frequency = 5.0
+spawn_delay = 7.5
+
+[node name="chute_entry_right_001" parent="chutes" index="1" instance=ExtResource("2_yqyq6")]
+y_sort_enabled = false
+position = Vector2(-416, -168)
+item_infos = Array[ExtResource("3_xinvl")]([ExtResource("5_n5vp7"), ExtResource("5_n5vp7"), ExtResource("4_oyi8m"), ExtResource("4_oyi8m"), ExtResource("5_n5vp7"), ExtResource("4_oyi8m")])
+spawn_frequency = 5.0
+spawn_delay = 5.0
+
+[node name="chute_exit_left_001" parent="chutes" index="2" instance=ExtResource("10_2ooa5")]
+position = Vector2(416, 160)
+item_infos = Array[ExtResource("3_xinvl")]([ExtResource("5_n5vp7")])
+
+[node name="chute_exit_left_002" parent="chutes" index="3" instance=ExtResource("10_2ooa5")]
+position = Vector2(416, -168)
+item_infos = Array[ExtResource("3_xinvl")]([ExtResource("4_oyi8m")])
 
 [node name="item_anvil" parent="items" index="0" instance=ExtResource("8_vp5s1")]
 position = Vector2(-160, -152)

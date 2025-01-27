@@ -61,17 +61,6 @@ metadata/_custom_type_script = ExtResource("8_iest2")
 [node name="wall_poster_1" parent="geometry" index="0"]
 position = Vector2(229, -304)
 
-[node name="chute_entry_right_000" parent="chutes" index="0" instance=ExtResource("2_rxabv")]
-y_sort_enabled = false
-position = Vector2(-416, 160)
-item_infos = Array[ExtResource("3_cg1gs")]([ExtResource("4_3p4ce"), ExtResource("5_axmfg"), ExtResource("6_omllw"), ExtResource("7_lebjv"), ExtResource("8_07r3n"), ExtResource("9_dec52")])
-spawn_frequency = 3.0
-spawn_delay = 3.0
-
-[node name="chute_exit_left_001" parent="chutes" index="1" instance=ExtResource("5_1ur70")]
-position = Vector2(416, 160)
-item_infos = Array[ExtResource("3_cg1gs")]([ExtResource("6_omllw"), ExtResource("8_07r3n"), ExtResource("7_lebjv"), ExtResource("9_dec52"), ExtResource("4_3p4ce"), ExtResource("5_axmfg")])
-
 [node name="item_belt_right_014" parent="belts" index="0" instance=ExtResource("6_0ki71")]
 position = Vector2(352, 160)
 
@@ -107,6 +96,17 @@ position = Vector2(-96, 160)
 
 [node name="item_belt_right_007" parent="belts" index="11" instance=ExtResource("6_0ki71")]
 position = Vector2(-32, 160)
+
+[node name="chute_entry_right_000" parent="chutes" index="0" instance=ExtResource("2_rxabv")]
+y_sort_enabled = false
+position = Vector2(-416, 160)
+item_infos = Array[ExtResource("3_cg1gs")]([ExtResource("4_3p4ce"), ExtResource("5_axmfg"), ExtResource("6_omllw"), ExtResource("7_lebjv"), ExtResource("8_07r3n"), ExtResource("9_dec52")])
+spawn_frequency = 3.0
+spawn_delay = 3.0
+
+[node name="chute_exit_left_001" parent="chutes" index="1" instance=ExtResource("5_1ur70")]
+position = Vector2(416, 160)
+item_infos = Array[ExtResource("3_cg1gs")]([ExtResource("6_omllw"), ExtResource("8_07r3n"), ExtResource("7_lebjv"), ExtResource("9_dec52"), ExtResource("4_3p4ce"), ExtResource("5_axmfg")])
 
 [node name="belt_left_002" parent="asset_zoo/belts" index="4" instance=ExtResource("7_vpue2")]
 position = Vector2(-32, 1056)

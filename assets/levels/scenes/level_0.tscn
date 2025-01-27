@@ -53,16 +53,6 @@ metadata/_custom_type_script = ExtResource("10_e63tf")
 [node name="wall_poster_1" parent="geometry" index="0"]
 position = Vector2(229, -304)
 
-[node name="chute_entry_right_000" parent="chutes" index="0" instance=ExtResource("2_ymvoe")]
-y_sort_enabled = false
-position = Vector2(-224, 96)
-item_infos = Array[ExtResource("3_fpsi2")]([ExtResource("4_fpsi2"), ExtResource("5_mhti0"), ExtResource("6_omd5s"), ExtResource("7_64u3x")])
-spawn_frequency = 5.0
-
-[node name="chute_exit_left_000" parent="chutes" index="1" instance=ExtResource("5_mn73r")]
-position = Vector2(224, -160)
-item_infos = Array[ExtResource("3_fpsi2")]([ExtResource("4_fpsi2"), ExtResource("6_omd5s"), ExtResource("7_64u3x"), ExtResource("5_mhti0")])
-
 [node name="item_belt_right_008" parent="belts" index="0" instance=ExtResource("7_72clv")]
 position = Vector2(-160, -160)
 
@@ -128,6 +118,16 @@ position = Vector2(-32, -32)
 
 [node name="item_belt_left_008" parent="belts" index="21" instance=ExtResource("9_d432t")]
 position = Vector2(-96, -32)
+
+[node name="chute_entry_right_000" parent="chutes" index="0" instance=ExtResource("2_ymvoe")]
+y_sort_enabled = false
+position = Vector2(-224, 96)
+item_infos = Array[ExtResource("3_fpsi2")]([ExtResource("4_fpsi2"), ExtResource("5_mhti0"), ExtResource("6_omd5s"), ExtResource("7_64u3x")])
+spawn_frequency = 5.0
+
+[node name="chute_exit_left_000" parent="chutes" index="1" instance=ExtResource("5_mn73r")]
+position = Vector2(224, -160)
+item_infos = Array[ExtResource("3_fpsi2")]([ExtResource("4_fpsi2"), ExtResource("6_omd5s"), ExtResource("7_64u3x"), ExtResource("5_mhti0")])
 
 [node name="dialogue_system" parent="canvas_layer" index="0"]
 dialogue_entries = Array[ExtResource("10_e63tf")]([SubResource("Resource_3gdde"), SubResource("Resource_ymvoe"), SubResource("Resource_fpsi2"), SubResource("Resource_mhti0"), SubResource("Resource_omd5s"), SubResource("Resource_64u3x"), SubResource("Resource_72clv")])
